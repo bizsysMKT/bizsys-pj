@@ -1,0 +1,75 @@
+---
+import Layout from '../components/Layout.astro';
+---
+
+<Layout title="よくある質問 | ビズシス">
+
+  <style>
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .faq-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: 0 14px 36px rgba(18, 38, 63, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: default;
+    }
+    .faq-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 48px rgba(10, 79, 159, 0.15);
+    }
+    .faq-card.faq-full { grid-column: span 3; }
+    .faq-card h3 { margin: 0 0 12px; font-size: 0.95rem; color: #0a4f9f; font-weight: 700; }
+    .faq-card p { margin: 0; line-height: 1.75; font-size: 0.92rem; color: #444; }
+    @media (max-width: 900px) {
+      .faq-grid { grid-template-columns: 1fr; }
+      .faq-card.faq-full { grid-column: span 1; }
+    }
+  </style>
+
+  <!-- ページヘッダー -->
+  <section class="section page-header">
+    <div class="section-inner">
+      <h1>よくある質問</h1>
+      <p class="page-lead">相談のハードルを下げるために、よくいただく質問にお答えします。</p>
+    </div>
+  </section>
+
+  <!-- FAQ 5問 -->
+  <section class="section bg-white">
+    <div class="section-inner">
+      <h2 class="section-title">Excel管理の不安を解消するFAQ</h2>
+      <div class="faq-grid">
+        <div class="faq-card">
+          <h3>保守費用は必要ですか？</h3>
+          <p>はい。システムは作って終わりではなく、継続的な改善と安定運用が重要です。月1万円〜の保守プランで安心を提供します。</p>
+        </div>
+        <div class="faq-card">
+          <h3>開発期間はどれくらいですか？</h3>
+          <p>規模にもよりますが、簡単な業務システムであれば約1〜2か月程度が目安です。要件によって調整します。</p>
+        </div>
+        <div class="faq-card">
+          <h3>Excel管理からシステムに移行したい場合、まず何をすればいいですか？</h3>
+          <p>まずは現状の運用と課題をヒアリングします。Excelの課題を整理したうえで、必要な機能を絞り込みます。</p>
+        </div>
+        <div class="faq-card">
+          <h3>料金はいくらですか？</h3>
+          <p>業務システム開発は30万円〜、保守は月1万円〜。機能・規模により変動しますので、まずはご相談ください。</p>
+        </div>
+        <div class="faq-card faq-full">
+          <h3>相談だけでもできますか？</h3>
+          <p>はい。まずはお気軽にご相談ください。文字ベースでのやり取りを基本としています。</p>
+        </div>
+      </div>
+      <div class="cta-group">
+        <a class="btn-primary" href="/contact">お問い合わせはこちら</a>
+        <a class="btn-secondary" href="/services">サービスを見る</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

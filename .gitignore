@@ -1,0 +1,14 @@
+# Node.js
+node_modules/
+
+# Astro generated
+.astro/
+
+# Claude Code local data
+.claude/
+
+# Local Node.js runtime (not needed on CI)
+tools/
+
+# macOS
+.DS_Store

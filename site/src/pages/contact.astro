@@ -1,0 +1,123 @@
+---
+import Layout from '../components/Layout.astro';
+---
+
+<Layout title="お問い合わせ | ビズシス">
+
+  <style>
+    .contact-wrap {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .contact-note {
+      background: #eef3fb;
+      border-left: 4px solid #0a4f9f;
+      border-radius: 0 12px 12px 0;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: #333;
+    }
+    .form-note {
+      font-size: 0.85rem;
+      color: #888;
+      margin: 4px 0 0;
+    }
+    .required-badge {
+      display: inline-block;
+      background: #0a4f9f;
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 1px 6px;
+      border-radius: 4px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+    .optional-badge {
+      display: inline-block;
+      background: #cdd6e8;
+      color: #555;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 1px 6px;
+      border-radius: 4px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+  </style>
+
+  <!-- ページヘッダー -->
+  <section class="section page-header">
+    <div class="section-inner">
+      <h1>まずは、現状と課題をお聞かせください</h1>
+      <p class="page-lead">文字ベースでの相談が基本です。電話やZoomは不要です。どんな内容でもお気軽にどうぞ。</p>
+    </div>
+  </section>
+
+  <!-- フォーム -->
+  <section class="section bg-white">
+    <div class="section-inner">
+      <div class="contact-wrap">
+
+        <div class="contact-note">
+          <strong>相談は文字ベースでOK</strong><br />
+          どんな相談でも構いません。現状の課題や業務の流れを入力してください。<br />
+          送信後、1日以内に一次回答をお送りします。
+        </div>
+
+        <!-- Formspree への送信フォーム -->
+        <form action="https://formspree.io/f/maqllrnj" method="POST">
+          <input type="hidden" name="_subject" value="ビズシスへのお問い合わせ" />
+
+          <div class="form-group">
+            <label for="name">
+              お名前
+              <span class="required-badge">必須</span>
+            </label>
+            <input id="name" name="name" type="text" placeholder="山田 太郎" required />
+          </div>
+
+          <div class="form-group">
+            <label for="company">
+              会社名 / 団体名
+              <span class="optional-badge">任意</span>
+            </label>
+            <input id="company" name="company" type="text" placeholder="株式会社〇〇" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">
+              メールアドレス
+              <span class="required-badge">必須</span>
+            </label>
+            <input id="email" name="email" type="email" placeholder="example@example.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">
+              お問い合わせ内容
+              <span class="required-badge">必須</span>
+            </label>
+            <textarea id="message" name="message" rows="8" placeholder="現在の課題や業務の流れ、ご相談内容をご記入ください。" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="note">
+              相談希望日 / 備考
+              <span class="optional-badge">任意</span>
+            </label>
+            <textarea id="note" name="note" rows="3" placeholder="ご希望の日程や補足事項があればご記入ください。"></textarea>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit" class="btn-primary">送信する</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+</Layout>

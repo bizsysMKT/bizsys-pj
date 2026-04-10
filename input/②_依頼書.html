@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ユースケへの依頼書 | ビズシス</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Hiragino Sans', 'Meiryo', sans-serif;
+    background: #f4f6f9;
+    color: #2d2d2d;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .header {
+    background: linear-gradient(135deg, #1a3a5c, #2d6a9f);
+    color: white;
+    padding: 48px 40px 36px;
+  }
+  .header h1 { font-size: 28px; font-weight: 700; margin-bottom: 12px; letter-spacing: 0.05em; }
+  .header-meta { display: flex; gap: 32px; font-size: 14px; opacity: 0.85; }
+  .header-meta span { display: flex; align-items: center; gap: 6px; }
+
+  .container { max-width: 900px; margin: 32px auto; padding: 0 24px; }
+
+  .section {
+    background: white;
+    border-radius: 12px;
+    padding: 32px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a3a5c;
+    border-left: 4px solid #2d6a9f;
+    padding-left: 12px;
+    margin-bottom: 20px;
+  }
+  .section-subtitle {
+    font-size: 14px;
+    font-weight: 700;
+    color: #2d6a9f;
+    margin: 20px 0 8px;
+  }
+
+  .purpose-text {
+    background: #f0f5fb;
+    border-radius: 8px;
+    padding: 16px 20px;
+    line-height: 1.9;
+  }
+
+  .task-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .task-card { border: 1px solid #e0e8f0; border-radius: 10px; padding: 20px; position: relative; }
+  .task-card .task-num {
+    display: inline-block;
+    background: #2d6a9f;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+  }
+  .task-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 10px; color: #1a3a5c; }
+  .task-card ul { list-style: none; font-size: 13.5px; color: #444; }
+  .task-card ul li { padding: 3px 0 3px 14px; position: relative; }
+  .task-card ul li::before { content: '・'; position: absolute; left: 0; color: #2d6a9f; }
+  .task-card .tech {
+    display: inline-block;
+    background: #e8f0f8;
+    color: #1a3a5c;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-top: 8px;
+  }
+
+  .catchcopy {
+    background: linear-gradient(135deg, #1a3a5c, #2d6a9f);
+    color: white;
+    border-radius: 10px;
+    padding: 24px 28px;
+    text-align: center;
+  }
+  .catchcopy .main { font-size: 22px; font-weight: 700; margin-bottom: 8px; line-height: 1.5; }
+  .catchcopy .sub { font-size: 14px; opacity: 0.85; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 8px; }
+  th { background: #1a3a5c; color: white; padding: 10px 14px; text-align: left; font-weight: 600; }
+  td { padding: 10px 14px; border-bottom: 1px solid #eef0f3; }
+  tr:nth-child(even) td { background: #f8fafb; }
+  tr:hover td { background: #f0f5fb; }
+
+  .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .stat-card { background: #f0f5fb; border-radius: 10px; padding: 16px; text-align: center; }
+  .stat-card .num { font-size: 22px; font-weight: 700; color: #2d6a9f; }
+  .stat-card .label { font-size: 12px; color: #666; margin-top: 4px; }
+
+  .blog-category { margin-bottom: 20px; }
+  .blog-category-title {
+    font-size: 13px;
+    font-weight: 700;
+    background: #e8f0f8;
+    color: #1a3a5c;
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    display: inline-block;
+  }
+  .blog-list { list-style: none; margin-left: 8px; }
+  .blog-list li { padding: 5px 0 5px 20px; position: relative; font-size: 14px; border-bottom: 1px dashed #eee; }
+  .blog-list li::before { content: attr(data-num); position: absolute; left: 0; color: #2d6a9f; font-weight: 700; font-size: 12px; }
+
+  .target-box {
+    background: #fff8e1;
+    border-left: 4px solid #f5a623;
+    border-radius: 0 8px 8px 0;
+    padding: 16px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #5d4037;
+    margin-bottom: 16px;
+  }
+  .target-list { list-style: none; font-size: 14px; }
+  .target-list li { padding: 6px 0 6px 20px; position: relative; border-bottom: 1px solid #f0f0f0; }
+  .target-list li::before { content: '▶'; position: absolute; left: 0; color: #2d6a9f; font-size: 11px; top: 9px; }
+
+  .goal-steps { counter-reset: step; list-style: none; }
+  .goal-steps li {
+    counter-increment: step;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px;
+  }
+  .goal-steps li::before {
+    content: counter(step);
+    background: #2d6a9f;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .footer { text-align: center; padding: 24px; font-size: 13px; color: #999; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>ユースケへの依頼書</h1>
+  <div class="header-meta">
+    <span>📅 作成日：2026年4月3日</span>
+    <span>👤 依頼者：漢那（ビズシス）</span>
+  </div>
+</div>
+
+<div class="container">
+  <!-- 背景・目的 -->
+  <div class="section">
+    <div class="section-title">依頼の背景・目的</div>
+    <div class="purpose-text">
+      ビズシスの受注がほぼ<strong>ココナラ経由</strong>になっており、プラットフォーム依存を脱却したい。<br>
+      自前の集客導線（HP・ブログ・SNS）を構築し、自動で運用できる仕組みを作りたい。<br><br>
+      また、<strong>Claude Codeを活用した構築・運用の自動化を模索する</strong>という目的も兼ねている。<br>
+      ユースケにまず構築・運用を担当してもらい、その後漢那に引き継ぐ予定。
+    </div>
+  </div>
+
+  <!-- ビズシスについて -->
+  <div class="section">
+    <div class="section-title">ビズシスについて</div>
+    <table>
+      <tr><th>項目</th><th>内容</th></tr>
+      <tr><td>チーム構成</td><td>2名体制（漢那・畑野）</td></tr>
+      <tr><td>エンジニア歴</td><td>14年（フロントエンド・バックエンド両方）</td></tr>
+      <tr><td>ココナラ評価</td><td>★5.0満点（両アカウント）</td></tr>
+      <tr><td>主な実績</td><td>業務システム開発25社以上・ココナラ販売550件以上</td></tr>
+      <tr><td>対応範囲</td><td>要件整理 → 設計 → 実装 → 試験 → 構築 → 運営（ワンストップ）</td></tr>
+      <tr><td>連絡方法</td><td>メール・チャット等の文字ベースのみ（電話・Zoom不可）</td></tr>
+    </table>
+  </div>
+
+  <!-- ターゲット -->
+  <div class="section">
+    <div class="section-title">ターゲット</div>
+    <div class="target-box">「Excel管理が限界になった、現場を持つ中小企業の社長・責任者」</div>
+    <ul class="target-list">
+      <li>業種：物流・医療介護・EC・現場作業系など</li>
+      <li>規模：従業員20人前後</li>
+      <li>ITを投資として理解している人</li>
+      <li>保守費用の必要性を理解できる人</li>
+    </ul>
+  </div>
+
+  <!-- ゴール -->
+  <div class="section">
+    <div class="section-title">最終的なゴール（引き継ぎ）</div>
+    <ol class="goal-steps">
+      <li>ユースケがHP・ブログ・SNS自動投稿を構築する</li>
+      <li>Claude Codeを使った記事生成〜公開の運用フローを作る</li>
+      <li>少し運用してみる（記事を数本出す）</li>
+      <li>漢那に操作手順ごと引き継ぐ</li>
+    </ol>
+  </div>
+  <!-- 依頼したいこと -->
+  <div class="section">
+    <div class="section-title">依頼したいこと</div>
+    <div class="task-grid">
+      <div class="task-card">
+        <span class="task-num">① HP構築</span>
+        <h3>ビズシスのHP</h3>
+        <ul>
+          <li>実績・強みを見せるHP</li>
+          <li>問い合わせにつながる導線</li>
+          <li>ドメイン：biz-sys.jp（設定は漢那）</li>
+        </ul>
+        <span class="tech">GitHub Pages + Astro + Formspree</span>
+      </div>
+      <div class="task-card">
+        <span class="task-num">② ブログ構築</span>
+        <h3>SEOブログ</h3>
+        <ul>
+          <li>記事はmarkdownで管理</li>
+          <li>Claude Codeで下書き生成</li>
+          <li>push → 自動デプロイ</li>
+        </ul>
+        <span class="tech">Astro（HPと同じリポジトリ）</span>
+      </div>
+      <div class="task-card">
+        <span class="task-num">③ X自動投稿</span>
+        <h3>SNS自動化</h3>
+        <ul>
+          <li>アカウント：@bizsys_jp（新規作成）</li>
+          <li>記事公開 → 自動でX投稿</li>
+          <li>手動運用は不要</li>
+        </ul>
+        <span class="tech">GitHub Actions</span>
+      </div>
+      <div class="task-card">
+        <span class="task-num">④ 運用自動化</span>
+        <h3>仕組みづくり</h3>
+        <ul>
+          <li>記事生成フロー整備（週2〜3本）</li>
+          <li>自動ビルド＆デプロイ</li>
+          <li><strong>漢那が引き継げるようドキュメント化</strong></li>
+        </ul>
+        <span class="tech">Claude Code + GitHub Actions</span>
+      </div>
+      <div class="task-card">
+        <span class="task-num">⑤ 効果測定・分析</span>
+        <h3>仕組みづくり</h3>
+        <ul>
+          <li>Google Analytics 4 導入（アクセス・流入経路）</li>
+          <li>Google Search Console 導入（SEO・検索キーワード）</li>
+          <li>月1回レポートまとめの仕組み整備</li>
+          <li>データ活用で記事テーマ・更新頻度を改善</li>
+        </ul>
+        <span class="tech">GA4 + Search Console</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 作業の進め方 -->
+  <div class="section">
+    <div class="section-title">作業の進め方・優先順位</div>
+    <ol class="goal-steps">
+      <li>LP（トップページ）を1枚作る（実績・強み・問い合わせ導線）</li>
+      <li>ブログ環境を整える（Astro + GitHub Pages + 自動デプロイ）</li>
+      <li>ブログ記事を5〜10本書いて公開する（Claude Codeで下書き生成・週2〜3本ペース）</li>
+      <li>Xへの自動シェアを設定する（記事公開と連動）</li>
+      <li>GA4・Search Consoleを導入して効果測定の仕組みを作る</li>
+      <li>少し運用してみる → 漢那に操作手順ごと引き継ぐ</li>
+    </ol>
+  </div>
+
+  <!-- 担当分担 -->
+  <div class="section">
+    <div class="section-title">担当分担</div>
+    <table>
+      <tr><th>作業</th><th>担当</th><th>補足</th></tr>
+      <tr><td>HP・ブログの初期構築</td><td><strong>ユースケ</strong></td><td>Astro + GitHub Pages のセットアップ</td></tr>
+      <tr><td>Xアカウント作成</td><td><strong>ユースケ</strong></td><td>@bizsys_jp で新規作成</td></tr>
+      <tr><td>SNS自動投稿設定</td><td><strong>ユースケ</strong></td><td>GitHub Actions</td></tr>
+      <tr><td>GA4・Search Console設定</td><td><strong>ユースケ</strong></td><td>アカウント準備は漢那に確認</td></tr>
+      <tr><td>記事の下書き生成</td><td><strong>Claude Code</strong></td><td>markdownで自動生成</td></tr>
+      <tr><td>記事の確認・公開</td><td><strong>ユースケ → 後に漢那</strong></td><td>確認してpushするだけ</td></tr>
+      <tr><td>ドメイン（DNS）設定</td><td><strong>漢那</strong></td><td>biz-sys.jp のDNS設定</td></tr>
+      <tr><td>問い合わせ対応</td><td><strong>漢那</strong></td><td>Formspreeの受信メールに返信</td></tr>
+      <tr><td>引き継ぎ後の運用</td><td><strong>漢那</strong></td><td>ドキュメントをもとに操作</td></tr>
+    </table>
+  </div>
+
+  <!-- 納品物一覧 -->
+  <div class="section">
+    <div class="section-title">最終アウトプット（納品物）一覧</div>
+    <p style="margin-bottom:12px; font-size:14px; color:#555;">漢那への引き継ぎ完了時点で、以下がすべて揃っている状態がゴール。</p>
+    <table>
+      <tr><th>#</th><th>納品物</th><th>確認ポイント</th></tr>
+      <tr><td>1</td><td>公開済みHP（biz-sys.jp）</td><td>7ページ構成・スマホ対応・問い合わせフォームの動作確認済み</td></tr>
+      <tr><td>2</td><td>ブログ記事（5〜10本・公開済み）</td><td>記事テーマリストより。Claude Codeで下書き生成・ユースケが確認済み</td></tr>
+      <tr><td>3</td><td>Xアカウント（@bizsys_jp）+ 自動投稿設定</td><td>記事公開 → X自動投稿が動作すること</td></tr>
+      <tr><td>4</td><td>GA4・Search Console 設定済み</td><td>漢那のGoogleアカウントで閲覧できること</td></tr>
+      <tr><td>5</td><td>月次レポートの手順 or テンプレート</td><td>漢那が自分でアクセス状況を確認できる形</td></tr>
+      <tr><td>6</td><td>操作手順書（引き継ぎドキュメント）</td><td>漢那が一人で記事追加・確認・公開できる内容</td></tr>
+    </table>
+  </div>
+  <!-- 技術構成 -->
+  <div class="section">
+    <div class="section-title">技術構成（決定済み）</div>
+    <table>
+      <tr><th>項目</th><th>ツール・技術</th><th>用途・補足</th></tr>
+      <tr><td>HP・ブログ基盤</td><td>GitHub Pages + Astro</td><td>無料・HTTPS自動対応・独自ドメイン設定可</td></tr>
+      <tr><td>記事管理</td><td>markdownファイル</td><td>Claude Codeで下書き生成 → pushで自動デプロイ</td></tr>
+      <tr><td>問い合わせフォーム</td><td>Formspree</td><td>無料プランで対応。受信先は漢那のメール</td></tr>
+      <tr><td>自動デプロイ</td><td>GitHub Actions</td><td>pushをトリガーに自動ビルド＆公開</td></tr>
+      <tr><td>SNS自動投稿</td><td>GitHub Actions</td><td>記事公開と連動してXへ自動投稿</td></tr>
+      <tr><td>効果測定</td><td>Google Analytics 4 + Search Console</td><td>アクセス解析・SEO計測</td></tr>
+      <tr><td>ドメイン</td><td>biz-sys.jp（既存）</td><td>DNS設定は漢那が対応</td></tr>
+      <tr><td>費用</td><td colspan="2"><strong>ほぼ無料</strong>（ドメイン費用のみ・既存）</td></tr>
+    </table>
+  </div>
+
+  <!-- アカウント一覧 -->
+  <div class="section">
+    <div class="section-title">作成が必要なアカウント・サービス一覧</div>
+    <p style="margin-bottom:12px; font-size:14px; color:#555;">ユースケが新規作成・設定するサービスの一覧。GA4・Search Consoleは漢那のGoogleアカウントに紐づける形で設定する。</p>
+    <table>
+      <tr><th>サービス</th><th>用途</th><th>アカウント名・備考</th></tr>
+      <tr><td>GitHub</td><td>ソースコード管理・GitHub Pagesでのホスティング</td><td>リポジトリ名はユースケが決めてOK</td></tr>
+      <tr><td>X（旧Twitter）</td><td>ブログ記事の自動投稿</td><td><strong>@bizsys_jp</strong>（新規作成）</td></tr>
+      <tr><td>Formspree</td><td>問い合わせフォームの受信</td><td>漢那のメールアドレスでアカウント作成（問い合わせ受信・管理は漢那が行うため）</td></tr>
+      <tr><td>Google Analytics 4</td><td>アクセス解析（アクセス数・流入経路）</td><td>漢那のGoogleアカウントに紐づける</td></tr>
+      <tr><td>Google Search Console</td><td>SEO計測（検索キーワード・表示回数）</td><td>漢那のGoogleアカウントに紐づける</td></tr>
+    </table>
+  </div>
+
+  <!-- SNS方針 -->
+  <div class="section">
+    <div class="section-title">SNS方針（なぜXだけか）</div>
+    <p style="margin-bottom:12px;">今の段階でSNS運用に力を入れすぎない。まずはブログSEOを優先する。</p>
+    <table>
+      <tr><th>SNS</th><th>採用</th><th>理由</th></tr>
+      <tr><td>X（旧Twitter）</td><td>◎ 採用（自動シェアのみ）</td><td>ブログ記事の自動投稿で導線を作る。手動運用不要</td></tr>
+      <tr><td>Facebook</td><td>✕ 見送り</td><td>有機リーチが激減・エンゲージメント管理が必要で継続困難</td></tr>
+      <tr><td>note</td><td>✕ 見送り</td><td>ターゲットの中小企業社長層に届きにくい・重複コンテンツリスク</td></tr>
+      <tr><td>スレッズ</td><td>✕ 見送り</td><td>ユーザー層がターゲットとずれている・まだ早い</td></tr>
+      <tr><td>Zenn / Qiita</td><td>✕ 見送り</td><td>技術者向け。顧客獲得には直結しにくい</td></tr>
+    </table>
+  </div>
+  <!-- HPの内容 -->
+  <div class="section">
+    <div class="section-title">HPの内容・構成</div>
+
+    <div class="section-subtitle">キャッチコピー</div>
+    <div class="catchcopy">
+      <div class="main">「そのExcel管理、そろそろ限界じゃないですか？」</div>
+      <div class="sub">『Excelでいいか』が、じつは一番コストがかかっています。</div>
+    </div>
+
+    <div class="section-subtitle" style="margin-top:24px;">HP構成（7ページ）</div>
+    <table>
+      <tr><th>ページ</th><th>内容</th></tr>
+      <tr><td>① トップ</td><td>キャッチコピー ＋ 実績数字 ＋ 問い合わせCTA</td></tr>
+      <tr><td>② ビズシスとは</td><td>チーム紹介・経歴・強み・ワンストップ対応</td></tr>
+      <tr><td>③ サービス内容</td><td>業務システム開発・ツール開発・保守サポート</td></tr>
+      <tr><td>④ 開発事例</td><td>業種別のシステム事例カード（8種類）</td></tr>
+      <tr><td>⑤ ツール提供実績</td><td>楽天・Yahoo出品ツール 89社導入など</td></tr>
+      <tr><td>⑥ よくある質問</td><td>保守費用・開発期間・相談内容など</td></tr>
+      <tr><td>⑦ お問い合わせ</td><td>Formspreeフォーム</td></tr>
+    </table>
+
+    <div class="section-subtitle" style="margin-top:24px;">チーム紹介文</div>
+    <div class="purpose-text">
+      システム開発・保守を専門とする少数精鋭のチームです。<br>
+      エンジニア歴14年、ココナラ★5.0・550件以上の実績を持つメンバーが、要件整理から保守まで一貫して対応します。<br>
+      少数精鋭だからこそ、無駄な管理工数がなく、その分をお客様への開発費用に還元できます。
+    </div>
+
+    <div class="section-subtitle" style="margin-top:24px;">料金表示</div>
+    <table>
+      <tr><th>サービス</th><th>料金</th></tr>
+      <tr><td>業務システム開発</td><td><strong>30万円〜</strong></td></tr>
+      <tr><td>保守・運用サポート</td><td><strong>月1万円〜</strong></td></tr>
+    </table>
+    <p style="font-size:13px;color:#888;margin-top:8px;">※規模・機能によって異なります。まずはご相談ください。</p>
+
+    <div class="section-subtitle" style="margin-top:24px;">数字実績</div>
+    <div class="stats-grid">
+      <div class="stat-card"><div class="num">14年</div><div class="label">エンジニア歴</div></div>
+      <div class="stat-card"><div class="num">★5.0</div><div class="label">ココナラ評価</div></div>
+      <div class="stat-card"><div class="num">550件以上</div><div class="label">ココナラ販売実績</div></div>
+      <div class="stat-card"><div class="num">25社以上</div><div class="label">業務システム開発実績</div></div>
+      <div class="stat-card"><div class="num">89社以上</div><div class="label">楽天・Yahoo出品ツール導入</div></div>
+      <div class="stat-card"><div class="num">10社以上</div><div class="label">保守継続中クライアント</div></div>
+    </div>
+
+    <div class="section-subtitle" style="margin-top:24px;">開発事例（業種名のみ・匿名）</div>
+    <table>
+      <tr><th>業種</th><th>システム名</th><th>ポイント</th></tr>
+      <tr><td>引越業者</td><td>引越案件管理システム</td><td>Excel管理から脱却。案件・顧客・対応状況を一元管理</td></tr>
+      <tr><td>訪問看護</td><td>訪問看護管理システム</td><td>記録・勤務・お知らせ機能を含む業務管理システム</td></tr>
+      <tr><td>EC・BUYMA</td><td>商品情報分析・バイヤー分析システム</td><td>AIを活用した分析機能も実装</td></tr>
+      <tr><td>製造業</td><td>生産管理システム</td><td>見積・工程・納品書・請求書まで対応</td></tr>
+      <tr><td>福祉施設</td><td>在庫管理システム</td><td>現場での在庫状況をリアルタイム管理</td></tr>
+      <tr><td>レンタカー</td><td>発注管理システム</td><td>発注・在庫・進捗の一元管理</td></tr>
+      <tr><td>入場管理</td><td>QRコード入場管理システム</td><td>複数店舗対応</td></tr>
+      <tr><td>物流</td><td>発注管理システム</td><td>大手企業向けの受発注管理</td></tr>
+    </table>
+
+    <div class="section-subtitle" style="margin-top:24px;">よくある質問（HP掲載用）</div>
+    <table>
+      <tr><th>質問</th><th>回答</th></tr>
+      <tr><td>保守費用は必要ですか？</td><td>システムを長期間安定して使い続けるために必要です。バグ修正・機能改善・サーバ対応などを月次でサポートします。月1万円〜。</td></tr>
+      <tr><td>どんな相談でも受けてもらえますか？</td><td>業務システム開発・既存システムの改修・保守が中心です。まずはお気軽にご相談ください。</td></tr>
+      <tr><td>開発期間はどのくらいですか？</td><td>規模によって異なりますが、小〜中規模で2〜4ヶ月が目安です。まずはご相談ください。</td></tr>
+      <tr><td>Excelからシステムに移行したいのですが相談できますか？</td><td>はい、むしろ最も得意とする領域です。現在の業務フローを整理した上でシステム化の提案をします。</td></tr>
+    </table>
+  </div>
+
+  <!-- ブログ記事テーマ -->
+  <div class="section">
+    <div class="section-title">ブログ記事テーマリスト（第1フェーズ）</div>
+    <div class="purpose-text" style="margin-bottom:20px;">
+      Claude Codeが下書きを生成し、ユースケが確認・修正してpushする運用。<br>
+      漢那引き継ぎ後に実案件・料金系の記事（第2フェーズ）を追加予定。
+    </div>
+    <div class="blog-category">
+      <span class="blog-category-title">📊 Excel・業務課題系</span>
+      <ol class="blog-list">
+        <li data-num="1">Excel在庫管理の限界サイン5つ</li>
+        <li data-num="2">Excel管理から脱却できない会社に共通する3つの理由</li>
+        <li data-num="3">業務の「属人化」がなぜ危険なのか？中小企業が陥りがちな罠</li>
+        <li data-num="4">紙・Excel管理のままだと採用にも影響する話</li>
+      </ol>
+    </div>
+    <div class="blog-category">
+      <span class="blog-category-title">💼 システム発注・導入検討系</span>
+      <ol class="blog-list">
+        <li data-num="5">システム発注で失敗しないための5つのチェックポイント</li>
+        <li data-num="6">良いシステム会社の選び方</li>
+        <li data-num="7">「オーダーメイドシステム」と「既製品パッケージ」どちらを選ぶべきか</li>
+        <li data-num="8">システム開発の見積もりに含まれているものとは？</li>
+      </ol>
+    </div>
+    <div class="blog-category">
+      <span class="blog-category-title">🔧 導入後・保守系</span>
+      <ol class="blog-list">
+        <li data-num="9">中小企業がシステム化で得られる3つのメリット</li>
+        <li data-num="10">システムを「作って終わり」にしてはいけない理由</li>
+        <li data-num="11">保守契約って何のため？更新し続けるメリットを解説</li>
+      </ol>
+    </div>
+    <div class="blog-category">
+      <span class="blog-category-title">🤖 DX・自動化系</span>
+      <ol class="blog-list">
+        <li data-num="12">中小企業のDXって何から始めればいい？</li>
+        <li data-num="13">繰り返し作業を自動化するだけで変わること</li>
+      </ol>
+    </div>
+  </div>
+  <!-- Astro -->
+  <div class="section">
+    <div class="section-title">Astroのテンプレートについて</div>
+    <p>デザインテンプレートはユースケに選んでもらってOK。<br>
+    シンプル・クリーン・信頼感のあるものが望ましい。</p>
+  </div>
+
+  <!-- Claude Code -->
+  <div class="section">
+    <div class="section-title">Claude Codeの使い方</div>
+    <p>別途、漢那からClaude Codeのアカウント・使い方を共有する。<br>
+    記事生成・ファイル操作の手順を整備する予定。</p>
+  </div>
+
+  <!-- 問い合わせ対応方針 -->
+  <div class="section">
+    <div class="section-title">問い合わせ後の対応方針</div>
+    <div class="purpose-text" style="margin-bottom:16px;">
+      <strong>基本方針：メール・チャット等の文字ベースのみでやりとりする。電話・Zoom等は行わない。</strong><br>
+      理由：言った言わないのトラブル防止・後から見返せる・開発工数とストレスの削減。
+    </div>
+    <div class="section-subtitle">【一次回答】受信後すぐ</div>
+    <div class="purpose-text" style="font-family: monospace; font-size:13px; margin-bottom:16px;">
+      〇〇様<br><br>
+      お問い合わせいただきありがとうございます。<br>
+      内容確認してご連絡しますので、しばらくお待ちください。<br><br>
+      ビズシス
+    </div>
+    <div class="section-subtitle">【本回答】内容確認後・1日以内</div>
+    <div class="purpose-text" style="font-family: monospace; font-size:13px;">
+      〇〇様<br><br>
+      お問い合わせいただきありがとうございます。<br>
+      内容を拝見しました。ぜひ詳しくお聞かせください。<br><br>
+      まずは以下についてメールにてお教えいただけますでしょうか。<br>
+      ・どのような業務でお困りですか？<br>
+      ・現在の管理方法（Excelなど）について<br>
+      ・ご希望のスケジュール感<br><br>
+      内容を確認の上、改めてご提案させていただきます。<br>
+      ビズシス　漢那
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">ビズシス | 作成日：2026年4月3日</div>
+
+</body>
+</html>

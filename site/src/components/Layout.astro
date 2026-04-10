@@ -1,0 +1,276 @@
+---
+const { title = 'ビズシスサイト' } = Astro.props;
+---
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-04S9SZW07N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-04S9SZW07N');
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style is:global>
+      /* ---- リセット・ベース ---- */
+      *, *::before, *::after { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: 'Noto Sans JP', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        color: #222;
+        background: #f7f8fb;
+      }
+      .page {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0 32px 32px;
+      }
+
+      /* ---- ヘッダー ---- */
+      .site-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+        border-bottom: 1px solid #e6e8ec;
+      }
+      .site-logo {
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        color: #0a4f9f;
+        text-decoration: none;
+      }
+      .site-nav a {
+        margin-left: 24px;
+        color: #333;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+      }
+      .site-nav a:hover { color: #0a4f9f; }
+
+      /* ---- フッター ---- */
+      .site-footer {
+        padding: 32px 0 16px;
+        border-top: 1px solid #e6e8ec;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.9rem;
+        color: #666;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 64px;
+      }
+      .site-footer a {
+        color: #0a4f9f;
+        text-decoration: none;
+        margin-left: 16px;
+        font-size: 0.9rem;
+      }
+      .site-footer a:hover { text-decoration: underline; }
+
+      /* ---- セクション共通 ---- */
+      .section { margin: 0; padding: 64px 0; }
+      .section-inner { max-width: 1080px; margin: 0 auto; padding: 0 32px; }
+
+      .section-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin: 0 0 32px;
+        color: #111;
+        position: relative;
+        padding-left: 20px;
+      }
+      .section-title::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.1em;
+        bottom: 0.1em;
+        width: 5px;
+        border-radius: 3px;
+        background: linear-gradient(180deg, #1a6fd4, #0a4f9f);
+      }
+
+      /* ---- ページヘッダー（サブページ共通） ---- */
+      .page-header { background: #f5f8ff; }
+      .page-header h1 {
+        font-size: 2rem;
+        font-weight: 900;
+        color: #111;
+        margin: 0 0 12px;
+      }
+      .page-header .page-lead {
+        font-size: 1rem;
+        color: #555;
+        margin: 0;
+        line-height: 1.75;
+      }
+
+      /* ---- 背景ユーティリティ ---- */
+      .bg-white { background: #ffffff; }
+      .bg-light { background: #f5f8ff; }
+      .bg-tint { background: #f7f8fb; }
+
+      /* ---- CTAボタン ---- */
+      .btn-primary {
+        display: inline-block;
+        padding: 14px 28px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, #0a4f9f, #1a6fd4);
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 1rem;
+        box-shadow: 0 8px 20px rgba(10, 79, 159, 0.35);
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+      }
+      .btn-primary:hover {
+        background: linear-gradient(135deg, #083d7a, #0a4f9f);
+        transform: translateY(-2px);
+        box-shadow: 0 12px 28px rgba(10, 79, 159, 0.45);
+      }
+      .btn-secondary {
+        display: inline-block;
+        padding: 14px 28px;
+        border-radius: 999px;
+        background: #fff;
+        color: #0a4f9f;
+        border: 1px solid #0a4f9f;
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: background 0.15s ease, transform 0.15s ease;
+      }
+      .btn-secondary:hover {
+        background: #f0f4fa;
+        transform: translateY(-2px);
+      }
+      .cta-group { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 24px; }
+
+      /* ---- カード（共通） ---- */
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+      .card {
+        background: #fff;
+        border-radius: 20px;
+        padding: 28px;
+        box-shadow: 0 14px 36px rgba(18, 38, 63, 0.08);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        cursor: default;
+      }
+      .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 24px 48px rgba(10, 79, 159, 0.15);
+      }
+      .card-icon { display: block; margin-bottom: 16px; }
+      .card h3 { margin: 0 0 12px; font-size: 1.1rem; font-weight: 700; color: #0a4f9f; }
+      .card p { margin: 0; line-height: 1.75; font-size: 0.95rem; color: #444; }
+
+      /* ---- フォーム（contact） ---- */
+      .form-group { margin-bottom: 24px; }
+      .form-group label {
+        display: block;
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 8px;
+      }
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 12px 16px;
+        border: 1.5px solid #cdd6e8;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-family: inherit;
+        color: #111;
+        background: #fff;
+        transition: border-color 0.15s ease;
+        box-sizing: border-box;
+      }
+      .form-group input:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: #0a4f9f;
+      }
+      .form-group textarea { resize: vertical; min-height: 120px; }
+      .form-submit { margin-top: 8px; }
+
+      /* ---- ブログ ---- */
+      .blog-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 24px; }
+      .blog-item {
+        background: #fff;
+        border-radius: 16px;
+        padding: 28px;
+        box-shadow: 0 10px 28px rgba(18, 38, 63, 0.07);
+      }
+      .blog-item a { color: #0a4f9f; text-decoration: none; font-size: 1.1rem; font-weight: 700; }
+      .blog-item a:hover { text-decoration: underline; }
+      .blog-item small { color: #888; font-size: 0.85rem; }
+      .blog-item p { margin: 8px 0 0; color: #555; font-size: 0.95rem; line-height: 1.7; }
+      .blog-article { background: #fff; border-radius: 20px; padding: 40px; box-shadow: 0 14px 36px rgba(18,38,63,0.08); }
+      .blog-article h1 { font-size: 1.8rem; font-weight: 900; color: #111; margin: 0 0 16px; }
+      .blog-article .blog-meta { color: #888; font-size: 0.88rem; margin: 0 0 24px; }
+      .blog-article .blog-tags { color: #0a4f9f; font-size: 0.88rem; margin: 0 0 32px; }
+      .blog-article .prose { line-height: 1.9; color: #333; }
+      .blog-article .prose h2 { font-size: 1.3rem; font-weight: 700; margin: 2em 0 0.8em; color: #111; }
+      .blog-article .prose h3 { font-size: 1.1rem; font-weight: 700; margin: 1.6em 0 0.6em; color: #0a4f9f; }
+      .blog-article .prose p { margin: 0 0 1.2em; }
+      .blog-article .prose ul, .blog-article .prose ol { padding-left: 1.5em; margin: 0 0 1.2em; line-height: 2; }
+
+      /* ---- レスポンシブ ---- */
+      @media (max-width: 900px) {
+        .site-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+        .site-nav a { margin: 0 12px 0 0; }
+        .site-footer { flex-direction: column; align-items: flex-start; }
+        .site-footer a { margin: 0 12px 0 0; }
+        .card-grid { grid-template-columns: 1fr; }
+        .section-title { font-size: 1.4rem; }
+        .page-header h1 { font-size: 1.5rem; }
+      }
+      @media (max-width: 480px) {
+        .page { padding: 0 16px 24px; }
+        .section-inner { padding: 0 16px; }
+        .cta-group { flex-direction: column; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <a class="site-logo" href="/">ビズシス</a>
+        <nav class="site-nav">
+          <a href="/services">サービス</a>
+          <a href="/cases">事例</a>
+          <a href="/blog">ブログ</a>
+          <a href="/faq">FAQ</a>
+          <a href="/contact">お問い合わせ</a>
+        </nav>
+      </header>
+      <main>
+        <slot />
+      </main>
+      <footer class="site-footer">
+        <div>© 2026 ビズシス</div>
+        <div>
+          <a href="/about">ビズシスとは</a>
+          <a href="/tools">ツール実績</a>
+          <a href="/blog">ブログ</a>
+          <a href="/contact">お問い合わせ</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

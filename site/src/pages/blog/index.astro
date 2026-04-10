@@ -1,0 +1,49 @@
+---
+import Layout from '../../components/Layout.astro';
+
+const blogModules = import.meta.glob('../../content/blog/*.md', { eager: true });
+const posts = Object.entries(blogModules)
+  .filter(([path]) => !path.endsWith('article-template.md'))
+  .map(([path, post]) => {
+    const slug = path.split('/').pop().replace(/\.md$/, '');
+    return {
+      slug,
+      ...(post.frontmatter || {}),
+    };
+  })
+  .sort((a, b) => new Date(b.date) - new Date(a.date));
+---
+
+<Layout title="ブログ | ビズシス">
+
+  <!-- ページヘッダー -->
+  <section class="section page-header">
+    <div class="section-inner">
+      <h1>Excel管理の限界と業務改善のヒント</h1>
+      <p class="page-lead">中小企業の現場担当者・社長向けに、業務改善やシステム化のヒントを発信しています。</p>
+    </div>
+  </section>
+
+  <!-- 記事一覧 -->
+  <section class="section bg-white">
+    <div class="section-inner">
+      {posts.length === 0 ? (
+        <p style="color: #888;">現在、公開記事はありません。</p>
+      ) : (
+        <ul class="blog-list">
+          {posts.map((post) => (
+            <li class="blog-item">
+              <a href={`/blog/${post.slug}`}>{post.title}</a>
+              <small>{new Date(post.date).toLocaleDateString('ja-JP')}</small>
+              {post.description && <p>{post.description}</p>}
+            </li>
+          ))}
+        </ul>
+      )}
+      <div class="cta-group">
+        <a class="btn-primary" href="/contact">お問い合わせはこちら</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

@@ -1,0 +1,54 @@
+---
+import Layout from '../../components/Layout.astro';
+const { slug } = Astro.params;
+
+export async function getStaticPaths() {
+  const blogModules = import.meta.glob('../../content/blog/*.md', { eager: true });
+  return Object.keys(blogModules)
+    .filter((path) => !path.endsWith('article-template.md'))
+    .map((path) => ({ params: { slug: path.split('/').pop().replace(/\.md$/, '') } }));
+}
+
+const blogModules = import.meta.glob('../../content/blog/*.md', { eager: true });
+const postEntry = Object.entries(blogModules).find(([path]) => path.endsWith(`${slug}.md`));
+
+if (!postEntry) {
+  throw new Error(`記事が見つかりません: ${slug}`);
+}
+
+const post = postEntry[1];
+const { title, date, description, tags } = post.frontmatter || {};
+const Content = post.default;
+---
+
+<Layout title={`${title || 'ブログ記事'} | ビズシス`}>
+
+  <!-- ページヘッダー -->
+  <section class="section page-header">
+    <div class="section-inner">
+      <p style="font-size: 0.88rem; color: #888; margin: 0 0 8px;">
+        <a href="/blog" style="color: #0a4f9f; text-decoration: none;">ブログ</a> &rsaquo; 記事
+      </p>
+      <h1 style="font-size: 1.6rem; font-weight: 900; color: #111; margin: 0 0 8px;">{title}</h1>
+      <p class="page-lead">{description}</p>
+    </div>
+  </section>
+
+  <!-- 記事本文 -->
+  <section class="section bg-white">
+    <div class="section-inner">
+      <div class="blog-article">
+        <p class="blog-meta">{new Date(date).toLocaleDateString('ja-JP')}</p>
+        {tags && <p class="blog-tags">タグ：{tags.join(' / ')}</p>}
+        <div class="prose">
+          <Content />
+        </div>
+      </div>
+      <div class="cta-group" style="margin-top: 40px;">
+        <a class="btn-primary" href="/contact">この記事について相談する</a>
+        <a class="btn-secondary" href="/blog">記事一覧へ戻る</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

@@ -1,0 +1,99 @@
+---
+import Layout from '../components/Layout.astro';
+---
+
+<Layout title="ビズシスとは | ビズシス">
+
+  <style>
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .stat {
+      background: #fff;
+      padding: 28px 20px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(10, 79, 159, 0.08);
+      text-align: center;
+    }
+    .stat strong {
+      display: block;
+      font-size: 2.2rem;
+      color: #0a4f9f;
+      font-weight: 900;
+      margin-bottom: 6px;
+    }
+    .stat span { font-size: 0.85rem; color: #666; }
+    .team-body { line-height: 1.85; color: #444; margin: 0 0 28px; }
+    .team-list { padding-left: 20px; line-height: 2.2; color: #444; margin: 0; }
+    @media (max-width: 900px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 480px) { .stats { grid-template-columns: 1fr; } }
+  </style>
+
+  <!-- ページヘッダー -->
+  <section class="section page-header">
+    <div class="section-inner">
+      <h1>ビズシスは、現場の困りごとをシステムで解決する少数精鋭チームです</h1>
+      <p class="page-lead">エンジニア歴14年・ここナラ評価★5.0・販売実績550件以上の実績で、現場に寄り添った開発を行います。</p>
+    </div>
+  </section>
+
+  <!-- チーム紹介 -->
+  <section class="section bg-white">
+    <div class="section-inner">
+      <h2 class="section-title">少人数だからこそ、無駄な管理コストを削減</h2>
+      <p class="team-body">
+        ビズシスは、システム開発・保守を専門とする少数精鋭のチームです。<br />
+        エンジニア歴14年・ここナラ評価★5.0・販売実績550件以上の実績を持ち、<br />
+        要件整理〜設計〜実装〜保守まで一貫して対応します。
+      </p>
+      <ul class="team-list">
+        <li>Excel管理の限界を理解した現場寄りの設計</li>
+        <li>追加費用を抑えるシンプル設計</li>
+        <li>相談しやすい少数精鋭体制</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 実績数字 -->
+  <section class="section bg-light">
+    <div class="section-inner">
+      <h2 class="section-title">14年の開発経験と550件以上の実績</h2>
+      <div class="stats">
+        <div class="stat"><strong>14年</strong><span>エンジニア歴</span></div>
+        <div class="stat"><strong>★5.0</strong><span>ここナラ評価</span></div>
+        <div class="stat"><strong>550件以上</strong><span>販売実績</span></div>
+        <div class="stat"><strong>25社以上</strong><span>業務システム導入</span></div>
+        <div class="stat"><strong>89社以上</strong><span>楽天・Yahoo出品ツール</span></div>
+        <div class="stat"><strong>10社以上</strong><span>保守継続中</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 強み -->
+  <section class="section bg-white">
+    <div class="section-inner">
+      <h2 class="section-title">相談から保守まで一貫対応</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>現場寄りの設計</h3>
+          <p>Excel管理の限界を理解した上で、現場担当者が迷わず使えるシステムを設計します。</p>
+        </div>
+        <div class="card">
+          <h3>シンプル・低コスト</h3>
+          <p>追加費用を抑えるシンプルな設計で、コストパフォーマンスの高い業務システムを提供します。</p>
+        </div>
+        <div class="card">
+          <h3>相談しやすい体制</h3>
+          <p>少数精鋭だからこそ、担当者と直接やり取りできます。文字ベースの相談で気軽にスタートできます。</p>
+        </div>
+      </div>
+      <div class="cta-group">
+        <a class="btn-primary" href="/contact">相談内容を送る</a>
+        <a class="btn-secondary" href="/services">サービスを見る</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

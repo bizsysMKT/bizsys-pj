@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Template 2 | ビズシス</title>
+  <style>
+    :root { color-scheme: light; }
+    body { margin:0; font-family: 'Inter', sans-serif; background:#fff; color:#111; }
+    .wrapper { max-width:1040px; margin:0 auto; padding:32px; }
+    .topbar { display:flex; justify-content:space-between; align-items:center; padding-bottom:24px; }
+    .topbar .brand { font-size:1.1rem; font-weight:800; letter-spacing:.14em; }
+    .topbar nav a { margin-left:24px; color:#444; text-decoration:none; font-size:.95rem; }
+    .hero { border-radius:32px; overflow:hidden; display:grid; grid-template-columns:1fr 1fr; background:#f2f7ff; }
+    .hero .copy { padding:48px; }
+    .hero h1 { font-size:3.4rem; line-height:1.02; margin:0 0 24px; }
+    .hero p { font-size:1.05rem; line-height:1.8; margin:0 0 32px; color:#4d5766; }
+    .hero .cta a { text-decoration:none; display:inline-block; margin-right:16px; background:#0f4bb5; color:#fff; padding:16px 28px; border-radius:999px; font-weight:700; }
+    .hero .features { display:grid; gap:16px; padding:48px; }
+    .feature { background:#fff; border-radius:24px; padding:24px; box-shadow:0 20px 40px rgba(15,75,181,.08); }
+    .feature h3 { margin:0 0 12px; font-size:1.1rem; }
+    .feature p { margin:0; line-height:1.75; color:#4d5766; }
+    .section { padding:64px 0; border-bottom:1px solid #eef2f7; }
+    .section:last-child { border-bottom:none; }
+    .section h2 { font-size:2rem; margin:0 0 20px; }
+    .grid-three { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+    .card { background:#fff; border-radius:24px; padding:28px; box-shadow:0 16px 34px rgba(17,24,39,.06); }
+    .card h3 { margin-top:0; }
+    .meta { display:flex; gap:24px; flex-wrap:wrap; margin-top:16px; }
+    .meta div { background:#eef4ff; border-radius:14px; padding:12px 18px; font-size:.95rem; }
+    .contact-panel { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:40px 32px; background:#0f4bb5; color:#fff; border-radius:28px; }
+    .contact-panel h3 { margin:0 0 12px; font-size:1.6rem; }
+    .contact-panel p { margin:0; color:rgba(255,255,255,.88); }
+    .contact-panel a { background:#fff; color:#0f4bb5; padding:14px 24px; border-radius:999px; font-weight:700; text-decoration:none; }
+    @media(max-width:900px){ .hero, .grid-three { grid-template-columns:1fr; } .topbar { flex-direction:column; align-items:flex-start; } .hero .copy, .hero .features, .contact-panel { padding:24px; } }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="topbar">
+      <div class="brand">BIZSYS</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#cases">Cases</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="copy">
+        <span style="display:inline-block; margin-bottom:16px; color:#0f4bb5; font-weight:700;">Excel管理の限界を、今すぐ解決</span>
+        <h1>現場のExcel運用を、使いやすい業務システムに変える</h1>
+        <p>ビズシスは中小企業の現場に寄り添うシステム開発チームです。入力ミス・担当者依存・工数の無駄を、シンプルな仕組みでなくします。</p>
+        <div class="cta">
+          <a href="#contact">無料相談を申し込む</a>
+          <a href="#services" style="background:#fff;color:#0f4bb5;border:1px solid #0f4bb5;">サービスを見る</a>
+        </div>
+      </div>
+      <div class="features">
+        <div class="feature"><h3>導入まで最短</h3><p>要件整理から保守まで、ワンストップで対応します。</p></div>
+        <div class="feature"><h3>運用しやすさ重視</h3><p>シンプルなUIとMarkdown管理で、更新も簡単に。</p></div>
+        <div class="feature"><h3>実績を可視化</h3><p>ココナラ550件以上の実績と、89社導入のツール経験。</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <h2>ビズシスについて</h2>
+      <p>14年の開発経験を持つ少数精鋭チームが、業務システムの企画・設計・実装・運用までを一貫して支援します。Excel管理から脱却し、現場の作業負担を減らします。</p>
+      <div class="meta">
+        <div>エンジニア歴 14年</div>
+        <div>550件以上の開発実績</div>
+        <div>89社以上のツール導入</div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <h2>提供サービス</h2>
+      <div class="grid-three">
+        <div class="card"><h3>業務システム開発</h3><p>Excel・スプレッドシート管理を捨て、運用しやすいシステムに移行します。</p></div>
+        <div class="card"><h3>ツール開発</h3><p>楽天・Yahoo出品ツールなど、現場業務を自動化できるツールを提供します。</p></div>
+        <div class="card"><h3>保守・運用</h3><p>月1万円〜の保守プランで、安定した運用と改善を支援します。</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="cases">
+      <h2>導入事例</h2>
+      <div class="grid-three">
+        <div class="card"><h3>引越業者</h3><p>案件管理システムを導入し、Excel運用の手間を削減。</p></div>
+        <div class="card"><h3>訪問看護</h3><p>訪問記録と勤務管理を一本化し、情報共有を改善。</p></div>
+        <div class="card"><h3>物流</h3><p>受発注管理を自動化し、在庫・納期の見える化を実現。</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <h2>よくある質問</h2>
+      <div class="grid-three">
+        <div class="card"><h3>相談するだけでOK？</h3><p>はい。まずは現状を共有いただくところから始めます。</p></div>
+        <div class="card"><h3>初期費用はどれくらい？</h3><p>業務システム開発は30万円〜。規模に応じて柔軟に対応します。</p></div>
+        <div class="card"><h3>保守は必要？</h3><p>継続的な改善と安定運用のために、保守プランを用意しています。</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="contact-panel">
+        <div>
+          <h3>まずは文字ベースで相談ください</h3>
+          <p>Formspreeで受信し、1日以内に返信します。電話は不要です。</p>
+        </div>
+        <a href="/contact">お問い合わせ</a>
+      </div>
+    </section>
+
+    <footer style="padding:24px 0; text-align:center; color:#777; font-size:.95rem;">© 2026 BizSys</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+---
+import Layout from '../../../components/Layout.astro';
+
+export async function getStaticPaths() {
+  const blogModules = import.meta.glob('../../../content/blog/*.md', { eager: true });
+  const validPosts = Object.entries(blogModules)
+    .filter(([path]) => !path.endsWith('article-template.md'))
+    .map(([path, post]) => ({
+      slug: path.split('/').pop().replace(/\.md$/, ''),
+      ...post.frontmatter,
+    }));
+
+  const allTags = [...new Set(
+    validPosts.flatMap(p => p.tags ?? [])
+  )];
+
+  return allTags.map(tag => ({
+    params: { tag },
+    props: {
+      posts: validPosts
+        .filter(p => (p.tags ?? []).includes(tag))
+        .sort((a, b) => new Date(b.date) - new Date(a.date))
+    }
+  }));
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+---
+
+<Layout title={`タグ：${tag} の記事一覧 | ビズシス`}>
+
+  <!-- ページヘッダー -->
+  <section class="section page-header">
+    <div class="section-inner">
+      <p style="font-size: 0.88rem; color: #888; margin: 0 0 8px;">
+        <a href="/blog" style="color: #0a4f9f; text-decoration: none;">ブログ</a> &rsaquo; タグ
+      </p>
+      <h1 class="tag-page-title">タグ：<span class="tag-highlight">{tag}</span> の記事一覧</h1>
+    </div>
+  </section>
+
+  <!-- 記事一覧 -->
+  <section class="section bg-white">
+    <div class="section-inner">
+      {posts.length === 0 ? (
+        <div class="no-posts">
+          <p>該当する記事はありません。</p>
+          <a href="/blog" class="btn-back">← すべての記事を見る</a>
+        </div>
+      ) : (
+        <>
+          <ul class="blog-list">
+            {posts.map((post) => (
+              <li class="blog-item">
+                <a href={`/blog/${post.slug}`}>{post.title}</a>
+                <small>{new Date(post.date).toLocaleDateString('ja-JP')}</small>
+                {post.description && <p>{post.description}</p>}
+                {post.tags && post.tags.length > 0 && (
+                  <p class="blog-tags">
+                    {post.tags.map((t, i) => (
+                      <>
+                        {i > 0 && ' '}
+                        <a href={`/blog/tag/${t}`} class="blog-tag-link">{t}</a>
+                      </>
+                    ))}
+                  </p>
+                )}
+              </li>
+            ))}
+          </ul>
+          <div style="margin-top: 40px;">
+            <a href="/blog" class="btn-back">← すべての記事を見る</a>
+          </div>
+        </>
+      )}
+    </div>
+  </section>
+
+</Layout>

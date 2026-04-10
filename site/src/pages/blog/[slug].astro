@@ -19,6 +19,8 @@ if (!postEntry) {
 const post = postEntry[1];
 const { title, date, description, tags } = post.frontmatter || {};
 const Content = post.default;
+const headings = typeof post.getHeadings === 'function' ? post.getHeadings() : [];
+const h2headings = headings.filter(h => h.depth === 2);
 ---
 
 <Layout title={`${title || 'ブログ記事'} | ビズシス`}>
@@ -39,13 +41,33 @@ const Content = post.default;
     <div class="section-inner">
       <div class="blog-article">
         <p class="blog-meta">{new Date(date).toLocaleDateString('ja-JP')}</p>
-        {tags && <p class="blog-tags">タグ：{tags.join(' / ')}</p>}
+        {tags && tags.length > 0 && (
+          <p class="blog-tags">
+            タグ：{tags.map((tag, i) => (
+              <>
+                {i > 0 && ' / '}
+                <a href={`/blog/tag/${tag}`} class="blog-tag-link">{tag}</a>
+              </>
+            ))}
+          </p>
+        )}
+        {h2headings.length >= 2 && (
+          <nav class="toc">
+            <p class="toc-title">もくじ</p>
+            <ul class="toc-list">
+              {h2headings.map(h => (
+                <li>
+                  <a href={`#${h.slug}`}>{h.text}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
         <div class="prose">
           <Content />
         </div>
       </div>
       <div class="cta-group" style="margin-top: 40px;">
-        <a class="btn-primary" href="/contact">この記事について相談する</a>
         <a class="btn-secondary" href="/blog">記事一覧へ戻る</a>
       </div>
     </div>

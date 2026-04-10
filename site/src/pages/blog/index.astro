@@ -36,6 +36,16 @@ const posts = Object.entries(blogModules)
               <a href={`/blog/${post.slug}`}>{post.title}</a>
               <small>{new Date(post.date).toLocaleDateString('ja-JP')}</small>
               {post.description && <p>{post.description}</p>}
+              {post.tags && post.tags.length > 0 && (
+                <p class="blog-tags">
+                  {post.tags.map((tag, i) => (
+                    <>
+                      {i > 0 && ' '}
+                      <a href={`/blog/tag/${tag}`} class="blog-tag-link">{tag}</a>
+                    </>
+                  ))}
+                </p>
+              )}
             </li>
           ))}
         </ul>

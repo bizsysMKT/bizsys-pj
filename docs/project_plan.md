@@ -31,7 +31,7 @@ Claude Code活用による構築・運用自動化の模索
 **フェーズ間依存関係**：フェーズ1完了が前提条件。その後、フェーズ2→3→4は順次進行する。
 
 ## 4. 成功の定義
-- HP公開（biz-sys.jp、7ページ構成、問い合わせフォーム動作）
+- HP公開（bizsys.jp、7ページ構成、問い合わせフォーム動作）
 - ブログ記事公開（5〜10本、週2〜3本ペース）
 - X自動投稿動作（記事公開→X投稿自動化）
 - GA4/Search Consoleデータ取得可能
@@ -52,7 +52,7 @@ Claude Code活用による構築・運用自動化の模索
 
 ## 6. 成果物一覧
 - docs：overview.md / architecture.md / operation.md / handover.md
-- LP：公開HP（biz-sys.jp）
+- LP：公開HP（bizsys.jp）
 - ブログ：公開ブログ（同ドメイン）
 - SNS：Xアカウント（@bizsys_jp）＋自動投稿設定
 - automation：GitHub Actionsワークフロー / 記事生成スクリプト
@@ -61,7 +61,7 @@ Claude Code活用による構築・運用自動化の模索
 - 技術構成固定（GitHub Pages + Astro + Formspree + GA4 + Search Console）
 - ディレクトリルール遵守（input/読み取り専用、output/成果物、automation/ロジック、docs/設計）
 - 相対パス使用、ユーザーディレクトリ禁止
-- ドメイン：biz-sys.jp（漢那さん設定）
+- ドメイン：bizsys.jp（漢那さん設定）
 - アカウント：GitHub（ユースケ作成）、X（@bizsys_jp新規）、Formspree（漢那メール）、GA4/Search Console（漢那Googleアカウント）
 
 ## 8. 主要リスク・対応

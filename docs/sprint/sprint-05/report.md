@@ -36,14 +36,14 @@
 
 ```js
 export default defineConfig({
-  site: 'https://biz-sys.jp',
+  site: 'https://bizsys.jp',
   base: '/',
 });
 ```
 
 #### C-2. `site/public/CNAME` ファイルの作成
 
-確認したところ、すでに `biz-sys.jp` が記載済みだった。
+確認したところ、すでに `bizsys.jp` が記載済みだった。
 
 #### C-3. GitHub Actions デプロイワークフローの作成
 
@@ -104,5 +104,5 @@ export default defineConfig({
 |---------|------|
 | **GitHub リポジトリの存在確認** | `bizsys-pj` というリポジトリが GitHub 上に作成されているか確認してください。まだの場合は `main` ブランチで新規作成が必要です |
 | **GitHub Pages の有効化** | リポジトリの「Settings」→「Pages」→ Source を「GitHub Actions」に設定してください |
-| **カスタムドメインの DNS 設定** | `biz-sys.jp` の DNS に GitHub Pages の A レコード（185.199.108.153 等）を設定してください。ドメインレジストラ側での設定が必要です |
+| **カスタムドメインの DNS 設定** | `bizsys.jp` の DNS に GitHub Pages の A レコード（185.199.108.153 等）を設定してください。ドメインレジストラ側での設定が必要です |
 | **初回 push の権限** | push 後、GitHub Actions の「Environments」で `github-pages` 環境のデプロイを承認する必要がある場合があります |

@@ -120,7 +120,7 @@ Sprint 3 が全体の **50%（10/20セッション）** を消費。他のスプ
 
 | 項目 | 状態 | 内容 |
 |------|------|------|
-| 自動デプロイ | ✅ 構築済み | main push → GitHub Actions → `biz-sys.jp` 自動公開 |
+| 自動デプロイ | ✅ 構築済み | main push → GitHub Actions → `bizsys.jp` 自動公開 |
 | ブログ運用 | ✅ 準備済み | `site/src/content/blog/` に Markdown 追加で記事公開 |
 | Formspree | ✅ 設定済み | ID `maqllrnj`・通知先 `bizsys.mkt@gmail.com` |
 | GA4 | ✅ 組み込み済み | 測定ID `G-04S9SZW07N`・全ページ自動計測 |
@@ -139,6 +139,6 @@ Sprint 3 が全体の **50%（10/20セッション）** を消費。他のスプ
 | Formspree・GA4 設定値組み込み済み | ✅ |
 | GitHub Actions 自動デプロイ設定済み | ✅ |
 | handover.md 完成（漢那さんが独立運用可能） | ✅ |
-| biz-sys.jp での公開確認 | ⏳ DNS反映待ち |
+| bizsys.jp での公開確認 | ⏳ DNS反映待ち |
 
 DNS 反映・公開確認をもってフェーズ1 **正式完了**。

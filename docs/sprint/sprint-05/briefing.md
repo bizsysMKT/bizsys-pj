@@ -61,8 +61,8 @@ GitHub Pages 用に `site` と `base` を設定する。
 
 | 項目 | 値 |
 |------|-----|
-| 公開ドメイン | `https://biz-sys.jp`（カスタムドメイン） |
-| `site` | `https://biz-sys.jp` |
+| 公開ドメイン | `https://bizsys.jp`（カスタムドメイン） |
+| `site` | `https://bizsys.jp` |
 | `base` | `/`（カスタムドメインのため、サブパス不要） |
 
 #### C-2. `site/public/CNAME` ファイルの作成
@@ -70,7 +70,7 @@ GitHub Pages 用に `site` と `base` を設定する。
 GitHub Pages カスタムドメイン設定用に CNAME ファイルを作成する。
 
 ```
-biz-sys.jp
+bizsys.jp
 ```
 
 #### C-3. GitHub Actions デプロイワークフローの作成
@@ -131,7 +131,7 @@ jobs:
 コード対応は不要。Search Console の設定は漢那さんが以下の手順で行う：
 
 1. [Google Search Console](https://search.google.com/search-console) にアクセス
-2. 「プロパティを追加」→ URL プレフィックス → `https://biz-sys.jp` を入力
+2. 「プロパティを追加」→ URL プレフィックス → `https://bizsys.jp` を入力
 3. 確認方法で「Google アナリティクス」を選択
 4. GA4 が設定済みであれば自動認証される
 
@@ -158,8 +158,8 @@ jobs:
 
 - [ ] `contact.astro` の Formspree エンドポイントが `maqllrnj` に変更されている
 - [ ] `Layout.astro` に GA4 スクリプトが追加されている
-- [ ] `astro.config.mjs` に `site: 'https://biz-sys.jp'` が設定されている
-- [ ] `site/public/CNAME` に `biz-sys.jp` が記載されている
+- [ ] `astro.config.mjs` に `site: 'https://bizsys.jp'` が設定されている
+- [ ] `site/public/CNAME` に `bizsys.jp` が記載されている
 - [ ] `.github/workflows/deploy.yml` が作成されている
 - [ ] `astro build` でエラーが出ない
 - [ ] `docs/handover.md` が作成されている

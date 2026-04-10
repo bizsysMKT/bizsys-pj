@@ -17,7 +17,7 @@
 
 ### 公開前準備：DNS設定 & GitHub設定
 
-サイトを `biz-sys.jp` で公開するには、以下の2つの設定が必要です。**初回のみ。一度設定すれば以後は不要。**
+サイトを `bizsys.jp` で公開するには、以下の2つの設定が必要です。**初回のみ。一度設定すれば以後は不要。**
 
 ---
 
@@ -25,7 +25,7 @@
 
 1. [お名前.com Navi](https://www.onamae.com/navi/) にログイン
 2. 「ドメイン」→「ドメイン機能一覧」→「DNS関連機能の設定」をクリック
-3. `biz-sys.jp` を選択し「次へ」
+3. `bizsys.jp` を選択し「次へ」
 4. 「DNSレコード設定を利用する」→「設定する」をクリック
 5. 以下の A レコードを4件追加する：
 
@@ -47,7 +47,7 @@
 2. 「New repository」で `bizsys-pj` というリポジトリを作成（Public・mainブランチ）
 3. リポジトリの「Settings」→「Pages」を開く
 4. 「Source」を **「GitHub Actions」** に設定する
-5. 「Custom domain」に `biz-sys.jp` を入力して「Save」
+5. 「Custom domain」に `bizsys.jp` を入力して「Save」
 
 ---
 
@@ -60,7 +60,7 @@ git push -u origin main
 ```
 
 GitHub の「Actions」タブで緑チェックが付けば自動デプロイ完了。  
-DNS 反映後（最大48時間）、`https://biz-sys.jp` にアクセスして表示を確認する。
+DNS 反映後（最大48時間）、`https://bizsys.jp` にアクセスして表示を確認する。
 
 ---
 

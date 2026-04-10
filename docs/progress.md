@@ -27,7 +27,7 @@
 | フェーズ1 | **[Sprint 4]** PMレビュー・公開可否判断 | PM | 完了 (2026-04-09) | Sprint 4 実装完了 | - | 承認。ブログナビ追加を実装担当に指示。Sprint 5 GO |
 | フェーズ1 | **[Sprint 5]** 公開設定（Formspree・GA4・GitHub Pages・deploy.yml・handover.md） | 実装担当 | 完了 (2026-04-09) | Sprint 4 完了 | - | astro build OK・全設定値埋め込み済み・handover.md完成 |
 | フェーズ1 | **[Sprint 5]** PMレビュー | PM | 完了 (2026-04-09) | Sprint 5 実装完了 | - | 全項目承認。DNS反映・GitHub push 待ち |
-| フェーズ1 | GitHub Pages 公開・ドメイン設定（biz-sys.jp） | 漢那さん | Aレコード設定完了 (2026-04-10)・DNS反映待ち | Sprint 5 完了 | DNS反映まで最大48時間 | biz-sys.jp がブラウザでアクセス可能。漢那さんがブラウザで確認可能 |
+| フェーズ1 | GitHub Pages 公開・ドメイン設定（bizsys.jp） | 漢那さん・実装担当 | 完了 (2026-04-10) | Sprint 5 完了 | - | Aレコード設定済み・GitHub push済み・Actions緑チェック確認済み。DNS反映後 bizsys.jp でアクセス可能 |
 | フェーズ1 | GA4設定（アクセス計測） | 完了（コード組込済） | 完了 (2026-04-09) | - | - | Layout.astro に G-04S9SZW07N 組み込み済み。公開後にリアルタイム確認 |
 | フェーズ1 | Google Search Console設定 | 漢那さん | 未着手 | HP公開後 | - | GA4連携方式で認証。手順は handover.md に記載済み |
 | フェーズ2 | GitHub Actions自動デプロイ設定 | 完了（Sprint 5で実施） | 完了 (2026-04-09) | - | - | .github/workflows/deploy.yml 作成済み。main push で自動デプロイ |

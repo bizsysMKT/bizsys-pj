@@ -130,7 +130,7 @@
 
 | 項目 | 内容 |
 |------|------|
-| 自動デプロイ | GitHub Actions が main push で `biz-sys.jp` に自動デプロイ（Sprint 5 で構築） |
+| 自動デプロイ | GitHub Actions が main push で `bizsys.jp` に自動デプロイ（Sprint 5 で構築） |
 | ブログ運用 | Markdown ファイルを `site/src/content/blog/` に追加するだけで記事公開可能 |
 | Search Console | GA4 連携で漢那さんが初回設定（handover.md に手順記載） |
 | X 自動投稿 | フェーズ3（未着手）。ブログ記事公開 → X 自動投稿の自動化 |

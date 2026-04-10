@@ -88,11 +88,11 @@ A. 回答を書きます。
 
 読者をビズシスのサービスへ導きます。
 
-**気になることがあれば、[お問い合わせフォーム](https://biz-sys.jp/contact)からお気軽にご相談ください。**
+**気になることがあれば、[お問い合わせフォーム](https://bizsys.jp/contact)からお気軽にご相談ください。**
 
 または
 
-**プロジェクト管理でお困りでしたら、[ビズシスにご相談ください](https://biz-sys.jp/)。具体的な解決方法を提案いたします。**
+**プロジェクト管理でお困りでしたら、[ビズシスにご相談ください](https://bizsys.jp/)。具体的な解決方法を提案いたします。**
 
 ---
 
@@ -200,7 +200,7 @@ docs/blog/2026-04-05-project-management-tips.md
 3. docs/blog/ に `.md` ファイルを保存
 4. GitHub Desktop で Commit & Push
 5. 2～3分待つ（GitHub Actions 自動デプロイ中）
-6. biz-sys.jp/blog で記事表示を確認
+6. bizsys.jp/blog で記事表示を確認
 7. X (@bizsys_jp) に自動投稿されたことを確認
 8. OK なら完了！
 

@@ -300,7 +300,7 @@
 
 ### X (Twitter) から投稿データを取得する方法
 
-1. @bizsys_jp のプロフィール画面を開く
+1. @bizsys_x のプロフィール画面を開く
 2. 「分析」タブで インプレッション数・エンゲージメント を確認
 3. または Twitter Analytics（analytics.twitter.com）で詳細確認
 

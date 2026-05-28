@@ -1,0 +1,12 @@
+{
+  "name": "bizsys-pj",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ビズシス マーケティング基盤プロジェクト",
+  "scripts": {
+    "fetch-analytics": "node automation/fetch-analytics.js"
+  },
+  "dependencies": {
+    "googleapis": "^144.0.0"
+  }
+}

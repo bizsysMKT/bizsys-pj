@@ -12,3 +12,12 @@ tools/
 
 # macOS
 .DS_Store
+
+# Google認証ファイル（コミット禁止）
+automation/credentials/
+
+# 納品フォルダ（site/等の重複コピーを含むためgit管理外）
+納品/
+
+# 下書き出力
+output/

@@ -180,11 +180,11 @@ A. 回答を書きます。
 ## ファイル名の付け方
 
 ```
-docs/blog/YYYY-MM-DD-slug.md
+site/src/content/blog/YYYY-MM-DD-slug.md
 
 例）
-docs/blog/2026-04-04-github-actions-tutorial.md
-docs/blog/2026-04-05-project-management-tips.md
+site/src/content/blog/2026-04-04-github-actions-tutorial.md
+site/src/content/blog/2026-04-05-project-management-tips.md
 ```
 
 **ルール**：
@@ -197,11 +197,11 @@ docs/blog/2026-04-05-project-management-tips.md
 
 1. テンプレートを使って記事を作成（ローカルPC）
 2. GitHub Desktop で新しいブランチを作成
-3. docs/blog/ に `.md` ファイルを保存
+3. site/src/content/blog/ に `.md` ファイルを保存
 4. GitHub Desktop で Commit & Push
 5. 2～3分待つ（GitHub Actions 自動デプロイ中）
 6. bizsys.jp/blog で記事表示を確認
-7. X (@bizsys_jp) に自動投稿されたことを確認
+7. X (@bizsys_x) に自動投稿されたことを確認
 8. OK なら完了！
 
 ---

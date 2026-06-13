@@ -1,6 +1,12 @@
 ---
-const { title = 'BizSys 現場改善システム企画/開発/保守', description = '' } = Astro.props;
-const path = Astro.url.pathname;
+const {
+  title = 'BizSys 現場改善システム企画/開発/保守',
+  description = '',
+  ogType = 'website',
+  ogImage = '/images/hero-right.png',
+} = Astro.props;
+const siteUrl = 'https://bizsys.jp';
+const canonicalUrl = `${siteUrl}${Astro.url.pathname}`;
 ---
 <html lang="ja">
   <head>
@@ -8,7 +14,26 @@ const path = Astro.url.pathname;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     {description && <meta name="description" content={description} />}
-    <link rel="canonical" href={`https://bizsys.jp${Astro.url.pathname}`} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- favicon -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <!-- OGP -->
+    <meta property="og:title" content={title} />
+    <meta property="og:site_name" content="BizSys" />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:locale" content="ja_JP" />
+    {description && <meta property="og:description" content={description} />}
+    <meta property="og:image" content={`${siteUrl}${ogImage}`} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    {description && <meta name="twitter:description" content={description} />}
+    <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-04S9SZW07N"></script>
     <script>
       window.dataLayer = window.dataLayer || [];

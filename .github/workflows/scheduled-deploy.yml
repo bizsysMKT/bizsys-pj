@@ -2,7 +2,7 @@ name: Scheduled Deploy（予約投稿用）
 
 on:
   schedule:
-    - cron: '0 15 * * *'  # 毎日深夜0時JST（UTC 15:00）に自動ビルド
+    - cron: '0 9 * * *'  # 毎日18時JST（UTC 09:00）に自動ビルド
 
 permissions:
   contents: read

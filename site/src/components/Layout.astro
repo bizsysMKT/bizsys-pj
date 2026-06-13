@@ -6,7 +6,8 @@ const {
   ogImage = '/images/hero-right.png',
 } = Astro.props;
 const siteUrl = 'https://bizsys.jp';
-const canonicalUrl = `${siteUrl}${Astro.url.pathname}`;
+const path = Astro.url.pathname;
+const canonicalUrl = `${siteUrl}${path}`;
 ---
 <html lang="ja">
   <head>

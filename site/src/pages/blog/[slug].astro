@@ -6,11 +6,10 @@ const { slug } = Astro.params;
 
 export async function getStaticPaths() {
   const blogModules = import.meta.glob('../../content/blog/*.md', { eager: true });
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
+  const todayStr = new Date().toLocaleDateString('sv-SE');
   return Object.entries(blogModules)
     .filter(([path]) => !path.endsWith('article-template.md'))
-    .filter(([, post]) => new Date((post.frontmatter || {}).date) <= today)
+    .filter(([, post]) => !import.meta.env.PROD || new Date((post.frontmatter || {}).date).toLocaleDateString('sv-SE') <= todayStr)
     .map(([path]) => ({ params: { slug: path.split('/').pop().replace(/\.md$/, '') } }));
 }
 
@@ -28,15 +27,14 @@ const headings = typeof post.getHeadings === 'function' ? post.getHeadings() : [
 const h2headings = headings.filter(h => h.depth === 2);
 
 // 関連記事：同タグの記事を優先、最大4件（自記事除く・未来記事除く）
-const today2 = new Date();
-today2.setHours(0, 0, 0, 0);
+const todayStr2 = new Date().toLocaleDateString('sv-SE');
 const allPosts = Object.entries(blogModules)
   .filter(([path]) => !path.endsWith('article-template.md') && !path.endsWith(`${slug}.md`))
   .map(([path, p]) => ({
     slug: path.split('/').pop().replace(/\.md$/, ''),
     ...(p.frontmatter || {}),
   }))
-  .filter(p => new Date(p.date) <= today2)
+  .filter(p => !import.meta.env.PROD || new Date(p.date).toLocaleDateString('sv-SE') <= todayStr2)
   .sort((a, b) => new Date(b.date) - new Date(a.date));
 
 const sameTags = allPosts.filter(p => (p.tags || []).some(t => (tags || []).includes(t)));

@@ -4,15 +4,14 @@ import '../../../styles/blog.css';
 
 export async function getStaticPaths() {
   const blogModules = import.meta.glob('../../../content/blog/*.md', { eager: true });
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
+  const todayStr = new Date().toLocaleDateString('sv-SE');
   const validPosts = Object.entries(blogModules)
     .filter(([path]) => !path.endsWith('article-template.md'))
     .map(([path, post]) => ({
       slug: path.split('/').pop().replace(/\.md$/, ''),
       ...post.frontmatter,
     }))
-    .filter(p => new Date(p.date) <= today);
+    .filter(p => !import.meta.env.PROD || new Date(p.date).toLocaleDateString('sv-SE') <= todayStr);
 
   const allTags = [...new Set(validPosts.flatMap(p => p.tags ?? []))];
 
@@ -30,12 +29,11 @@ const { tag } = Astro.params;
 const { posts } = Astro.props;
 
 const allBlogModules = import.meta.glob('../../../content/blog/*.md', { eager: true });
-const todayTag = new Date();
-todayTag.setHours(0, 0, 0, 0);
+const todayTagStr = new Date().toLocaleDateString('sv-SE');
 const allTagPosts = Object.entries(allBlogModules)
   .filter(([path]) => !path.endsWith('article-template.md'))
   .map(([, post]) => post.frontmatter)
-  .filter(p => new Date(p?.date) <= todayTag)
+  .filter(p => !import.meta.env.PROD || new Date(p?.date).toLocaleDateString('sv-SE') <= todayTagStr)
   .sort((a, b) => new Date(b.date) - new Date(a.date));
 const allTags = [...new Set(allTagPosts.flatMap(p => p?.tags ?? []))];
 

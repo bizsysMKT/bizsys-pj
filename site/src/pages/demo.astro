@@ -1,0 +1,278 @@
+---
+import Layout from '../components/Layout.astro';
+import '../styles/demo.css';
+---
+
+<Layout title="操作デモ | BizSys">
+  <div class="demo-page">
+
+    <!-- ヒーロー -->
+    <section class="demo-hero">
+      <div class="container demo-hero-inner">
+
+        <div class="demo-hero-text">
+          <h1>実際に触れる<br /><span>業務システム操作デモ</span></h1>
+          <p>受注管理・顧客管理・売上分析など、実際の業務を想定したデモ画面をご用意しています。どんな画面になるのか、使いやすさや業務改善のイメージを事前にご確認いただけます。</p>
+          <div class="demo-hero-buttons">
+            <a href="/contact" class="btn primary">
+              <svg xmlns="http://www.w3.org/2000/svg" style="margin:2px 5px 0 0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>            
+             無料相談する
+            </a>
+            <a href="/pricing" class="btn secondary">料金を見る</a>
+          </div>
+        </div>
+
+        <div class="demo-hero-visual">
+          <img src="/images/demo/hero-device2.png" alt="操作デモ画面" style="width:100%;max-width:580px;height:auto;display:block;margin-left:auto;" />
+        </div>
+
+      </div>
+    </section>
+
+    <!-- デモ一覧 -->
+    <section class="demo-list-section" id="demo-list">
+      <div class="container">
+
+        <div class="demo-section-head">
+          <h2>操作できるデモシステム一覧</h2>
+          <p>業務の種類や目的に合わせて、実際の画面を操作して体験できます。</p>
+        </div>
+
+        <div class="demo-list">
+
+          <!-- 1. 受注管理システム -->
+          <article class="demo-row">
+            <div class="demo-main">
+              <div class="demo-header">
+                <div class="demo-icon"><img src="/images/demo/icon-order.png" alt="" style="width:40px;height:40px;object-fit:contain;" /></div>
+                <div class="demo-title-row">
+                  <h3>1. 受注管理システム</h3>
+                </div>
+              </div>
+              <span class="demo-tag">受注・案件・契約</span>
+              <p class="demo-desc">受注・見積・納品・検収の流れを一元管理。売上や案件状況を見える化し、業務を効率化します。</p>
+            </div>
+            <div class="demo-shot">
+              <img src="/images/demo/demo-order.png" alt="受注管理システム サンプル画面" />
+            </div>
+            <div class="demo-points-action">
+              <ul class="demo-points">
+                <li>受注・案件の管理</li>
+                <li>見積・納品書の作成</li>
+                <li>納品・検収の進捗管理</li>
+              </ul>
+              <div class="demo-actions">
+                <a href="https://biz-sys.s-o-b.jp/order-demo/mng/login" class="btn-demo-blue" target="_blank" rel="noopener noreferrer">デモを操作する</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. 顧客管理システム -->
+          <article class="demo-row">
+            <div class="demo-main">
+              <div class="demo-header">
+                <div class="demo-icon"><img src="/images/demo/icon-customer.png" alt="" style="width:40px;height:40px;object-fit:contain;" /></div>
+                <div class="demo-title-row">
+                  <h3>2. 顧客管理システム</h3>
+                </div>
+              </div>
+              <span class="demo-tag">顧客・営業</span>
+              <p class="demo-desc">顧客情報・対応履歴をまとめて管理。営業活動の質を向上し、継続的な関係構築を支援します。</p>
+            </div>
+            <div class="demo-shot">
+              <img src="/images/demo/demo-customer.png" alt="顧客管理システム サンプル画面" />
+            </div>
+            <div class="demo-points-action">
+              <ul class="demo-points">
+                <li>顧客情報の管理</li>
+                <li>対応履歴の記録</li>
+                <li>商談・案件管理</li>
+              </ul>
+              <div class="demo-actions">
+                <a href="https://biz-sys.s-o-b.jp/cs-mng/mng/login" class="btn-demo-blue" target="_blank" rel="noopener noreferrer">デモを操作する</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. 売上分析システム -->
+          <article class="demo-row">
+            <div class="demo-main">
+              <div class="demo-header">
+                <div class="demo-icon"><img src="/images/demo/icon-sales.png" alt="" style="width:40px;height:40px;object-fit:contain;" /></div>
+                <div class="demo-title-row">
+                  <h3>3. 売上分析システム</h3>
+                </div>
+              </div>
+              <span class="demo-tag">分析・BI・サービス</span>
+              <p class="demo-desc">売上・利益・商品の動向を見える化。様々なグラフや分析で、経営判断をサポートします。</p>
+            </div>
+            <div class="demo-shot">
+              <img src="/images/demo/demo-sales.png" alt="売上分析システム サンプル画面" />
+            </div>
+            <div class="demo-points-action">
+              <ul class="demo-points">
+                <li>売上推移・月次集計</li>
+                <li>商品別・得意先別の分析</li>
+                <li>グラフ表示（棒・円・折線）</li>
+              </ul>
+              <div class="demo-actions">
+                <a href="https://staging.s-o-b.jp/sales-mng/mng/login" class="btn-demo-blue" target="_blank" rel="noopener noreferrer">デモを操作する</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. 日報管理システム -->
+          <article class="demo-row">
+            <div class="demo-main">
+              <div class="demo-header">
+                <div class="demo-icon"><img src="/images/demo/icon-daily.png" alt="" style="width:40px;height:40px;object-fit:contain;" /></div>
+                <div class="demo-title-row">
+                  <h3>4. 日報管理システム</h3>
+                </div>
+              </div>
+              <span class="demo-tag">報告・工数・勤怠管理</span>
+              <p class="demo-desc">日々の作業内容や工数を記録・共有。現場の状況把握と業務の効率化を実現します。</p>
+            </div>
+            <div class="demo-shot">
+              <img src="/images/demo/demo-daily.png" alt="日報管理システム サンプル画面" />
+            </div>
+            <div class="demo-points-action">
+              <ul class="demo-points">
+                <li>日報の登録・編集</li>
+                <li>作業時間・工数の記録</li>
+                <li>承認フロー・コメント</li>
+              </ul>
+              <div class="demo-actions">
+                <a href="https://alma9.staging.s-o-b.jp/daily-note-mng/mng/login" class="btn-demo-blue" target="_blank" rel="noopener noreferrer">デモを操作する</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. 写真台帳システム -->
+          <article class="demo-row">
+            <div class="demo-main">
+              <div class="demo-header">
+                <div class="demo-icon"><img src="/images/demo/icon-photo.png" alt="" style="width:40px;height:40px;object-fit:contain;" /></div>
+                <div class="demo-title-row">
+                  <h3>5. 写真台帳システム</h3>
+                </div>
+              </div>
+              <span class="demo-tag">図面・工事・資産管理</span>
+              <p class="demo-desc">工事写真・図面を一元管理。現場情報をクラウドで共有し、確認・検索を効率化します。</p>
+            </div>
+            <div class="demo-shot">
+              <img src="/images/demo/demo-photo.png" alt="写真台帳システム サンプル画面" />
+            </div>
+            <div class="demo-points-action">
+              <ul class="demo-points">
+                <li>写真アップロード</li>
+                <li>図面・帳票管理</li>
+                <li>タグ検索・絞り込み</li>
+              </ul>
+              <div class="demo-actions">
+                <a href="http://bizsys3.s-o-b.jp/photo-ledger-mng/mng/login" class="btn-demo-blue" target="_blank" rel="noopener noreferrer">デモを操作する</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6. バス乗降管理システム -->
+          <article class="demo-row">
+            <div class="demo-main">
+              <div class="demo-header">
+                <div class="demo-icon"><img src="/images/demo/icon-bus.png" alt="" style="width:40px;height:40px;object-fit:contain;" /></div>
+                <div class="demo-title-row">
+                  <h3>6. バス乗降管理システム</h3>
+                </div>
+              </div>
+              <span class="demo-tag">動線・スタッフ管理</span>
+              <p class="demo-desc">乗降・動線情報を記録・管理。送迎バスなどの運行状況を可視化し、安全管理に活用。</p>
+            </div>
+            <div class="demo-shot">
+              <img src="/images/demo/demo-bus.png" alt="バス乗降管理システム サンプル画面" />
+            </div>
+            <div class="demo-points-action">
+              <ul class="demo-points">
+                <li>乗車・降車の記録</li>
+                <li>運行ルート管理</li>
+                <li>集計・帳票出力</li>
+              </ul>
+              <div class="demo-actions">
+                <a href="https://biz-sys.s-o-b.jp/passenger-mng/mng/login" class="btn-demo-blue" target="_blank" rel="noopener noreferrer">デモを操作する</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+
+      </div>
+    </section>
+
+    <!-- よくあるご質問 -->
+    <section class="demo-faq-section">
+      <div class="container">
+
+        <div class="demo-section-head">
+          <h2>よくあるご質問</h2>
+        </div>
+
+        <div class="demo-faq-grid">
+          <div class="demo-faq-col">
+            <details>
+              <summary>今使っているExcelをもとにシステム化できますか？</summary>
+              <p>可能です。現在お使いのExcelや業務フローを確認しながら、必要な項目や管理方法を整理し、使いやすいシステムをご提案します。</p>
+            </details>
+            <details>
+              <summary>スマホやタブレットでも使えるシステムにできますか？</summary>
+              <p>対応可能です。外出先や現場での入力・確認が必要な場合は、スマホやタブレットでも使いやすい画面を設計できます。</p>
+            </details>
+            <details>
+              <summary>デモにない業務でも相談できますか？</summary>
+              <p>可能です。受注管理、顧客管理、日報管理、写真管理、在庫管理、予約管理など、業務内容に合わせて幅広くご相談いただけます。</p>
+            </details>
+          </div>
+          <div class="demo-faq-col">
+            <details>
+              <summary>社内の複数人で使うことはできますか？</summary>
+              <p>可能です。利用者ごとのログイン管理や、管理者・一般スタッフなどの権限設定にも対応できます。</p>
+            </details>
+            <details>
+              <summary>見積書や請求書などの帳票出力もできますか？</summary>
+              <p>対応可能です。見積書、請求書、日報、写真台帳、集計表など、業務に必要な帳票出力をシステムに組み込むことができます。</p>
+            </details>
+            <details>
+              <summary>開発後の修正や保守もお願いできますか？</summary>
+              <p>可能です。運用開始後の不具合対応、機能追加、画面修正、サーバ保守なども継続してサポートできます。</p>
+            </details>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ボトム CTA -->
+    <section class="demo-bottom-cta">
+      <div class="container demo-bottom-cta-inner">
+
+        <div class="demo-bottom-cta-text">
+          <h2>自社の業務に合わせた<br />システム開発をご提案します</h2>
+          <div class="cta-points"><span>🕐 24時間受付中</span><span>✉ 1営業日以内に返信</span></div>
+        </div>
+
+        <div class="demo-bottom-cta-buttons">
+          <div class="demo-bottom-cta-btn-group">
+            <a href="/contact" class="btn-cta-orange">
+              <svg xmlns="http://www.w3.org/2000/svg" style="margin:2px 5px 0 0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              無料相談する
+            </a>
+          </div>
+          <div class="demo-bottom-cta-btn-group">
+            <a href="/cases" class="btn-cta-white">導入事例を見る</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+</Layout>

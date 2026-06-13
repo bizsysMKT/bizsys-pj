@@ -1,0 +1,518 @@
+/* ====================================================
+   ブログ詳細ページ専用スタイル
+   ==================================================== */
+
+.blog-detail-page {
+  --blue: #0052b4;
+  --blue2: #0066d8;
+  --navy: #073b78;
+  --deep: #082f63;
+  --light-blue: #eef6ff;
+  --pale: #f4f8fd;
+  --line: #cfe1f5;
+  --orange: #ff7a00;
+  --text: #10243f;
+  --muted: #5c6f87;
+  --shadow: 0 10px 28px rgba(16, 64, 120, .08);
+  min-height: 100vh;
+}
+
+/* ====================================================
+   パンくず
+   ==================================================== */
+.blog-detail-page .breadcrumb {
+  color: #537092;
+  font-size: 13px;
+  font-weight: 750;
+  padding: 18px 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: transparent;
+}
+.blog-detail-page .breadcrumb a { color: var(--blue); }
+
+/* ====================================================
+   レイアウト
+   ==================================================== */
+.blog-detail-page .layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 34px;
+  align-items: start;
+  padding-bottom: 48px;
+}
+
+/* ====================================================
+   記事カード
+   ==================================================== */
+.blog-detail-page .article {
+  background: #fff;
+  border: 1px solid #e2edf8;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 34px 44px;
+  margin-top: 18px;
+}
+.blog-detail-page .article-header {
+  padding-bottom: 24px;
+  border-bottom: 1px solid #dbe9f6;
+  margin-bottom: 0;
+}
+.blog-detail-page .article-category {
+  color: var(--blue);
+  font-weight: 900;
+  margin: 0 0 8px;
+  font-size: 14px;
+}
+.blog-detail-page .article-date {
+  display: block;
+  color: #586f88;
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+.blog-detail-page .article-header h1 {
+  color: #071c38;
+  font-size: 28px;
+  line-height: 1.38;
+  letter-spacing: -.03em;
+  margin: 0 0 14px;
+  font-weight: 900;
+}
+.blog-detail-page .article-description {
+  color: #52687f;
+  font-weight: 700;
+  margin: 0 0 20px;
+  font-size: 15px;
+}
+.blog-detail-page .article-tags {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+.blog-detail-page .article-tags a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid #9fc6f3;
+  color: var(--blue);
+  background: #f7fbff;
+  font-size: 13px;
+  font-weight: 850;
+  transition: 0.15s ease;
+}
+.blog-detail-page .article-tags a:hover {
+  background: var(--blue);
+  color: #fff;
+  border-color: var(--blue);
+}
+
+/* ====================================================
+   もくじ
+   ==================================================== */
+.blog-detail-page .toc {
+  margin: 28px 0 34px;
+  padding: 22px 28px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+.blog-detail-page .toc-title {
+  color: var(--blue);
+  font-size: 18px;
+  font-weight: 900;
+  margin: 0 0 10px;
+}
+.blog-detail-page .toc ol {
+  margin: 0;
+  padding-left: 1.4em;
+  color: var(--blue);
+  font-weight: 850;
+}
+.blog-detail-page .toc li { margin: 4px 0; }
+.blog-detail-page .toc a { color: var(--blue); }
+.blog-detail-page .toc a:hover { text-decoration: underline; }
+
+/* ====================================================
+   本文（prose）
+   ==================================================== */
+.blog-detail-page .prose {
+  font-size: 16px;
+  color: #1f334c;
+  line-height: 2.1;
+}
+.blog-detail-page .prose h2 {
+  position: relative;
+  color: var(--deep);
+  font-size: 24px;
+  line-height: 1.45;
+  margin: 40px 0 14px;
+  padding-left: 18px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #d8e7f6;
+  font-weight: 900;
+}
+.blog-detail-page .prose h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .28em;
+  width: 5px;
+  height: 1.2em;
+  border-radius: 5px;
+  background: var(--blue);
+}
+.blog-detail-page .prose h3 {
+  color: var(--blue);
+  font-size: 19px;
+  line-height: 1.5;
+  margin: 28px 0 20px;
+  font-weight: 900;
+}
+.blog-detail-page .prose p {
+  margin: 0 0 16px;
+  font-weight: normal;
+}
+.blog-detail-page .prose ul,
+.blog-detail-page .prose ol {
+  margin: 0 0 18px 1.4em;
+  padding: 0;
+}
+.blog-detail-page .prose li { margin: 5px 0; }
+.blog-detail-page .prose strong { color: var(--deep); }
+.blog-detail-page .prose a {
+  color: var(--blue);
+  text-decoration: underline;
+  font-weight: 800;
+}
+.blog-detail-page .prose hr {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 32px 0;
+}
+
+/* ====================================================
+   記事内CTA
+   ==================================================== */
+.blog-detail-page .article-cta {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 18px;
+  align-items: center;
+  margin-top: 34px;
+  padding: 18px 22px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: linear-gradient(90deg, #f0f7ff, #fff 65%, #fff4e8);
+}
+.blog-detail-page .article-cta strong {
+  display: block;
+  color: var(--deep);
+  font-size: 17px;
+  margin-bottom: 4px;
+  font-weight: 900;
+}
+.blog-detail-page .article-cta p {
+  margin: 0;
+  color: #52687f;
+  font-weight: 700;
+  font-size: 14px;
+}
+.blog-detail-page .btn-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  min-width: 160px;
+  padding: 0 24px;
+  border-radius: 999px;
+  background: var(--orange);
+  color: #fff;
+  font-weight: 900;
+  font-size: 15px;
+  white-space: nowrap;
+  box-shadow: 0 8px 18px rgba(255,122,0,.25);
+  transition: 0.15s ease;
+}
+.blog-detail-page .btn-cta:hover {
+  background: #e06800;
+  color: #fff;
+}
+
+/* ====================================================
+   シェア
+   ==================================================== */
+.blog-detail-page .share {
+  margin: 24px 0;
+  padding: 16px;
+  border: 1px solid #e2edf8;
+  border-radius: 10px;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: center;
+}
+.blog-detail-page .share-label {
+  font-size: 14px;
+  color: var(--deep);
+  font-weight: 850;
+}
+.blog-detail-page .share img {
+  width: 34px;
+  height: 34px;
+}
+
+/* ====================================================
+   戻るリンク
+   ==================================================== */
+.blog-detail-page .back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 18px;
+  border: 1px solid var(--blue);
+  border-radius: 999px;
+  color: var(--blue);
+  background: #fff;
+  font-weight: 900;
+  font-size: 14px;
+  margin-top: 32px;
+  transition: 0.15s ease;
+}
+.blog-detail-page .back-link:hover {
+  background: var(--blue);
+  color: #fff;
+}
+.blog-detail-page .back-link img { width: 16px; height: 16px; }
+
+/* ====================================================
+   サイドバー
+   ==================================================== */
+.blog-detail-page .sidebar {
+  position: sticky;
+  top: 98px;
+  display: grid;
+  gap: 12px;
+}
+.blog-detail-page .side-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 24px;
+}
+.blog-detail-page .side-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--deep);
+  font-size: 18px;
+  line-height: 1.45;
+  margin: 0 0 16px;
+  font-weight: 900;
+}
+.blog-detail-page .side-card h3 img {
+  width: 24px;
+  height: 24px;
+}
+
+/* サイドCTA */
+.blog-detail-page .side-cta {
+  background: linear-gradient(150deg, #0052b4, #003b88);
+  color: #fff;
+  text-align: center;
+  padding: 18px 26px;
+  border-color: transparent;
+}
+.blog-detail-page .side-cta img.cta-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 14px;
+}
+.blog-detail-page .side-cta h3 {
+  color: #fff;
+  justify-content: center;
+  margin-bottom: 14px;
+  font-size: 17px;
+}
+.blog-detail-page .side-cta p {
+  margin: 0 0 20px;
+  font-weight: 700;
+  color: rgba(255,255,255,.9);
+  font-size: 14px;
+}
+.blog-detail-page .side-cta small {
+  display: block;
+  margin-top: 14px;
+  opacity: .85;
+  font-weight: 800;
+  color: #fff;
+  font-size: 13px;
+}
+.blog-detail-page .btn-side-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 50px;
+  border-radius: 999px;
+  background: var(--orange);
+  color: #fff;
+  font-weight: 900;
+  font-size: 16px;
+  box-shadow: 0 8px 18px rgba(255,122,0,.3);
+  transition: 0.15s ease;
+}
+.blog-detail-page .btn-side-cta:hover {
+  background: #e06800;
+  color: #fff;
+}
+
+/* 関連記事 */
+.blog-detail-page .related a {
+  display: block;
+  padding: 14px 0;
+  border-bottom: 1px solid #e1edf8;
+}
+.blog-detail-page .related a:last-of-type { border-bottom: 0; }
+.blog-detail-page .related .related-title {
+  display: block;
+  color: var(--deep);
+  line-height: 1.55;
+  font-size: 14px;
+  font-weight: 750;
+}
+.blog-detail-page .related time {
+  display: block;
+  color: #7b8fa5;
+  font-size: 12px;
+  font-weight: 800;
+  margin-top: 5px;
+}
+.blog-detail-page .related .side-more {
+  display: block;
+  color: var(--blue);
+  font-weight: 900;
+  text-align: center;
+  border: 1px solid var(--blue);
+  border-radius: 999px;
+  margin-top: 14px;
+  padding: 9px;
+  font-size: 14px;
+  transition: 0.15s ease;
+}
+.blog-detail-page .related .side-more:hover {
+  background: var(--blue);
+  color: #fff;
+}
+
+/* 人気タグ */
+.blog-detail-page .side-tags-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.blog-detail-page .side-tags-wrap a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid #9fc6f3;
+  color: var(--blue);
+  background: #f7fbff;
+  font-size: 13px;
+  font-weight: 850;
+  transition: 0.15s ease;
+}
+.blog-detail-page .side-tags-wrap a:hover {
+  background: var(--blue);
+  color: #fff;
+  border-color: var(--blue);
+}
+
+/* ====================================================
+   ボトムCTA
+   ==================================================== */
+.blog-detail-page .bottom-cta {
+  background: linear-gradient(90deg, #003a78, #004c99);
+  color: #fff;
+  padding: 40px 0;
+}
+.blog-detail-page .bottom-cta-inner {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  gap: 28px;
+  align-items: center;
+}
+.blog-detail-page .cta-icon-wrap {
+  width: 70px;
+  height: 70px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255,255,255,.18);
+  font-size: 32px;
+  color: #fff;
+}
+.blog-detail-page .bottom-cta h2 {
+  margin: 0 0 4px;
+  font-size: 28px;
+  color: #fff;
+  font-weight: 900;
+  text-align: left;
+}
+.blog-detail-page .bottom-cta p {
+  margin: 0;
+  font-size: 15px;
+  color: rgba(255,255,255,.85);
+}
+.blog-detail-page .btn-bottom-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 30px;
+  min-width: 220px;
+  border-radius: 999px;
+  background: var(--orange);
+  color: #fff;
+  font-weight: 900;
+  font-size: 16px;
+  white-space: nowrap;
+  box-shadow: 0 8px 18px rgba(255,122,0,.3);
+  transition: 0.15s ease;
+}
+.blog-detail-page .btn-bottom-cta:hover {
+  background: #e06800;
+  color: #fff;
+}
+
+/* ====================================================
+   レスポンシブ
+   ==================================================== */
+@media (max-width: 980px) {
+  .blog-detail-page .layout {
+    grid-template-columns: 1fr;
+  }
+  .blog-detail-page .article {
+    padding: 26px 22px;
+  }
+  .blog-detail-page .sidebar {
+    position: static;
+  }
+  .blog-detail-page .article-cta {
+    grid-template-columns: 1fr;
+  }
+  .blog-detail-page .bottom-cta-inner {
+    grid-template-columns: 1fr;
+  }
+  .blog-detail-page .cta-icon-wrap { display: none; }
+  .blog-detail-page .btn-bottom-cta { width: 100%; }
+}

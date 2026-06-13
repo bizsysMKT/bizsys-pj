@@ -1,123 +1,110 @@
 ---
 import Layout from '../components/Layout.astro';
+import '../styles/contact.css';
 ---
 
-<Layout title="お問い合わせ | ビズシス">
+<Layout title="無料相談 | BizSys">
+  <div class="contact-page">
 
-  <style>
-    .contact-wrap {
-      max-width: 680px;
-      margin: 0 auto;
-    }
-    .contact-note {
-      background: #eef3fb;
-      border-left: 4px solid #0a4f9f;
-      border-radius: 0 12px 12px 0;
-      padding: 20px 24px;
-      margin-bottom: 40px;
-      font-size: 0.95rem;
-      line-height: 1.8;
-      color: #333;
-    }
-    .form-note {
-      font-size: 0.85rem;
-      color: #888;
-      margin: 4px 0 0;
-    }
-    .required-badge {
-      display: inline-block;
-      background: #0a4f9f;
-      color: #fff;
-      font-size: 0.7rem;
-      font-weight: 700;
-      padding: 1px 6px;
-      border-radius: 4px;
-      margin-left: 6px;
-      vertical-align: middle;
-    }
-    .optional-badge {
-      display: inline-block;
-      background: #cdd6e8;
-      color: #555;
-      font-size: 0.7rem;
-      font-weight: 700;
-      padding: 1px 6px;
-      border-radius: 4px;
-      margin-left: 6px;
-      vertical-align: middle;
-    }
-  </style>
-
-  <!-- ページヘッダー -->
-  <section class="section page-header">
-    <div class="section-inner">
-      <h1>まずは、現状と課題をお聞かせください</h1>
-      <p class="page-lead">文字ベースでの相談が基本です。電話やZoomは不要です。どんな内容でもお気軽にどうぞ。</p>
-    </div>
-  </section>
-
-  <!-- フォーム -->
-  <section class="section bg-white">
-    <div class="section-inner">
-      <div class="contact-wrap">
-
-        <div class="contact-note">
-          <strong>相談は文字ベースでOK</strong><br />
-          どんな相談でも構いません。現状の課題や業務の流れを入力してください。<br />
-          送信後、1日以内に一次回答をお送りします。
+    <!-- ヒーロー -->
+    <section class="contact-hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>まずは、<br />現状と課題をお聞かせください</h1>
+          <p class="hero-lead">
+            どんな内容でもお気軽にどうぞ。<br />
+            一言でもいただければ、順を追って丁寧にご要望をお伺いいたします。
+          </p>
         </div>
+        <div class="hero-visual">
+          <img src="/images/contact/hero-contact-illustration.png" alt="無料相談イメージ" />
+        </div>
+      </div>
+    </section>
 
-        <!-- Formspree への送信フォーム -->
-        <form action="https://formspree.io/f/maqllrnj" method="POST">
+    <!-- フォームセクション -->
+    <section class="form-section">
+      <div class="container form-grid">
+
+        <!-- フォーム本体 -->
+        <form class="contact-form" action="https://formspree.io/f/maqllrnj" method="POST">
           <input type="hidden" name="_subject" value="ビズシスへのお問い合わせ" />
+          <h2>無料相談フォーム</h2>
 
-          <div class="form-group">
-            <label for="name">
-              お名前
-              <span class="required-badge">必須</span>
-            </label>
-            <input id="name" name="name" type="text" placeholder="山田 太郎" required />
-          </div>
+          <label>
+            <span>お名前 <em>必須</em></span>
+            <input type="text" name="name" placeholder="例）山田 太郎" required />
+          </label>
 
-          <div class="form-group">
-            <label for="company">
-              会社名 / 団体名
-              <span class="optional-badge">任意</span>
-            </label>
-            <input id="company" name="company" type="text" placeholder="株式会社〇〇" />
-          </div>
+          <label>
+            <span>会社名 / 団体名 <span class="opt">任意</span></span>
+            <input type="text" name="company" placeholder="例）株式会社〇〇 / 〇〇団体" />
+          </label>
 
-          <div class="form-group">
-            <label for="email">
-              メールアドレス
-              <span class="required-badge">必須</span>
-            </label>
-            <input id="email" name="email" type="email" placeholder="example@example.com" required />
-          </div>
+          <label>
+            <span>メールアドレス <em>必須</em></span>
+            <input type="email" name="email" placeholder="例）yamada@example.com" required />
+          </label>
 
-          <div class="form-group">
-            <label for="message">
-              お問い合わせ内容
-              <span class="required-badge">必須</span>
-            </label>
-            <textarea id="message" name="message" rows="8" placeholder="現在の課題や業務の流れ、ご相談内容をご記入ください。" required></textarea>
-          </div>
+          <label>
+            <span>お問い合わせ内容 <em>必須</em></span>
+            <textarea name="message" placeholder="ご相談内容や、現状の課題・ご要望などをご記入ください。" required></textarea>
+          </label>
 
-          <div class="form-group">
-            <label for="note">
-              相談希望日 / 備考
-              <span class="optional-badge">任意</span>
-            </label>
-            <textarea id="note" name="note" rows="3" placeholder="ご希望の日程や補足事項があればご記入ください。"></textarea>
-          </div>
+          <p class="privacy-note">※ ご入力いただいた個人情報は、お問い合わせ対応のみに利用いたします。</p>
 
-          <div class="form-submit">
-            <button type="submit" class="btn-primary">送信する</button>
-          </div>
+          <label class="check-label">
+            <input type="checkbox" required />
+            <span><a href="/privacy" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>に同意する</span>
+          </label>
+
+          <button type="submit" class="submit-btn">送信する</button>
         </form>
 
-      </div>
-    </div>
-  </section>
+        <!-- サイドコラム -->
+        <aside class="side-column">
 
+          <section class="side-card">
+            <div class="side-title">
+              <img src="/images/contact/icon-lightbulb.png" alt="" />
+              <h3>ご相談のポイント</h3>
+            </div>
+            <ul class="check-list">
+              <li>どういうことに困っているか、どういうことを解決したいか</li>
+              <li>現状使っているソフトやシステムを教えてください</li>
+            </ul>
+            <p>上記がわかる範囲で教えていただけると、より具体的なご提案が可能です。</p>
+          </section>
+
+          <section class="side-card">
+            <div class="side-title">
+              <img src="/images/contact/icon-operator.png" alt="" />
+              <h3>お気軽にどうぞ</h3>
+            </div>
+            <p>まとまっていなくても大丈夫です。わかる範囲でご記入ください。</p>
+            <div class="message-box">
+              ご相談は無料です。<br />
+              しつこい営業は一切いたしません。
+            </div>
+          </section>
+
+
+        </aside>
+      </div>
+    </section>
+
+
+    <!-- ボトムCTA -->
+    <section class="bottom-cta">
+      <div class="container bottom-cta-inner">
+        <div class="cta-icon">✉</div>
+        <div>
+          <h2>現場の困りごと、まずはお聞かせください</h2>
+          <p>システム化が必要かどうかも含めて、丁寧にご相談に対応します。</p>
+          <div class="cta-points"><span>🕐 24時間受付中</span><span>✉ 1営業日以内に返信</span></div>
+        </div>
+      </div>
+    </section>
+
+  </div>
 </Layout>

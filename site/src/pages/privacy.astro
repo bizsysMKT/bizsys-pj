@@ -1,0 +1,150 @@
+---
+import Layout from '../components/Layout.astro';
+---
+
+<Layout title="プライバシーポリシー | BizSys">
+
+  <style>
+    .privacy-page {
+      --blue: #0052b4;
+      --deep: #082f63;
+      --line: #cfe1f5;
+    }
+    .privacy-hero {
+      padding: 48px 0 32px;
+      background: linear-gradient(90deg, #f0f7ff 0%, #fff 60%, #eef6ff 100%);
+      border-bottom: 1px solid var(--line);
+    }
+    .privacy-hero h1 {
+      font-size: 32px;
+      font-weight: 900;
+      color: var(--deep);
+      margin: 0 0 10px;
+      letter-spacing: -.03em;
+    }
+    .privacy-hero p {
+      color: #52687f;
+      font-size: 14px;
+      margin: 0;
+    }
+    .privacy-body {
+      padding: 48px 0 72px;
+    }
+    .privacy-content {
+      max-width: 780px;
+    }
+    .privacy-content h2 {
+      position: relative;
+      font-size: 18px;
+      font-weight: 900;
+      color: var(--deep);
+      margin: 40px 0 12px;
+      padding-left: 16px;
+    }
+    .privacy-content h2::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .2em;
+      width: 4px;
+      height: 1.1em;
+      border-radius: 4px;
+      background: var(--blue);
+    }
+    .privacy-content h2:first-child { margin-top: 0; }
+    .privacy-content p {
+      color: #2e4460;
+      line-height: 1.9;
+      margin: 0 0 14px;
+      font-size: 15px;
+    }
+    .privacy-content ul {
+      margin: 0 0 14px 1.4em;
+      padding: 0;
+      color: #2e4460;
+      line-height: 1.9;
+      font-size: 15px;
+    }
+    .privacy-content li { margin: 4px 0; }
+    .privacy-updated {
+      color: #7a90a8;
+      font-size: 13px;
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+    }
+  </style>
+
+  <!-- ヒーロー -->
+  <section class="privacy-hero">
+    <div class="container">
+      <h1>プライバシーポリシー</h1>
+      <p>個人情報の取り扱いについて</p>
+    </div>
+  </section>
+
+  <!-- 本文 -->
+  <section class="privacy-body">
+    <div class="container">
+      <div class="privacy-content">
+
+        <h2>1. 個人情報の収集について</h2>
+        <p>
+          当社（株式会社SOB）は、お問い合わせフォームなどを通じて、お名前・会社名・メールアドレスなどの個人情報をご提供いただく場合があります。
+          収集する情報は、お問い合わせへの回答・サービスのご提案・ご連絡の目的にのみ使用します。
+        </p>
+
+        <h2>2. 個人情報の利用目的</h2>
+        <p>収集した個人情報は、以下の目的で利用します。</p>
+        <ul>
+          <li>お問い合わせへの回答・対応</li>
+          <li>サービスに関するご提案・情報提供</li>
+          <li>サービス改善のための統計的分析（個人を特定しない形式）</li>
+        </ul>
+
+        <h2>3. 個人情報の第三者提供</h2>
+        <p>
+          当社は、以下の場合を除き、ご提供いただいた個人情報を第三者に提供・開示することはありません。
+        </p>
+        <ul>
+          <li>本人の同意がある場合</li>
+          <li>法令に基づく場合</li>
+          <li>人命・身体・財産の保護のために必要な場合</li>
+        </ul>
+
+        <h2>4. 個人情報の管理</h2>
+        <p>
+          当社は、個人情報への不正アクセス・漏洩・紛失・破壊を防止するため、適切な安全管理措置を講じます。
+        </p>
+
+        <h2>5. 開示・訂正・削除のご要望</h2>
+        <p>
+          ご自身の個人情報について、開示・訂正・削除をご希望の場合は、お問い合わせフォームよりご連絡ください。
+          本人確認のうえ、合理的な期間内に対応いたします。
+        </p>
+
+        <h2>6. Cookie（クッキー）の使用について</h2>
+        <p>
+          当サイトでは、アクセス解析のためにGoogle Analyticsを使用する場合があります。
+          Google Analyticsはクッキーを使用してデータを収集しますが、個人を特定する情報は含まれません。
+          クッキーの使用を希望されない場合は、ブラウザの設定で無効にすることができます。
+        </p>
+
+        <h2>7. プライバシーポリシーの変更</h2>
+        <p>
+          当社は、必要に応じて本ポリシーを変更することがあります。変更後のポリシーは本ページに掲載した時点から効力を生じるものとします。
+        </p>
+
+        <h2>8. お問い合わせ</h2>
+        <p>
+          個人情報の取り扱いに関するお問い合わせは、下記よりご連絡ください。<br />
+          <a href="/contact" style="color: var(--blue); font-weight: 900;">お問い合わせフォームはこちら →</a>
+        </p>
+
+        <p class="privacy-updated">制定日：2026年4月1日　／　最終更新：2026年6月12日</p>
+
+      </div>
+    </div>
+  </section>
+
+</Layout>

@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../components/Layout.astro';
+import '../../../styles/blog.css';
 
 export async function getStaticPaths() {
   const blogModules = import.meta.glob('../../../content/blog/*.md', { eager: true });
@@ -10,71 +11,151 @@ export async function getStaticPaths() {
       ...post.frontmatter,
     }));
 
-  const allTags = [...new Set(
-    validPosts.flatMap(p => p.tags ?? [])
-  )];
+  const allTags = [...new Set(validPosts.flatMap(p => p.tags ?? []))];
 
   return allTags.map(tag => ({
     params: { tag },
     props: {
       posts: validPosts
         .filter(p => (p.tags ?? []).includes(tag))
-        .sort((a, b) => new Date(b.date) - new Date(a.date))
+        .sort((a, b) => new Date(b.date) - new Date(a.date)),
     }
   }));
 }
 
 const { tag } = Astro.params;
 const { posts } = Astro.props;
+
+const allBlogModules = import.meta.glob('../../../content/blog/*.md', { eager: true });
+const allTagPosts = Object.entries(allBlogModules)
+  .filter(([path]) => !path.endsWith('article-template.md'))
+  .map(([, post]) => post.frontmatter)
+  .sort((a, b) => new Date(b.date) - new Date(a.date));
+const allTags = [...new Set(allTagPosts.flatMap(p => p?.tags ?? []))];
+
+function formatDate(date) {
+  const d = new Date(date);
+  return `${d.getFullYear()}/${d.getMonth() + 1}/${d.getDate()}`;
+}
 ---
 
-<Layout title={`タグ：${tag} の記事一覧 | ビズシス`}>
+<Layout title={`タグ：${tag} の記事一覧 | BizSys`}>
+  <div class="blog-page">
 
-  <!-- ページヘッダー -->
-  <section class="section page-header">
-    <div class="section-inner">
-      <p style="font-size: 0.88rem; color: #888; margin: 0 0 8px;">
-        <a href="/blog" style="color: #0a4f9f; text-decoration: none;">ブログ</a> &rsaquo; タグ
-      </p>
-      <h1 class="tag-page-title">タグ：<span class="tag-highlight">{tag}</span> の記事一覧</h1>
-    </div>
-  </section>
-
-  <!-- 記事一覧 -->
-  <section class="section bg-white">
-    <div class="section-inner">
-      {posts.length === 0 ? (
-        <div class="no-posts">
-          <p>該当する記事はありません。</p>
-          <a href="/blog" class="btn-back">← すべての記事を見る</a>
+    <!-- ヒーロー -->
+    <section class="blog-hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="section-label">ブログ</p>
+          <h1>タグ：<span>{tag}</span></h1>
+          <p class="hero-lead">
+            「{tag}」に関する記事一覧です。<br />
+            <a href="/blog" style="color: var(--blue); font-weight: 900;">← すべての記事を見る</a>
+          </p>
         </div>
-      ) : (
-        <>
-          <ul class="blog-list">
-            {posts.map((post) => (
-              <li class="blog-item">
-                <a href={`/blog/${post.slug}`}>{post.title}</a>
-                <small>{new Date(post.date).toLocaleDateString('ja-JP')}</small>
-                {post.description && <p>{post.description}</p>}
-                {post.tags && post.tags.length > 0 && (
-                  <p class="blog-tags">
-                    {post.tags.map((t, i) => (
-                      <>
-                        {i > 0 && ' '}
-                        <a href={`/blog/tag/${t}`} class="blog-tag-link">{t}</a>
-                      </>
-                    ))}
-                  </p>
-                )}
-              </li>
-            ))}
-          </ul>
-          <div style="margin-top: 40px;">
-            <a href="/blog" class="btn-back">← すべての記事を見る</a>
-          </div>
-        </>
-      )}
-    </div>
-  </section>
+        <div class="hero-visual">
+          <img src="/images/blog/blog_hero_object_transparent.png" alt="ブログイメージ" style="width:min(280px,100%);max-height:160px;object-fit:contain;" />
+        </div>
+      </div>
+    </section>
 
+    <!-- コンテンツエリア -->
+    <section class="blog-content">
+      <div class="container">
+
+        <!-- カテゴリチップ -->
+        <div class="category-chips">
+          <a href="/blog">すべて</a>
+          {allTags.map(t => (
+            <a class={t === tag ? 'active' : ''} href={`/blog/tag/${t}`}>{t}</a>
+          ))}
+        </div>
+
+        <div class="content-grid">
+
+          <!-- メインカラム -->
+          <div class="main-column">
+            {posts.length === 0 ? (
+              <p style="color: #888;">該当する記事はありません。</p>
+            ) : (
+              <div class="article-list">
+                {posts.map(post => (
+                  <article class="article-row">
+                    <div class="row-thumb">
+                      <img src={`/images/blog/${post.icon || 'icon-gears.png'}`} alt="" />
+                    </div>
+                    <div class="row-body">
+                      <time>{formatDate(post.date)}</time>
+                      <h2>{post.title}</h2>
+                      <p>{post.description}</p>
+                      <div class="article-bottom">
+                        <div class="tags">
+                          {(post.tags || []).map(t => <span>{t}</span>)}
+                        </div>
+                        <a class="read-link" href={`/blog/${post.slug}`}>記事を読む →</a>
+                      </div>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <!-- サイドバー -->
+          <aside class="sidebar">
+
+            <section class="side-card">
+              <h3>人気タグ</h3>
+              <div class="side-tags">
+                {allTags.map(t => (
+                  <a class={t === tag ? 'active' : ''} href={`/blog/tag/${t}`}>{t}</a>
+                ))}
+              </div>
+            </section>
+
+            <section class="side-card recommend">
+              <h3>こんな方におすすめ</h3>
+              <div class="recommend-item">
+                <img src="/images/blog/icon-person.png" alt="" />
+                <span>Excelでの管理に<br />限界を感じている方</span>
+              </div>
+              <div class="recommend-item">
+                <img src="/images/blog/icon-sidebar-chart.png" alt="" />
+                <span>業務を効率化して<br />時間を生み出したい方</span>
+              </div>
+              <div class="recommend-item">
+                <img src="/images/blog/icon-shield-check.png" alt="" />
+                <span>システム化を検討中の<br />中小企業の方</span>
+              </div>
+              <div class="recommend-item">
+                <img src="/images/blog/icon-chat.png" alt="" />
+                <span>信頼できるシステム会社を<br />探している方</span>
+              </div>
+            </section>
+
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ボトム CTA -->
+    <section class="blog-bottom-cta">
+      <div class="container blog-bottom-cta-inner">
+        <div>
+          <h2>自社の業務に合う改善方法を知りたい方は、<br />お気軽にご相談ください</h2>
+          <p>専任の担当者が、貴社の課題に合わせて最適な解決策をご提案します。</p>
+          <div class="cta-points"><span>🕐 24時間受付中</span><span>✉ 1営業日以内に返信</span></div>
+        </div>
+        <div class="cta-actions">
+          <a href="/contact" class="btn-cta-orange">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            無料相談する
+          </a>
+          <a href="/services" class="btn-cta-white">サービスを見る</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
 </Layout>

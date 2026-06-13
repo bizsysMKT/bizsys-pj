@@ -1,81 +1,260 @@
 ---
 import Layout from '../components/Layout.astro';
+import '../styles/cases3.css';
 ---
 
-<Layout title="導入事例 | ビズシス">
+<Layout title="導入事例 | BizSys">
+  <div class="p3-page">
 
-  <style>
-    .cases-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-    .case-card {
-      background: #fff;
-      border-radius: 16px;
-      padding: 22px;
-      box-shadow: 0 10px 28px rgba(18, 38, 63, 0.07);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      cursor: default;
-    }
-    .case-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 24px 48px rgba(10, 79, 159, 0.15);
-    }
-    .case-card h3 { margin: 0 0 8px; font-size: 0.95rem; font-weight: 700; color: #0a4f9f; }
-    .case-card p { margin: 0; font-size: 0.88rem; line-height: 1.65; color: #555; }
-    @media (max-width: 900px) { .cases-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 480px) { .cases-grid { grid-template-columns: 1fr; } }
-  </style>
+    <!-- ヒーロー -->
+    <section class="p3-hero">
+      <div class="container p3-hero-inner">
 
-  <!-- ページヘッダー -->
-  <section class="section page-header">
-    <div class="section-inner">
-      <h1>導入事例でわかる、現場の課題解決</h1>
-      <p class="page-lead">業種別の現場課題を解決した8つの事例をご紹介します。</p>
-    </div>
-  </section>
-
-  <!-- 事例8件 -->
-  <section class="section bg-white">
-    <div class="section-inner">
-      <h2 class="section-title">Excel運用を変えた導入事例</h2>
-      <div class="cases-grid">
-        <div class="case-card"><h3>引越業者</h3><p>案件管理システムによりExcel管理から脱却</p></div>
-        <div class="case-card"><h3>訪問看護</h3><p>記録・勤務・お知らせを一元管理</p></div>
-        <div class="case-card"><h3>EC・BUYMA</h3><p>商品分析・バイヤー分析を実装</p></div>
-        <div class="case-card"><h3>製造業</h3><p>見積・工程・納品・請求を一元管理</p></div>
-        <div class="case-card"><h3>福祉施設</h3><p>在庫管理のリアルタイム化</p></div>
-        <div class="case-card"><h3>レンタカー</h3><p>発注・在庫・進捗を一元管理</p></div>
-        <div class="case-card"><h3>入場管理</h3><p>QRコード入場管理を複数店舗対応</p></div>
-        <div class="case-card"><h3>物流</h3><p>発注管理で大手企業の受発注業務を効率化</p></div>
-      </div>
-      <div class="cta-group">
-        <a class="btn-primary" href="/contact">同じような課題で相談する</a>
-        <a class="btn-secondary" href="/services">サービスを見る</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- 共通ポイント -->
-  <section class="section bg-light">
-    <div class="section-inner">
-      <h2 class="section-title">導入で変わること</h2>
-      <div class="card-grid">
-        <div class="card">
-          <h3>Excelの限界を解消</h3>
-          <p>入力ミス・バージョン管理・属人化といったExcel管理の課題を根本から解消します。</p>
+        <div class="p3-hero-copy">
+          <h1>
+            導入事例でわかる、<br />
+            <span>業務システムの改善イメージ</span>
+          </h1>
+          <p>
+            引越業者、介護施設、訪問看護、製造業など、<br />
+            さまざまな業種の導入事例から、<br />
+            業務改善のイメージをご確認いただけます。
+          </p>
+          <div class="p3-hero-actions">
+            <a href="/contact" class="btn primary">
+              <svg xmlns="http://www.w3.org/2000/svg" style="margin:2px 5px 0 0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              無料相談する
+            </a>
+            <a href="/pricing" class="btn secondary">料金を見る</a>
+          </div>
         </div>
-        <div class="card">
-          <h3>使いやすさ重視の設計</h3>
-          <p>現場担当者が迷わず使えるUIを最優先に設計。操作研修のコストも最小化します。</p>
+
+        <div class="p3-hero-visual" aria-hidden="true">
+          <img src="/images/hero-cases.png" alt="" class="p3-hero-img" style="width:100%;height:auto;display:block;" />
         </div>
-        <div class="card">
-          <h3>継続保守で運用を安定化</h3>
-          <p>導入後も月1万円〜の保守プランで安心。現場の変化に合わせた継続改善を行います。</p>
+
+      </div>
+    </section>
+
+    <!-- 業種・用途から探す -->
+    <section class="p3-section p3-industry-section">
+      <div class="container">
+        <h2 class="p3-section-title">導入業種・用途の一例</h2>
+        <div class="p3-industry-grid">
+          <div class="p3-industry-card">
+            <img src="/images/industries/01_hikkoshi.png" alt="引越業者" class="p3-industry-icon">
+            <div>
+              <strong>引越業者</strong>
+              <small>見積・作業管理の効率化で作業ミスを削減</small>
+            </div>
+          </div>
+          <div class="p3-industry-card">
+            <img src="/images/industries/02_houmon_kango.png" alt="訪問看護" class="p3-industry-icon">
+            <div>
+              <strong>訪問看護</strong>
+              <small>記録・報告の効率化で情報共有をスムーズに</small>
+            </div>
+          </div>
+          <div class="p3-industry-card">
+            <img src="/images/industries/03_seizou.png" alt="製造業" class="p3-industry-icon">
+            <div>
+              <strong>製造業</strong>
+              <small>工程・在庫・品質管理の見える化を実現</small>
+            </div>
+          </div>
+          <div class="p3-industry-card">
+            <img src="/images/industries/04_kaigo_shisetsu.png" alt="介護施設" class="p3-industry-icon">
+            <div>
+              <strong>介護施設</strong>
+              <small>介護記録の一元管理でケアの質を向上</small>
+            </div>
+          </div>
+          <div class="p3-industry-card">
+            <img src="/images/industries/05_rentacar.png" alt="レンタカー" class="p3-industry-icon">
+            <div>
+              <strong>レンタカー</strong>
+              <small>車両・予約・売上管理をシステムで一元化</small>
+            </div>
+          </div>
+          <div class="p3-industry-card">
+            <img src="/images/industries/06_butsuryu.png" alt="物流" class="p3-industry-icon">
+            <div>
+              <strong>物流</strong>
+              <small>配車・荷主管理の効率化で稼働率を最大化</small>
+            </div>
+          </div>
+          <div class="p3-industry-card">
+            <img src="/images/industries/07_nyujo_kanri.png" alt="入場管理" class="p3-industry-icon">
+            <div>
+              <strong>入場管理</strong>
+              <small>入退場の記録・集計を簡単・正確に</small>
+            </div>
+          </div>
+          <div class="p3-industry-card">
+            <img src="/images/industries/08_ec_buyma.png" alt="EC・小売" class="p3-industry-icon">
+            <div>
+              <strong>EC・小売</strong>
+              <small>受注・在庫・発送管理を自動化しミスを削減</small>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
+    <!-- 導入事例のご紹介 -->
+    <section class="p3-cases-section" id="cases">
+      <div class="container">
+        <h2 class="p3-section-title">導入事例のご紹介</h2>
+      </div>
+      <div class="container p3-cases-grid-container">
+        <div class="p3-case-grid">
+
+          <!-- 引越業者 -->
+          <article class="case-card case-card--moving" id="case-moving">
+            <div class="case-visual">
+              <div class="screen-stack screen-stack--moving">
+                <img class="screen screen--main" src="/images/cases-section/moving-schedule.png" alt="引越業者向け案件管理システムのスケジュール管理画面" />
+                <img class="screen screen--sub" src="/images/cases-section/moving-estimate.png" alt="引越業者向け案件管理システムの見積書画面" />
+              </div>
+            </div>
+            <div class="case-body">
+              <span class="case-badge">引越業者</span>
+              <h3>引越業者向け案件管理システム</h3>
+              <p>見積・作業日・担当者・請求までを一元管理。スケジュール管理や帳票出力に対応します。</p>
+              <div class="case-subtitle"><span></span>主な改善ポイント<span></span></div>
+              <div class="feature-grid">
+                <div class="feature-card">
+                  <div class="feature-icon"><img src="/images/cases-section/icon-moving-1.png" alt="" /></div>
+                  <div class="feature-text"><strong>案件管理</strong><small>予定・進捗・対応状況を一覧で確認</small></div>
+                </div>
+                <div class="feature-card">
+                  <div class="feature-icon"><img src="/images/cases-section/icon-moving-2.png" alt="" /></div>
+                  <div class="feature-text"><strong>見積・請求</strong><small>帳票作成から請求内容の確認まで対応</small></div>
+                </div>
+                <div class="feature-card">
+                  <div class="feature-icon"><img src="/images/cases-section/icon-moving-3.png" alt="" /></div>
+                  <div class="feature-text"><strong>スタッフ手配</strong><small>作業日・担当者・対応状況をまとめて管理</small></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 小売・卸 -->
+          <article class="case-card case-card--retail" id="case-retail">
+            <div class="case-visual">
+              <span class="integration-badge">会計システム連携対応</span>
+              <div class="screen-stack screen-stack--retail">
+                <img class="screen screen--main" src="/images/cases-section/retail-dashboard.png" alt="小売・卸向け売上利益管理システムのダッシュボード画面" />
+              </div>
+            </div>
+            <div class="case-body">
+              <span class="case-badge">小売・卸</span>
+              <h3>小売・卸向け売上利益管理システム</h3>
+              <p>仕入・販売・在庫を一元管理し、商品別・販売先別の売上や利益を確認できます。</p>
+              <div class="case-subtitle"><span></span>主な改善ポイント<span></span></div>
+              <div class="feature-grid">
+                <div class="feature-card">
+                  <div class="feature-icon"><img src="/images/cases-section/icon-retail-1.png" alt="" /></div>
+                  <div class="feature-text"><strong>売上・利益</strong><small>商品別・販売先別の売上や利益を確認</small></div>
+                </div>
+                <div class="feature-card">
+                  <div class="feature-icon"><img src="/images/cases-section/icon-retail-2.png" alt="" /></div>
+                  <div class="feature-text"><strong>仕入・在庫</strong><small>入出庫・在庫数・仕入状況をまとめて把握</small></div>
+                </div>
+                <div class="feature-card">
+                  <div class="feature-icon"><img src="/images/cases-section/icon-retail-3.png" alt="" /></div>
+                  <div class="feature-text"><strong>freee連携</strong><small>会計データ連携で入力や転記の手間を軽減</small></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 訪問看護 -->
+          <article class="case-card case-card--nursing" id="case-nurse">
+            <div class="case-visual">
+              <div class="screen-stack screen-stack--nursing">
+                <img class="screen screen--main" src="/images/cases-section/nursing-schedule.png" alt="訪問看護向け記録管理システムの訪問スケジュール画面" />
+                <img class="screen screen--sub" src="/images/cases-section/nursing-record.png" alt="訪問看護向け記録管理システムの訪問看護記録書画面" />
+              </div>
+            </div>
+            <div class="case-body">
+              <span class="case-badge">訪問看護</span>
+              <h3>訪問看護向け記録管理システム</h3>
+              <p>訪問スケジュールと記録票の作成・共有をデジタル化し、情報共有をしやすくします。</p>
+              <div class="case-subtitle"><span></span>主な改善ポイント<span></span></div>
+              <div class="feature-grid">
+                <div class="feature-card">
+                  <div class="feature-icon"><img src="/images/cases-section/icon-nursing-1.png" alt="" /></div>
+                  <div class="feature-text"><strong>訪問予定</strong><small>スタッフ別・利用者別の訪問予定を確認</small></div>
+                </div>
+                <div class="feature-card">
+                  <div class="feature-icon"><img src="/images/cases-section/icon-nursing-2.png" alt="" /></div>
+                  <div class="feature-text"><strong>記録票作成</strong><small>訪問記録の入力・確認・記録票作成に対応</small></div>
+                </div>
+                <div class="feature-card">
+                  <div class="feature-icon"><img src="/images/cases-section/icon-nursing-3.png" alt="" /></div>
+                  <div class="feature-text"><strong>情報共有</strong><small>訪問内容や特記事項を関係者間で共有</small></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 選ばれる理由 -->
+    <section class="p3-reason-section">
+      <div class="container">
+        <h2 class="p3-reason-heading">BizSysが選ばれる理由</h2>
+        <div class="p3-reason-grid">
+          <div class="p3-reason-card">
+            <img src="/images/reasons/r1.png" alt="" class="p3-reason-icon">
+            <div>
+              <h3 class="p3-reason-title">現場目線の設計</h3>
+              <p class="p3-reason-desc">実際の業務フローを理解し、現場で使いやすいシステムを設計します。</p>
+            </div>
+          </div>
+          <div class="p3-reason-card">
+            <img src="/images/reasons/r2.png" alt="" class="p3-reason-icon">
+            <div>
+              <h3 class="p3-reason-title">少数精鋭の対応</h3>
+              <p class="p3-reason-desc">営業から開発まで一貫対応。無駄なコストを抑え、スピーディーに対応します。</p>
+            </div>
+          </div>
+          <div class="p3-reason-card">
+            <img src="/images/reasons/r3.png" alt="" class="p3-reason-icon">
+            <div>
+              <h3 class="p3-reason-title">保守・運用サポート</h3>
+              <p class="p3-reason-desc">作って終わりではなく、継続的な改善と安定運用をしっかりサポートします。</p>
+            </div>
+          </div>
+          <div class="p3-reason-card">
+            <img src="/images/reasons/r4.png" alt="" class="p3-reason-icon">
+            <div>
+              <h3 class="p3-reason-title">相談しやすい体制</h3>
+              <p class="p3-reason-desc">文字ベースでの相談が基本。気軽に相談できる体制を整えています。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTAバンド -->
+    <section class="p3-contact-band" id="contact">
+      <div class="container p3-contact-inner">
+        <div>
+          <h2>自社の業務もシステム化できるか<br />まずはお気軽にご相談ください</h2>
+          <div class="cta-points"><span>🕐 24時間受付中</span><span>✉ 1営業日以内に返信</span></div>
+        </div>
+        <div class="p3-contact-actions">
+          <a href="/contact" class="p3-btn p3-btn-primary">
+            無料で相談してみる
+          </a>
+          <a href="/demo" class="p3-btn p3-btn-white">操作デモを見てみる</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
 </Layout>

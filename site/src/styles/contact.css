@@ -1,0 +1,440 @@
+/* ====================================================
+   お問い合わせページ専用スタイル
+   ==================================================== */
+
+.contact-page {
+  --blue: #0052b4;
+  --navy: #073b78;
+  --deep: #082f63;
+  --light-blue: #eef6ff;
+  --line: #cfe1f5;
+  --orange: #ff7a00;
+  --text: #10243f;
+  --muted: #5c6f87;
+  --shadow: 0 10px 28px rgba(16, 64, 120, .08);
+}
+
+/* ====================================================
+   ヒーロー
+   ==================================================== */
+.contact-page .contact-hero {
+  padding: 48px 0 24px;
+  background: linear-gradient(90deg, #f0f7ff 0%, #fff 55%, #eef6ff 100%);
+}
+.contact-page .hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 56px;
+  align-items: start;
+}
+.contact-page .pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 18px;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--blue);
+  font-weight: 900;
+  box-shadow: var(--shadow);
+  margin: 0 0 22px;
+}
+.contact-page .hero-copy h1 {
+  font-size: 38px;
+  line-height: 1.35;
+  letter-spacing: -.03em;
+  color: var(--deep);
+  margin: 0 0 22px;
+  font-weight: 900;
+}
+.contact-page .hero-lead {
+  font-size: 17px;
+  color: #243c59;
+  font-weight: 700;
+  margin: 0 0 34px;
+}
+.contact-page .hero-points {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+.contact-page .hero-point {
+  display: grid;
+  grid-template-columns: 54px 1fr;
+  gap: 12px;
+  align-items: center;
+  color: var(--deep);
+  font-weight: 900;
+}
+.contact-page .hero-point span {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+.contact-page .hero-point img { width: 34px; height: 34px; }
+.contact-page .hero-visual {
+  display: grid;
+  place-items: center;
+}
+.contact-page .hero-visual img { width: min(320px, 100%); }
+
+/* ====================================================
+   フォームセクション
+   ==================================================== */
+.contact-page .form-section {
+  padding: 34px 0 46px;
+  background: #fff;
+}
+.contact-page .form-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 32px;
+  align-items: start;
+}
+
+/* フォーム本体 */
+.contact-page .contact-form {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 34px;
+}
+.contact-page .contact-form h2 {
+  margin: 0 0 24px;
+  color: var(--deep);
+  font-size: 26px;
+  line-height: 1.3;
+  font-weight: 900;
+}
+.contact-page .contact-form label {
+  display: block;
+  margin-bottom: 18px;
+}
+.contact-page .contact-form label > span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #243c59;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+.contact-page .contact-form em {
+  font-style: normal;
+  font-size: 12px;
+  line-height: 1;
+  padding: 4px 7px;
+  border-radius: 5px;
+  background: #ffedf0;
+  color: #e6455c;
+}
+.contact-page .contact-form .opt {
+  font-size: 12px;
+  line-height: 1;
+  padding: 4px 7px;
+  border-radius: 5px;
+  background: #edf2f8;
+  color: #5d7088;
+}
+.contact-page .contact-form input,
+.contact-page .contact-form textarea {
+  width: 100%;
+  border: 1px solid #cbddef;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--text);
+  font: inherit;
+  font-weight: 600;
+  outline: none;
+}
+.contact-page .contact-form input {
+  height: 48px;
+  padding: 0 14px;
+}
+.contact-page .contact-form textarea {
+  min-height: 124px;
+  padding: 13px 14px;
+  resize: vertical;
+}
+.contact-page .contact-form input::placeholder,
+.contact-page .contact-form textarea::placeholder {
+  color: #b0bec9;
+  font-weight: 400;
+}
+.contact-page .contact-form input:focus,
+.contact-page .contact-form textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(0, 82, 180, .1);
+}
+.contact-page .privacy-note {
+  color: #697f96;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 4px 0 14px;
+}
+.contact-page .check-label {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 22px !important;
+}
+.contact-page .check-label input {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.contact-page .check-label span {
+  font-weight: 700;
+  display: flex !important;
+  align-items: center;
+  line-height: 1.4;
+}
+.contact-page .check-label a {
+  color: var(--blue);
+  text-decoration: underline;
+  font-weight: 900;
+}
+.contact-page .submit-btn {
+  width: 100%;
+  min-height: 58px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--orange);
+  color: #fff;
+  font: inherit;
+  font-size: 18px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 12px 22px rgba(255,122,0,.26);
+  transition: 0.15s ease;
+}
+.contact-page .submit-btn::before {
+  content: "✈";
+  margin-right: 10px;
+}
+.contact-page .submit-btn:hover { background: #e06800; }
+
+/* サイドコラム */
+.contact-page .side-column {
+  display: grid;
+  gap: 18px;
+}
+.contact-page .side-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 24px;
+}
+.contact-page .side-title {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.contact-page .side-title img {
+  width: 50px;
+  height: 50px;
+  background: var(--light-blue);
+  border-radius: 50%;
+  padding: 10px;
+}
+.contact-page .side-title h3 {
+  color: var(--deep);
+  font-size: 20px;
+  margin: 0;
+  line-height: 1.35;
+  font-weight: 900;
+}
+.contact-page .check-list,
+.contact-page .faq-mini {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 14px;
+  color: #213b58;
+  font-weight: 850;
+}
+.contact-page .check-list li {
+  margin-bottom: 8px;
+}
+.contact-page .check-list li::before {
+  content: "●";
+  color: var(--blue);
+  margin-right: 10px;
+  font-size: 12px;
+}
+.contact-page .side-card p {
+  color: #4a6078;
+  margin: 0;
+  font-weight: 700;
+  font-size: 14px;
+}
+.contact-page .message-box {
+  margin-top: 14px;
+  background: var(--light-blue);
+  color: var(--deep);
+  border-radius: 10px;
+  padding: 16px;
+  font-weight: 900;
+  font-size: 14px;
+}
+.contact-page .faq-mini {
+  list-style: disc;
+  padding-left: 20px;
+  font-size: 14px;
+}
+.contact-page .faq-mini li { margin-bottom: 6px; }
+.contact-page .text-link {
+  color: var(--blue);
+  font-weight: 900;
+  font-size: 14px;
+}
+
+/* ====================================================
+   選ばれる理由
+   ==================================================== */
+.contact-page .reasons {
+  padding: 10px 0 46px;
+}
+.contact-page .reasons h2 {
+  color: var(--deep);
+  font-size: 22px;
+  margin: 0 0 18px;
+  font-weight: 900;
+}
+.contact-page .reasons h2::before {
+  content: "●";
+  color: var(--blue);
+  margin-right: 8px;
+  font-size: 14px;
+}
+.contact-page .reason-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+.contact-page .reason-grid article {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 24px;
+}
+.contact-page .reason-grid img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 12px;
+}
+.contact-page .reason-grid h3 {
+  color: var(--blue);
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 900;
+}
+.contact-page .reason-grid p {
+  color: #405874;
+  font-size: 13px;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* ====================================================
+   ボトムCTA
+   ==================================================== */
+.contact-page .bottom-cta {
+  background: linear-gradient(135deg, #004486, #0069d9);
+  color: #fff;
+  padding: 42px 0;
+}
+.contact-page .bottom-cta-inner {
+  display: grid;
+  grid-template-columns: 64px 1fr auto;
+  gap: 24px;
+  align-items: center;
+}
+.contact-page .cta-icon {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255,255,255,.14);
+  font-size: 28px;
+}
+.contact-page .bottom-cta h2 {
+  margin: 0 0 4px;
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 900;
+  color: #fff;
+}
+.contact-page .bottom-cta p {
+  margin: 0;
+  font-weight: 700;
+  opacity: .95;
+  font-size: 15px;
+}
+.contact-page .cta-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.contact-page .btn-cta-orange {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 28px;
+  min-width: 160px;
+  border-radius: 999px;
+  background: var(--orange);
+  color: #fff;
+  font-weight: 900;
+  font-size: 16px;
+  box-shadow: 0 8px 20px rgba(255,122,0,.3);
+  white-space: nowrap;
+  transition: 0.15s ease;
+}
+.contact-page .btn-cta-orange:hover { background: #e06800; color: #fff; }
+.contact-page .btn-cta-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 28px;
+  min-width: 150px;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--blue);
+  font-weight: 900;
+  font-size: 16px;
+  white-space: nowrap;
+  transition: 0.15s ease;
+}
+.contact-page .btn-cta-white:hover { background: #eef5ff; color: var(--blue); }
+
+/* ====================================================
+   レスポンシブ
+   ==================================================== */
+@media (max-width: 980px) {
+  .contact-page .hero-grid,
+  .contact-page .form-grid,
+  .contact-page .bottom-cta-inner {
+    grid-template-columns: 1fr;
+  }
+  .contact-page .reason-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contact-page .hero-points {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 540px) {
+  .contact-page .reason-grid { grid-template-columns: 1fr; }
+  .contact-page .contact-form { padding: 22px 18px; }
+}

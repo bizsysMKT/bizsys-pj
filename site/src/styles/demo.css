@@ -1,0 +1,530 @@
+/* ====================================================
+   操作デモページ専用スタイル
+   ==================================================== */
+
+/* CSS変数 */
+.demo-page {
+  --blue: #0b4db7;
+  --blue-dark: #0a3278;
+  --blue-soft: #edf4ff;
+  --line: #d9e3f2;
+  --text: #1d2b44;
+  --sub-text: #5a6b86;
+  --bg: #f7fafe;
+  --orange: #ff8a00;
+  --orange-dark: #f07800;
+  --shadow: 0 10px 30px rgba(17, 57, 128, 0.08);
+}
+
+/* ====================================================
+   パンくずリスト
+   ==================================================== */
+.demo-page .breadcrumb-wrap {
+  background: #fff;
+  padding: 14px 0 8px;
+}
+.demo-page .breadcrumb-list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #7e8da7;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.demo-page .breadcrumb-list a {
+  color: #7e8da7;
+}
+.demo-page .breadcrumb-list a:hover {
+  color: var(--blue);
+  text-decoration: underline;
+}
+
+/* ====================================================
+   ヒーロー
+   ==================================================== */
+.demo-page .demo-hero {
+  background: linear-gradient(180deg, #f7fbff 0%, #f4f8ff 100%);
+  padding: 40px 0 0;
+}
+.demo-page .demo-hero-inner {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 40px;
+}
+.demo-page .demo-hero-text h1 {
+  margin: 0 0 24px;
+  font-size: 38px;
+  line-height: 1.35;
+  font-weight: 900;
+  color: #000;
+}
+.demo-page .demo-hero-text h1 span {
+  color: var(--blue);
+}
+.demo-page .demo-hero-text p {
+  margin: 0 0 32px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #10233f;
+}
+.demo-page .demo-hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.demo-page .demo-hero-note {
+  margin-top: 18px;
+  font-size: 14px;
+  color: #667998;
+}
+.demo-page .demo-hero-visual img {
+  width: 100%;
+  max-width: 580px;
+  margin-left: auto;
+  display: block;
+}
+
+/* ====================================================
+   ボタン共通
+   ==================================================== */
+.demo-page .btn-demo-orange {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  padding: 0 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 15px;
+  background: var(--orange);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(255, 138, 0, 0.25);
+  transition: 0.2s ease;
+  white-space: nowrap;
+}
+.demo-page .btn-demo-orange:hover {
+  background: var(--orange-dark);
+  transform: translateY(-1px);
+  color: #fff;
+}
+.demo-page .btn-demo-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  padding: 0 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 15px;
+  border: 2px solid var(--blue);
+  color: var(--blue);
+  background: #fff;
+  transition: 0.2s ease;
+  white-space: nowrap;
+}
+.demo-page .btn-demo-outline:hover {
+  background: var(--blue-soft);
+  color: var(--blue);
+}
+.demo-page .btn-demo-blue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  min-height: 50px;
+  background: var(--blue);
+  color: #fff;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 0 16px;
+  transition: 0.2s ease;
+}
+.demo-page .btn-demo-blue:hover {
+  background: var(--blue-dark);
+  color: #fff;
+}
+.demo-page .btn-cta-orange {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 64px;
+  padding: 0 40px;
+  min-width: 240px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 18px;
+  background: var(--orange);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(255, 138, 0, 0.25);
+  transition: 0.2s ease;
+  white-space: nowrap;
+}
+.demo-page .btn-cta-orange:hover {
+  background: var(--orange-dark);
+  transform: translateY(-1px);
+  color: #fff;
+}
+.demo-page .btn-cta-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 64px;
+  padding: 0 40px;
+  min-width: 240px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 18px;
+  background: #fff;
+  color: var(--blue);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  transition: 0.2s ease;
+  white-space: nowrap;
+}
+.demo-page .btn-cta-white:hover {
+  background: #eef5ff;
+  color: var(--blue);
+}
+
+/* ====================================================
+   セクション共通見出し
+   ==================================================== */
+.demo-page .demo-section-head {
+  text-align: left;
+  margin-bottom: 28px;
+}
+.demo-page .demo-section-head h2 {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.4;
+  color: #003b8f;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+.demo-page .demo-section-head p {
+  margin: 10px 0 0;
+  color: var(--sub-text);
+  font-size: 16px;
+}
+
+/* ====================================================
+   デモ一覧セクション
+   ==================================================== */
+.demo-page .demo-list-section {
+  padding: 56px 0 40px;
+  background: #fff;
+}
+.demo-page .demo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.demo-page .demo-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 24px 20px;
+  box-shadow: 0 4px 16px rgba(17, 57, 128, 0.04);
+}
+/* アイコン＋タイトル＋タグを横並びにするヘッダブロック */
+.demo-page .demo-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+.demo-page .demo-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.demo-page .demo-icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+.demo-page .demo-icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.demo-page .demo-title-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+.demo-page .demo-title-row h3 {
+  margin: 0;
+  font-size: clamp(18px, 2vw, 22px);
+  line-height: 1.4;
+  color: #12336d;
+}
+.demo-page .demo-tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: #edf4ff;
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  margin: 8px 0 6px;
+}
+.demo-page .demo-desc {
+  margin: 0;
+  font-size: 15px;
+  color: #435878;
+  line-height: 1.8;
+}
+.demo-page .demo-points {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.demo-page .demo-points li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 15px;
+  color: #24416e;
+  margin-bottom: 8px;
+}
+.demo-page .demo-points li:last-child {
+  margin-bottom: 0;
+}
+.demo-page .demo-points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--blue);
+  transform: translateY(-50%);
+}
+.demo-page .demo-shot img {
+  width: 100%;
+  border: 1px solid #d9e4f5;
+  border-radius: 10px;
+  background: #fff;
+  display: block;
+}
+.demo-page .demo-points-action {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-left: 30px;
+}
+.demo-page .demo-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.demo-page .demo-link {
+  text-align: center;
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 14px;
+}
+.demo-page .demo-link:hover {
+  text-decoration: underline;
+  color: var(--blue);
+}
+.demo-page .demo-bottom-note {
+  margin-top: 18px;
+  padding: 16px 20px;
+  border-radius: 14px;
+  background: #f5f8fd;
+  border: 1px solid #e1e9f5;
+}
+.demo-page .demo-bottom-note p {
+  margin: 0;
+  font-size: 14px;
+  color: #5f7291;
+  text-align: center;
+}
+
+/* ====================================================
+   FAQ セクション
+   ==================================================== */
+.demo-page .demo-faq-section {
+  padding: 52px 0 70px;
+  background: #fff;
+}
+.demo-page .demo-faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.demo-page .demo-faq-col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.demo-page details {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  overflow: hidden;
+}
+.demo-page summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 18px 52px 18px 22px;
+  font-weight: 700;
+  color: #23406f;
+  position: relative;
+}
+.demo-page summary::-webkit-details-marker {
+  display: none;
+}
+.demo-page summary::after {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--blue);
+  font-size: 24px;
+  font-weight: 400;
+}
+.demo-page details[open] summary::after {
+  content: "−";
+}
+.demo-page details p {
+  margin: 0;
+  padding: 0 22px 18px;
+  color: #526784;
+  font-size: 15px;
+}
+
+/* ====================================================
+   ボトム CTA
+   ==================================================== */
+.demo-page .demo-bottom-cta {
+  background: linear-gradient(90deg, #083b8e 0%, #0b4db7 100%);
+  padding: 48px 0;
+  color: #fff;
+}
+.demo-page .demo-bottom-cta-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+.demo-page .demo-bottom-cta-text h2 {
+  margin: 0 0 14px;
+  font-size: 28px;
+  line-height: 1.4;
+  font-weight: 800;
+  color: #fff;
+}
+.demo-page .demo-bottom-cta-text p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+}
+.demo-page .demo-bottom-cta-sub {
+  margin-top: 8px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.demo-page .demo-bottom-cta-buttons {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.demo-page .demo-bottom-cta-btn-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ====================================================
+   レスポンシブ
+   ==================================================== */
+@media (max-width: 1200px) {
+  .demo-page .demo-row {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 980px) {
+  .demo-page .demo-hero-inner {
+    grid-template-columns: 1fr;
+  }
+  .demo-page .demo-hero-visual img {
+    margin: 0 auto;
+  }
+  .demo-page .demo-faq-grid {
+    grid-template-columns: 1fr;
+  }
+  .demo-page .demo-bottom-cta-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .demo-page .demo-bottom-cta-buttons {
+    justify-content: flex-start;
+  }
+  .demo-page .demo-row {
+    grid-template-columns: 1fr;
+  }
+  .demo-page .demo-shot,
+  .demo-page .demo-points-action {
+    grid-column: 1 / 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .demo-page .demo-hero {
+    padding: 20px 0 40px;
+  }
+  .demo-page .demo-hero-text h1 {
+    font-size: 28px;
+  }
+  .demo-page .demo-section-head h2 {
+    font-size: 26px;
+  }
+  .demo-page .demo-title-row h3 {
+    font-size: 20px;
+  }
+  .demo-page .demo-row {
+    padding: 16px;
+    gap: 16px;
+  }
+  .demo-page .demo-icon img {
+    width: 56px;
+    height: 56px;
+  }
+  .demo-page .btn-demo-orange,
+  .demo-page .btn-demo-outline,
+  .demo-page .btn-cta-orange,
+  .demo-page .btn-cta-white {
+    width: 100%;
+  }
+  .demo-page .demo-hero-buttons {
+    flex-direction: column;
+  }
+  .demo-page .demo-bottom-cta-text h2 {
+    font-size: 28px;
+  }
+}

@@ -1,0 +1,284 @@
+---
+import Layout from '../components/Layout.astro';
+import '../styles/pricing.css';
+---
+
+<Layout title="料金 | BizSys">
+  <div class="pricing-page">
+
+    <!-- ヒーロー -->
+    <section class="pricing-hero">
+      <div class="container pricing-hero-grid">
+
+        <div class="pricing-hero-copy">
+          <h1>システム開発って<br /><span>いくら</span>かかるの？</h1>
+          <p class="hero-lead">
+            業務システムはオーダーメイドのため、<br />
+            必要な機能や規模によって費用が変わります。<br />
+            BizSysでは事前に費用感をお伝えし、<br />
+            分かりやすい料金表でご案内します。
+          </p>
+          <div class="hero-actions">
+            <a href="/contact" class="btn primary">
+              <svg xmlns="http://www.w3.org/2000/svg" style="margin:2px 5px 0 0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>            
+             無料相談する
+            </a>
+            <a href="/demo" class="btn secondary">デモシステムを見る</a>
+          </div>
+        </div>
+
+        <div class="summary-cards" style="gap:12px;">
+          <article class="summary-card">
+            <div class="icon-circle">
+              <img src="/images/pricing/icon-laptop-chart.png" alt="" />
+            </div>
+            <h3>Excel脱却・一元管理</h3>
+            <p class="summary-price">50<span>万円〜</span></p>
+            <p>集計・通知・紙の作業を<br/>効率化</p>
+          </article>
+          <article class="summary-card">
+            <div class="icon-circle">
+              <img src="/images/pricing/icon-chart-up.png" alt="" />
+            </div>
+            <h3>業務効率化</h3>
+            <p class="summary-price">80<span>万円〜</span></p>
+            <p>集計・管理・売上・売上を<br/>見える化</p>
+          </article>
+          <article class="summary-card green">
+            <div class="icon-circle">
+              <img src="/images/pricing/icon-shield-gear.png" alt="" />
+            </div>
+            <h3>保守・運用サポート</h3>
+            <p class="summary-price">月1.5<span>万円〜</span></p>
+            <p>安心して長く使える体制づくり</p>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- なぜ料金が変わるのか -->
+    <section class="why-section">
+      <div class="container">
+        <h2>なぜ料金が変わるのか？</h2>
+        <div class="why-body">
+          <p class="why-lead">
+            必要な機能、画面数、データ量、利用人数、有無など、さまざまな要素によって費用が変動によって開発工数や開発量が変わるため、費用も変動します。
+          </p>
+          <div class="factor-grid">
+          <div class="factor">
+            <img src="/images/pricing/icon-monitor.png" alt="" />
+            <span>画面数</span>
+          </div>
+          <div class="factor">
+            <img src="/images/pricing/icon-database.png" alt="" />
+            <span>データ量</span>
+          </div>
+          <div class="factor">
+            <img src="/images/pricing/icon-users.png" alt="" />
+            <span>利用人数</span>
+          </div>
+          <div class="factor">
+            <img src="/images/pricing/icon-phone.png" alt="" />
+            <span>スマホ対応</span>
+          </div>
+          <div class="factor">
+            <img src="/images/pricing/icon-cloud.png" alt="" />
+            <span>外部連携</span>
+          </div>
+          <div class="factor">
+            <img src="/images/pricing/icon-csv.png" alt="" />
+            <span>CSV取込・出力</span>
+          </div>
+          <div class="factor">
+            <img src="/images/pricing/icon-doc.png" alt="" />
+            <span>帳票出力</span>
+          </div>
+          <div class="factor">
+            <img src="/images/pricing/icon-calendar-clock.png" alt="" />
+            <span>定期実行機能</span>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 開発内容別の料金目安 -->
+    <section class="examples-section">
+      <div class="container">
+
+        <div class="section-title-row">
+          <h2>開発内容別の料金目安</h2>
+          <span>※内容・規模により変動します</span>
+        </div>
+
+        <div class="example-cards">
+
+          <article class="example-card">
+            <h3>Excel脱却・一元管理</h3>
+            <p class="example-price">50<span>万円〜</span></p>
+            <p class="card-lead">表計算管理・メール管理などの脱却を支援</p>
+            <h4>よくある開発内容の例</h4>
+            <ul class="two-col">
+              <li>案件管理</li><li>検索機能</li>
+              <li>顧客管理</li><li>CSV出力</li>
+              <li>在庫管理</li>
+            </ul>
+            <h4>期待できる効果</h4>
+            <div class="effect-row">
+              <div>
+                <img src="/images/pricing/icon-shield-check.png" alt="" />
+                <span>入力ミスの<br />削減</span>
+              </div>
+              <div>
+                <img src="/images/pricing/icon-share.png" alt="" />
+                <span>情報共有の<br />効率化</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="example-card">
+            <h3>業務効率化</h3>
+            <p class="example-price">80<span>万円〜</span></p>
+            <p class="card-lead">集計・連携・紙の作業などを効率化</p>
+            <h4>よくある開発内容の例</h4>
+            <ul class="two-col">
+              <li>自動集計</li><li>帳票出力</li>
+              <li>メール送信</li><li>ステータス管理</li>
+              <li>CSV取込</li>
+            </ul>
+            <h4>期待できる効果</h4>
+            <div class="effect-row">
+              <div>
+                <img src="/images/pricing/icon-clock.png" alt="" />
+                <span>作業時間の<br />削減</span>
+              </div>
+              <div>
+                <img src="/images/pricing/icon-person.png" alt="" />
+                <span>属人化の<br />解消</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="example-card purple">
+            <h3>オーダーメイド開発</h3>
+            <p class="example-price">100<span>万円〜</span></p>
+            <p class="card-lead">業務に合わせた最適なシステムを構築</p>
+            <h4>よくある開発内容の例</h4>
+            <ul class="two-col">
+              <li>新機能</li><li>ダッシュボード</li>
+              <li>スマホ対応</li><li>リアルタイム管理</li>
+              <li>外部サービス連携</li>
+            </ul>
+            <h4>期待できる効果</h4>
+            <div class="effect-row three">
+              <div>
+                <img src="/images/pricing/icon-network.png" alt="" />
+                <span>全体最適</span>
+              </div>
+              <div>
+                <img src="/images/pricing/icon-bars.png" alt="" />
+                <span>データ活用</span>
+              </div>
+              <div>
+                <img src="/images/pricing/icon-eye.png" alt="" />
+                <span>業務変革の<br />見える化</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="note center">※上記は一例です。ご要望に応じて最適な構成・費用をご提案します。</p>
+
+      </div>
+    </section>
+
+    <!-- 保守・運用サポート -->
+    <section class="maintenance-section">
+      <div class="container">
+        <h2>保守・運用サポート</h2>
+        <p class="maintenance-lead">
+          システムは作って終わりではありません。継続的な保守で安心・快適して使い続けるための保守・運用をサポートします。
+        </p>
+        <article class="maintenance-card">
+          <div class="maintenance-card-head">
+            <span class="maintenance-head-label">月額保守の目安</span>
+            <p class="maintenance-price-val">月 1.5 <span>万円〜</span></p>
+          </div>
+          <h3 class="maintenance-contents-title">含まれる内容</h3>
+          <ul class="maintenance-list">
+            <li>システム及びサーバの監視、異常時対応</li>
+            <li>軽微な修正対応</li>
+            <li>データベースの日次バックアップ</li>
+            <li>必要に応じたデータ復旧作業対応</li>
+            <li>システムに関するお問い合わせ対応</li>
+            <li>SSLサーバ証明書の更新管理</li>
+          </ul>
+          <p class="note">※軽微な修正とは、文言変更・表示調整・簡単な設定変更など、短時間で対応できる内容を想定しています。</p>
+          <p class="note">※対応量が多い場合や、継続的な作業が発生する場合は、別途お見積りとなる場合があります。</p>
+        </article>
+      </div>
+    </section>
+
+
+    <!-- よくある質問 -->
+    <section class="faq-section">
+      <div class="container">
+        <h2>よくある質問</h2>
+        <div class="faq-list">
+          <details>
+            <summary>
+              <span class="faq-q-mark">Q</span>
+              見積りは無料ですか？
+              <span class="faq-plus">+</span>
+            </summary>
+            <p class="faq-answer">無料ですのでお気軽にご相談ください。規模や内容によっては有償になる場合もありますが、その場合は必ず先にご相談いたします。</p>
+          </details>
+          <details>
+            <summary>
+              <span class="faq-q-mark">Q</span>
+              開発期間はどれくらいかかりますか？
+              <span class="faq-plus">+</span>
+            </summary>
+            <p class="faq-answer">規模や内容にもよりますが、小規模で2〜3ヶ月、中〜大規模で4〜8ヶ月程度が目安です。</p>
+          </details>
+          <details>
+            <summary>
+              <span class="faq-q-mark">Q</span>
+              月額費用は必ず必要ですか？
+              <span class="faq-plus">+</span>
+            </summary>
+            <p class="faq-answer">ケースバイケースになりますが、安定した運用のため、原則必須となります。</p>
+          </details>
+          <details>
+            <summary>
+              <span class="faq-q-mark">Q</span>
+              途中で仕様変更はできますか？
+              <span class="faq-plus">+</span>
+            </summary>
+            <p class="faq-answer">対応可能です。ただし、変更内容によっては追加費用や納期変更が発生する場合があります。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ボトム CTA -->
+    <section class="pricing-bottom-cta">
+      <div class="container pricing-bottom-cta-inner">
+        <div>
+          <h2>まずは費用感だけ知りたい方も歓迎です</h2>
+          <p>疑問やお見積りのご相談も無料。最適なご提案をお約束します。</p>
+          <div class="cta-points"><span>🕐 24時間受付中</span><span>✉ 1営業日以内に返信</span></div>
+        </div>
+        <div class="cta-buttons">
+          <a href="/contact" class="btn-cta-orange">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            無料相談する
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</Layout>

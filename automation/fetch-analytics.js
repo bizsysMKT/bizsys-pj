@@ -22,7 +22,7 @@ const { google } = require('googleapis');
 
 // GA4 プロパティID（例：properties/123456789）
 // → GA4管理画面の「プロパティ設定」で確認できる数値IDを使う
-const GA4_PROPERTY_ID = process.env.GA4_PROPERTY_ID || 'properties/XXXXXXXXX';
+const GA4_PROPERTY_ID = process.env.GA4_PROPERTY_ID || 'properties/531295406';
 
 // Search Console サイトURL（登録時のURLと完全一致させる）
 const SEARCH_CONSOLE_SITE_URL = process.env.SEARCH_CONSOLE_SITE_URL || 'https://bizsys.jp/';
@@ -52,9 +52,8 @@ function getPreviousMonthRange() {
 // ─── 認証 ────────────────────────────────────────────────
 
 function loadAuth() {
-  // Application Default Credentials（ADC）を使用する。
-  // 事前に `gcloud auth application-default login` を実行しておくこと。
   const auth = new google.auth.GoogleAuth({
+    keyFile: 'C:/Users/tk171/claude-work/google_credentials.json',
     scopes: [
       'https://www.googleapis.com/auth/analytics.readonly',
       'https://www.googleapis.com/auth/webmasters.readonly',

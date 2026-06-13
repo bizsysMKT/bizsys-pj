@@ -2,73 +2,679 @@
 import Layout from '../components/Layout.astro';
 ---
 
-<Layout title="サービス内容 | ビズシス">
+<Layout title="サービス | BizSys 現場改善システム">
 
-  <!-- ページヘッダー -->
-  <section class="section page-header">
-    <div class="section-inner">
-      <h1>ビズシスの提供サービス</h1>
-      <p class="page-lead">業務システム開発から保守・運用サポートまで、現場に寄り添ったワンストップ支援を提供します。</p>
-    </div>
-  </section>
+  <style is:global>
+    /* ====================================================
+       サービスページ共通
+       ==================================================== */
+    .svc-section { padding: 48px 0; }
+    .svc-section h2 {
+      text-align: left;
+      font-size: 28px;
+      font-weight: 800;
+      color: #003b78;
+      margin: 0 0 28px;
+      line-height: 1.3;
+    }
 
-  <!-- サービス3カード -->
-  <section class="section bg-white">
-    <div class="section-inner">
-      <h2 class="section-title">Excel管理から脱却する提供サービス</h2>
-      <div class="card-grid">
-        <div class="card">
-          <svg class="card-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#0a4f9f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="4" y="6" width="32" height="22" rx="3"/>
-            <path d="M14 34h12M20 28v6"/>
-            <path d="M13 17l4 4 8-8"/>
-          </svg>
-          <h3>業務システム開発</h3>
-          <p>Excel・スプレッドシート管理から脱却したい中小企業向け。案件管理・在庫管理・売上管理などの現場システムを構築します。</p>
+    /* ====================================================
+       ヒーロー
+       ==================================================== */
+    .svc-hero {
+      background: #F8F8F6;
+      padding: 48px 0;
+      overflow: hidden;
+    }
+    .svc-hero-grid {
+      display: grid;
+      grid-template-columns: 1.03fr 1fr;
+      align-items: start;
+      gap: 38px;
+    }
+    .svc-eyebrow {
+      display: inline-block;
+      background: #eaf2fa;
+      color: #003b78;
+      font-size: 16px;
+      font-weight: 900;
+      padding: 4px 16px;
+      border-radius: 7px;
+      margin-bottom: 20px;
+    }
+    .svc-hero h1 {
+      font-size: 38px;
+      line-height: 1.35;
+      font-weight: 900;
+      margin: 0 0 24px;
+      color: #071225;
+    }
+    .svc-hero h1 span { color: #0b4a93; }
+    .svc-hero .lead {
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.8;
+      margin: 0 0 28px;
+      color: #071225;
+    }
+    .svc-hero-points {
+      display: flex;
+      gap: 28px;
+      margin-bottom: 32px;
+    }
+    .svc-point {
+      border-left: 5px solid #0b56a6;
+      padding-left: 14px;
+    }
+    .svc-point strong { display: block; font-size: 18px; color: #071225; font-weight: 900; }
+    .svc-point small  { display: block; font-size: 14px; color: #555; }
+    .svc-hero-actions { display: flex; gap: 20px; flex-wrap: wrap; }
+    .svc-hero-visual {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 340px;
+    }
+    .svc-hero-visual img {
+      width: min(400px, 100%);
+      filter: drop-shadow(0 16px 24px rgba(4,31,58,.12));
+    }
+    .svc-feature-badges {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+    .svc-feature-badges span {
+      display: grid;
+      place-items: center;
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: #003d7c;
+      color: #fff;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.3;
+      box-shadow: 0 8px 18px rgba(0,61,124,.18);
+    }
+
+    /* ====================================================
+       サービス4カード
+       ==================================================== */
+    .svc-cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .svc-card {
+      position: relative;
+      background: #fff;
+      border: 1px solid #dce7f2;
+      border-radius: 8px;
+      padding: 32px 24px 20px;
+      min-height: 420px;
+      box-shadow: 0 12px 30px rgba(3,34,70,.08);
+      display: flex;
+      flex-direction: column;
+    }
+    .svc-num {
+      position: absolute;
+      top: 18px;
+      left: 16px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #003b78;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .svc-card-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 120px;
+      margin: 0 auto 16px;
+    }
+    .svc-card-icon img {
+      max-height: 120px;
+      width: auto;
+      object-fit: contain;
+    }
+    .svc-card h3 {
+      font-size: 19px;
+      font-weight: 800;
+      text-align: center;
+      color: #063f7e;
+      margin: 0 0 10px;
+      line-height: 1.4;
+    }
+    .svc-card > p {
+      font-size: 15px;
+      font-weight: 700;
+      color: #111;
+      margin: 0 0 14px;
+    }
+    .svc-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 14px;
+      border-bottom: 1px solid #e7eef6;
+      padding-bottom: 14px;
+      flex: 1;
+    }
+    .svc-card li {
+      position: relative;
+      font-size: 15px;
+      line-height: 1.8;
+      padding-left: 22px;
+      color: #123;
+    }
+    .svc-card li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 3px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #0b56a6;
+      color: #fff;
+      font-size: 9px;
+      display: grid;
+      place-items: center;
+    }
+    .svc-card a {
+      display: block;
+      text-align: center;
+      color: #0b4a93;
+      font-size: 15px;
+      font-weight: 900;
+    }
+    .svc-card a:hover { text-decoration: underline; }
+
+    /* ====================================================
+       対応業種
+       ==================================================== */
+    .svc-industry {
+      background: #f4f8fc;
+    }
+    .industry-box {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      border: 1px solid #dce7f2;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .industry-item {
+      text-align: center;
+      padding: 22px 12px 18px;
+      border-right: 1px solid #dce7f2;
+    }
+    .industry-item:last-child { border-right: 0; }
+    .industry-item .ind-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 64px;
+      margin: 0 auto 12px;
+    }
+    .industry-item .ind-icon img {
+      max-height: 64px;
+      width: auto;
+      object-fit: contain;
+    }
+    .industry-item strong { display: block; font-size: 15px; color: #003b78; font-weight: 800; margin-bottom: 6px; }
+    .industry-item small  { display: block; font-size: 13px; color: #5b6c7f; line-height: 1.7; }
+    .svc-note { text-align: center; color: #33516e; font-size: 14px; margin: 14px 0 0; }
+
+    /* ====================================================
+       開発の流れ
+       ==================================================== */
+    .flow-list {
+      display: flex;
+      align-items: flex-start;
+      background: #fff;
+      border: 1px solid #dce7f2;
+      border-radius: 8px;
+      padding: 28px 8px;
+      gap: 0;
+    }
+    .flow-step {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 4px;
+      position: relative;
+    }
+    .flow-step-num {
+      display: grid;
+      place-items: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #0b56a6;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      flex-shrink: 0;
+    }
+    .flow-step-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 80px;
+      margin-bottom: 12px;
+    }
+    .flow-step-img img {
+      max-height: 80px;
+      width: auto;
+      object-fit: contain;
+    }
+    .flow-step strong { display: block; color: #063f7e; font-size: 14px; font-weight: 800; margin-bottom: 4px; }
+    .flow-step small  { display: block; font-size: 12px; color: #5b6c7f; line-height: 1.6; }
+    .flow-arrow {
+      flex-shrink: 0;
+      align-self: center;
+      margin-top: -44px;
+      color: #a8b9ca;
+      font-size: 14px;
+      padding: 0;
+    }
+    .flow-message {
+      width: min(760px, 100%);
+      margin: 16px auto 0;
+      padding: 12px 20px;
+      border: 1px solid #b9d6ee;
+      background: #f0f8ff;
+      border-radius: 7px;
+      text-align: center;
+      color: #0b4a93;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    /* ====================================================
+       料金の目安
+       ==================================================== */
+    .svc-price-section {
+      background: #fafbfc;
+      padding: 48px 0;
+    }
+    .svc-price-section h2 { text-align: left; margin-bottom: 24px; }
+    .price-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    .price-card {
+      min-height: 200px;
+      border-radius: 9px;
+      padding: 28px 38px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+    .price-card.blue  { background: linear-gradient(90deg, #edf7ff, #f9fcff); }
+    .price-card.green { background: linear-gradient(90deg, #f0fbf3, #f9fff8); }
+    .price-card h3 { color: #0a4a99; font-size: 22px; font-weight: 800; margin: 0; }
+    .price-card.green h3 { color: #2a7b43; }
+    .price-card .price {
+      font-size: 34px;
+      color: #0a4a99;
+      margin: 4px 0;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .price-card.green .price { color: #2a7b43; }
+    .price-card .price strong { font-size: 58px; line-height: 1; font-weight: 900; }
+    .price-card small { display: block; color: #444; margin-bottom: 10px; font-size: 14px; }
+    .price-card p:not(.price) { font-size: 15px; margin: 0; line-height: 1.7; }
+    .price-card .price-img { max-width: 185px; opacity: .85; flex-shrink: 0; }
+    .price-card .shield { max-width: 190px; opacity: .42; transform: translate(20px, 4px); flex-shrink: 0; }
+    .price-footnote { text-align: center; color: #244668; font-size: 14px; margin: 12px 0 0; }
+    @media (max-width: 760px) {
+      .price-grid { grid-template-columns: 1fr; }
+      .price-card { padding: 24px; flex-direction: column; align-items: flex-start; }
+    }
+
+    /* ====================================================
+       CTA
+       ==================================================== */
+    .svc-cta {
+      background: linear-gradient(90deg, #003a78, #004c99);
+      color: #fff;
+      padding: 40px 0;
+    }
+    .svc-cta-inner {
+      display: grid;
+      grid-template-columns: 80px 1fr auto;
+      align-items: center;
+      gap: 28px;
+    }
+    .svc-cta-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.18);
+      display: grid;
+      place-items: center;
+      font-size: 32px;
+    }
+    .svc-cta h2 {
+      text-align: left;
+      color: #fff;
+      font-size: 28px;
+      margin: 0 0 4px;
+    }
+    .svc-cta p { margin: 0; font-size: 15px; color: rgba(255,255,255,.85); }
+
+    /* ====================================================
+       レスポンシブ
+       ==================================================== */
+    @media (max-width: 1040px) {
+      .svc-hero-grid { grid-template-columns: 1fr; }
+      .svc-hero { background: #F8F8F6; }
+      .svc-hero-visual { min-height: auto; padding-bottom: 80px; }
+      .svc-cards { grid-template-columns: repeat(2, 1fr); }
+      .industry-box { grid-template-columns: repeat(3, 1fr); }
+      .industry-item:nth-child(3n) { border-right: 0; }
+      .flow-list { flex-wrap: wrap; }
+      .flow-step { flex: 0 0 calc(33.333% - 16px); }
+      .flow-arrow:nth-child(4), .flow-arrow:nth-child(8) { display: none; }
+    }
+    @media (max-width: 760px) {
+      .svc-hero h1 { font-size: 34px; }
+      .svc-hero .lead { font-size: 17px; }
+      .svc-hero-points { flex-direction: column; gap: 12px; }
+      .svc-hero-actions { flex-direction: column; }
+      .svc-hero-actions .btn { width: 100%; }
+      .svc-cards { grid-template-columns: 1fr; }
+      .industry-box { grid-template-columns: 1fr 1fr; }
+      .industry-item:nth-child(2n) { border-right: 0; }
+      .industry-item { border-bottom: 1px solid #dce7f2; }
+      .flow-list { flex-direction: column; align-items: center; }
+      .flow-step { flex: 0 0 auto; width: 100%; max-width: 300px; }
+      .flow-arrow { margin-top: 0; transform: rotate(90deg); }
+      .svc-cta-inner { grid-template-columns: 1fr; }
+      .svc-cta-icon { display: none; }
+    }
+  </style>
+
+  <!--/* ヒーロー */-->
+  <section class="svc-hero">
+    <div class="container svc-hero-grid">
+      <div class="svc-hero-copy">
+        <h1 style="font-size:38px;">BizSysで<span>解決できること</span></h1>
+        <p class="lead" style="font-size:17px;">
+          現場のムダ・手間・ミスを減らし、<br>
+          業務を見える化・自動化・効率化する<br>
+          システムを開発します。
+        </p>
+        <div class="svc-hero-points">
+          <div class="svc-point">
+            <strong>見える化</strong>
+            <small>データを一元管理</small>
+          </div>
+          <div class="svc-point">
+            <strong>自動化</strong>
+            <small>手作業を削減</small>
+          </div>
+          <div class="svc-point">
+            <strong>属人化解消</strong>
+            <small>誰でも使える仕組みに</small>
+          </div>
         </div>
-        <div class="card">
-          <svg class="card-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#0a4f9f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M17 4.5l-1.2 4.4a10.5 10.5 0 00-3.8 2.2L7.6 9.7 4 15.8l3.2 3.3a10.5 10.5 0 000 4.3L4 26.5l3.6 6.2 4.4-1.4a10.5 10.5 0 003.8 2.2L17 37.5h6l1.2-4.4a10.5 10.5 0 003.8-2.2l4.4 1.4 3.6-6.2-3.2-3.3a10.5 10.5 0 000-4.3l3.2-3.3-3.6-6.2-4.4 1.4a10.5 10.5 0 00-3.8-2.2L23 4.5h-6z"/>
-            <circle cx="20" cy="21" r="5"/>
-          </svg>
-          <h3>ツール・Webシステム開発</h3>
-          <p>楽天・Yahoo出品ツールや在庫管理ツールなど、現場で使える仕組みを作ります。既存ツールとの連携やデータ自動化にも対応します。</p>
+        <div class="svc-hero-actions">
+          <a class="btn primary" href="/contact">
+            <svg xmlns="http://www.w3.org/2000/svg" style="margin:2px 5px 0 0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>          
+            無料相談する
+          </a>
+          <a class="btn secondary" href="/cases">導入事例を見る</a>
         </div>
-        <div class="card">
-          <svg class="card-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#0a4f9f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M20 4l14 5v10c0 9.5-7 15-14 17C13 34 6 28.5 6 19V9l14-5z"/>
-            <path d="M14 20l4 4 8-8"/>
-          </svg>
-          <h3>保守・運用サポート</h3>
-          <p>システムを導入して終わりではなく、継続的な改善と安定運用をサポートします。月1万円〜の保守プランで安心して任せられる体制を提供します。</p>
+      </div>
+      <div class="svc-hero-visual">
+        <img src="/images/hero-dashboard.png" alt="業務システムのダッシュボード画面" style="width:min(400px,100%);height:auto;display:block;">
+        <div class="svc-feature-badges">
+          <span>一元<br>管理</span>
+          <span>自動化</span>
+          <span>リアル<br>タイム</span>
+          <span>共有<br>連携</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 料金の目安 -->
-  <section class="section bg-light">
-    <div class="section-inner">
-      <h2 class="section-title">料金の目安</h2>
-      <div class="card-grid">
-        <div class="card">
-          <h3>業務システム開発</h3>
-          <p><strong style="font-size:1.5rem; color:#0a4f9f; display:block; margin-bottom:8px;">30万円〜</strong>規模・機能により変動します。まずはご要件をお聞かせください。</p>
-        </div>
-        <div class="card">
+  <!--/* サービス内容4カード */-->
+  <section class="svc-section">
+    <div class="container">
+      <h2>サービス内容</h2>
+      <div class="svc-cards">
+        <article class="svc-card">
+          <span class="svc-num">01</span>
+          <div class="svc-card-icon">
+            <img src="/images/svc-icon1.png" alt="Excel管理からの脱却">
+          </div>
+          <h3>Excel管理からの脱却</h3>
+          <p>Excelやスプレッドシートでの管理を、使いやすいシステムに。</p>
+          <ul>
+            <li>案件管理</li>
+            <li>顧客管理</li>
+            <li>在庫管理</li>
+            <li>売上管理</li>
+            <li>請求管理 など</li>
+          </ul>
+          <a href="#">詳しく見る →</a>
+        </article>
+        <article class="svc-card">
+          <span class="svc-num">02</span>
+          <div class="svc-card-icon">
+            <img src="/images/svc-icon2.png" alt="業務の自動化">
+          </div>
+          <h3>業務の自動化</h3>
+          <p>手作業や転記作業を自動化し、ミスを減らし生産性を向上。</p>
+          <ul>
+            <li>CSV取込・出力</li>
+            <li>データ連携</li>
+            <li>自動集計・レポート</li>
+            <li>メール・LINE通知</li>
+            <li>定型業務の自動化 など</li>
+          </ul>
+          <a href="#">詳しく見る →</a>
+        </article>
+        <article class="svc-card">
+          <span class="svc-num">03</span>
+          <div class="svc-card-icon">
+            <img src="/images/svc-icon3.png" alt="現場向けWebシステム">
+          </div>
+          <h3>現場向けWebシステム</h3>
+          <p>現場で使いやすいWebシステムをオーダーメイドで開発。</p>
+          <ul>
+            <li>モバイル・タブレット対応</li>
+            <li>進捗管理</li>
+            <li>情報共有</li>
+            <li>権限管理</li>
+            <li>外部システム連携 など</li>
+          </ul>
+          <a href="#">詳しく見る →</a>
+        </article>
+        <article class="svc-card">
+          <span class="svc-num">04</span>
+          <div class="svc-card-icon">
+            <img src="/images/svc-icon4.png" alt="保守・運用サポート">
+          </div>
           <h3>保守・運用サポート</h3>
-          <p><strong style="font-size:1.5rem; color:#0a4f9f; display:block; margin-bottom:8px;">月1万円〜</strong>安定運用と継続的な改善をサポートするプランです。</p>
+          <p>導入後も安心して使えるように、継続的なサポートを提供。</p>
+          <ul>
+            <li>不具合対応</li>
+            <li>機能追加・改善</li>
+            <li>運用相談</li>
+            <li>定期メンテナンス</li>
+            <li>システムの安定運用</li>
+          </ul>
+          <a href="#">詳しく見る →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!--/* 対応業種 */-->
+  <section class="svc-section svc-industry">
+    <div class="container">
+      <h2>対応業種・業務の一例</h2>
+      <div class="industry-box">
+        <div class="industry-item">
+          <div class="ind-icon">
+            <img src="/images/industries/ind1-truck.png" alt="物流・運送業">
+          </div>
+          <strong>物流・運送業</strong>
+          <small>配車管理・発注管理・<br>在庫管理・ドライバー管理など</small>
         </div>
-        <div class="card">
-          <h3>まずはご相談ください</h3>
-          <p>ご予算・規模・納期に合わせて柔軟にご提案します。相談は無料・文字ベースでOKです。</p>
+        <div class="industry-item">
+          <div class="ind-icon">
+            <img src="/images/industries/ind2-medical.png" alt="医療・介護・福祉">
+          </div>
+          <strong>医療・介護・福祉</strong>
+          <small>記録管理・シフト管理・<br>連絡共有・請求管理など</small>
+        </div>
+        <div class="industry-item">
+          <div class="ind-icon">
+            <img src="/images/industries/ind3-cart.png" alt="EC・小売">
+          </div>
+          <strong>EC・小売</strong>
+          <small>在庫連携・受注管理・<br>商品分析・出品管理など</small>
+        </div>
+        <div class="industry-item">
+          <div class="ind-icon">
+            <img src="/images/industries/ind4-factory.png" alt="製造業">
+          </div>
+          <strong>製造業</strong>
+          <small>見積管理・工程管理・<br>在庫管理・品質管理など</small>
+        </div>
+        <div class="industry-item">
+          <div class="ind-icon">
+            <img src="/images/industries/ind5-car.png" alt="レンタカー・サービス業">
+          </div>
+          <strong>レンタカー・サービス業</strong>
+          <small>予約管理・車両管理・<br>請求管理・点検管理など</small>
+        </div>
+        <div class="industry-item">
+          <div class="ind-icon">
+            <img src="/images/industries/ind6-other.png" alt="その他の業種">
+          </div>
+          <strong>その他の業種</strong>
+          <small>学校・団体・イベント・<br>不動産・建設業 など</small>
         </div>
       </div>
-      <p style="margin: 24px 0 0; font-size: 0.88rem; color: #888;">※規模・機能によって異なります。詳細はお気軽にご相談ください。</p>
-      <div class="cta-group">
-        <a class="btn-primary" href="/contact">見積もりを相談する</a>
-        <a class="btn-secondary" href="/cases">導入事例を見る</a>
+      <p class="svc-note">上記以外の業種・業務にも幅広く対応しています。まずはお気軽にご相談ください。</p>
+    </div>
+  </section>
+
+  <!--/* 開発の流れ */-->
+  <section class="svc-section">
+    <div class="container">
+      <h2>開発の流れ</h2>
+      <div class="flow-list">
+        <div class="flow-step">
+          <span class="flow-step-num">01</span>
+          <div class="flow-step-img"><img src="/images/flow/flow1.png" alt="ご相談"></div>
+          <strong>ご相談</strong>
+          <small>現状の課題やご要望をヒアリングします。</small>
+        </div>
+        <div class="flow-arrow">▶</div>
+        <div class="flow-step">
+          <span class="flow-step-num">02</span>
+          <div class="flow-step-img"><img src="/images/flow/flow2.png" alt="課題の整理・ご提案"></div>
+          <strong>課題の整理・ご提案</strong>
+          <small>業務を整理し、最適なシステムをご提案します。</small>
+        </div>
+        <div class="flow-arrow">▶</div>
+        <div class="flow-step">
+          <span class="flow-step-num">03</span>
+          <div class="flow-step-img"><img src="/images/flow/flow3.png" alt="お見積り"></div>
+          <strong>お見積り</strong>
+          <small>ご要望に合わせたお見積りを提示します。</small>
+        </div>
+        <div class="flow-arrow">▶</div>
+        <div class="flow-step">
+          <span class="flow-step-num">04</span>
+          <div class="flow-step-img"><img src="/images/flow/flow4.png" alt="開発・テスト"></div>
+          <strong>開発・テスト</strong>
+          <small>設計・開発・テストを経て使いやすく構築します。</small>
+        </div>
+        <div class="flow-arrow">▶</div>
+        <div class="flow-step">
+          <span class="flow-step-num">05</span>
+          <div class="flow-step-img"><img src="/images/flow/flow5.png" alt="運用開始"></div>
+          <strong>運用開始</strong>
+          <small>予約説明・データ移行を行い、スムーズに運用開始。</small>
+        </div>
+        <div class="flow-arrow">▶</div>
+        <div class="flow-step">
+          <span class="flow-step-num">06</span>
+          <div class="flow-step-img"><img src="/images/flow/flow6.png" alt="保守・改善"></div>
+          <strong>保守・改善</strong>
+          <small>運用後も継続サポートと改善提案を行います。</small>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <!--/* 料金の目安（ホームと同じデザイン） */-->
+  <section class="svc-price-section">
+    <div class="container">
+      <h2 style="text-align:left;">料金の目安</h2>
+      <div class="price-grid">
+        <article class="price-card blue">
+          <div>
+            <h3>業務システム開発</h3>
+            <p class="price"><strong>50</strong>万円〜</p>
+            <small>※規模・範囲により異なります</small>
+            <p>小規模なシステムから大規模システムまで、ご予算に合わせて最適なプランをご提案します。</p>
+          </div>
+          <img src="/images/pricing/monitor.png" alt="モニターアイコン" class="price-img">
+        </article>
+        <article class="price-card green">
+          <div>
+            <h3>保守・運用サポート</h3>
+            <p class="price">月額<strong>1.5</strong>万円〜</p>
+            <small>※システム規模により異なります</small>
+            <p>システムを安心・安全に運用していただくための継続的なサポートを提供します。</p>
+          </div>
+          <img src="/images/pricing/support.png" alt="保守・運用サポートのアイコン" class="shield">
+        </article>
+      </div>
+      <p class="price-footnote">まずは見積りだけでもOKです。費用感を知りたい方もお気軽にご相談ください。</p>
+    </div>
+  </section>
+
+  <!--/* CTA */-->
+  <section class="svc-cta">
+    <div class="container svc-cta-inner">
+      <div class="svc-cta-icon">✉</div>
+      <div>
+        <h2>現場の困りごと、まずはお聞かせください</h2>
+        <p>システム化が必要かどうかも含めて、丁寧にご相談に対応します。</p>
+        <div class="cta-points"><span>🕐 24時間受付中</span><span>✉ 1営業日以内に返信</span></div>
+      </div>
+      <a class="btn primary" href="/contact" style="min-width:220px;">
+        <svg xmlns="http://www.w3.org/2000/svg" style="margin:2px 5px 0 0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        無料相談する
+      </a>
     </div>
   </section>
 

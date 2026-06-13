@@ -2,6 +2,7 @@
 title: "Excel脱却の第一歩｜まず何をすればいい？中小企業向け実践ガイド"
 date: 2026-05-29
 tags: [Excel脱却, 業務改善, 中小企業, システム化]
+icon: "thumb-excel-exit.png"
 author: "ビズシス"
 description: "「Excelもう限界…」と思いながら何年も使い続けていませんか？脱却の第一歩は意外とシンプルです。"
 ---

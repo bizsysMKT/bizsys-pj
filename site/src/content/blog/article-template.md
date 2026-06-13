@@ -2,6 +2,7 @@
 title: "記事のタイトル（SEOキーワードを含める）"
 date: 2026-04-04
 tags: [キーワード1, キーワード2]
+icon: "blog-thumb-default.png"
 author: "ビズシス"
 description: "記事の説明（70～90文字程度）"
 ---

@@ -2,405 +2,962 @@
 import Layout from '../components/Layout.astro';
 ---
 
-<Layout title="そのExcel管理、そろそろ限界じゃないですか？ | ビズシス">
+<Layout title="そのExcel管理、そろそろ限界じゃないですか？ | BizSys">
 
-  <style>
-    /* ---- ヒーロー（ページ固有） ---- */
+  <style is:global>
+    .fs-36{font-size:36px;}
+    /* ====================================================
+       ヒーロー
+       ==================================================== */
     .hero {
-      background: linear-gradient(135deg, #061e3f 0%, #0a4f9f 60%, #1a6fd4 100%);
-      border-radius: 0;
-      margin: 0 -32px;
+      background: #f3f8fd;
+      padding: 40px 0;
     }
-    .hero-top {
-      padding: 56px 32px 32px;
-      max-width: 1080px;
-      margin: 0 auto;
-    }
-    .hero-eyebrow {
-      color: rgba(255, 255, 255, 0.9);
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      margin: 0 0 20px;
-      font-size: 0.85rem;
-      border: 1px solid rgba(255, 255, 255, 0.4);
-      padding: 4px 12px;
-      border-radius: 999px;
-      display: inline-block;
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 48px;
+      align-items: center;
     }
     .hero h1 {
-      font-size: 3.5rem;
-      line-height: 1.15;
-      margin: 0;
-      color: #fff;
+      font-size: 38px;
+      line-height: 1.35;
       font-weight: 900;
-    }
-    .hero-bottom {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
-      align-items: center;
-      padding: 32px 32px 64px;
-      max-width: 1080px;
-      margin: 0 auto;
-    }
-    .hero-lead {
-      font-size: 1.1rem;
-      line-height: 1.9;
       margin: 0 0 24px;
-      color: rgba(255, 255, 255, 0.85);
+      color: #000;
     }
-    .hero .btn-primary {
-      background: #ffffff;
-      color: #0a4f9f;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    .hero h1 span { color: #005bac; }
+    .hero-copy p {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 32px;
+      color: #10233f;
     }
-    .hero .btn-primary:hover { background: #e8f0fb; transform: translateY(-2px); }
-    .hero .btn-secondary {
-      background: transparent;
-      color: #ffffff;
-      border-color: rgba(255, 255, 255, 0.6);
-    }
-    .hero .btn-secondary:hover { background: rgba(255, 255, 255, 0.1); transform: translateY(-2px); }
-    .hero-card {
-      background: #ffffff;
-      border-radius: 24px;
-      padding: 32px;
-      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.25);
-    }
-    .hero-card h2 { color: #111; margin: 0 0 16px; font-size: 1.15rem; font-weight: 700; }
-    .hero-card ul { color: #444; padding-left: 20px; line-height: 2.1; margin: 0; }
+    .hero-buttons { display: flex; gap: 20px; }
 
-    /* ---- 実績数字 ---- */
-    .stats-section { background: #ffffff; }
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
+    /* ---- ヒーロービジュアル ---- */
+    .hero-visual {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: center;
+      min-width: 0;
     }
-    .stat {
-      background: #fff;
-      padding: 28px 20px;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(10, 79, 159, 0.08);
-      text-align: center;
+    .hero-visual-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 1;
+      min-width: 0;
     }
-    .stat strong {
+    .hero-badge {
+      display: inline-block;
+      background: #555;
+      color: #fff;
+      padding: 7px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .hero-badge.blue { background: #005bac; }
+    .hero-visual img {
+      height: 240px;
+      width: auto;
       display: block;
-      font-size: 2.2rem;
-      color: #0a4f9f;
+      mix-blend-mode: multiply;
+    }
+    .hero-arrow {
+      font-size: 48px;
+      color: #005bac;
       font-weight: 900;
-      margin-bottom: 6px;
+      text-align: center;
+      line-height: 1;
+      flex-shrink: 0;
     }
-    .stat span { font-size: 0.85rem; color: #666; }
 
-    /* ---- チーム紹介 ---- */
-    .team-section { background: #ffffff; }
-    .team-body { line-height: 1.85; color: #444; margin: 0 0 28px; }
-    .team-list { padding-left: 20px; line-height: 2.2; color: #444; margin: 0; }
-
-    /* ---- サービス ---- */
-    .services-section { background: #f5f8ff; }
-    .pricing-box {
-      background: #eef3fb;
-      border-left: 4px solid #0a4f9f;
-      border-radius: 0 12px 12px 0;
-      padding: 24px 28px;
-      margin-top: 36px;
+    /* ====================================================
+       実績数字
+       ==================================================== */
+    .stats {
+      background: #fff;
+      padding: 28px 0;
     }
-    .pricing-box h3 { margin: 0 0 10px; font-size: 0.9rem; font-weight: 700; color: #0a4f9f; text-transform: uppercase; letter-spacing: 0.08em; }
-    .pricing-box ul { padding-left: 20px; line-height: 2; margin: 0 0 8px; color: #333; }
-    .pricing-box p { margin: 0; font-size: 0.88rem; color: #777; }
-
-    /* ---- 開発事例 ---- */
-    .cases-section { background: #ffffff; }
-    .cases-grid {
+    .stats-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
+      text-align: center;
+      gap: 24px;
+    }
+    .stats-grid > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }
+    .laurel-left,
+    .laurel-right {
+      flex-shrink: 0;
+      width: 56px;
+      height: 120px;
+      background-size: auto 120px;
+      background-repeat: no-repeat;
+    }
+    .laurel-left {
+      background-image: url('/images/laurel_left.png');
+      background-position: left center;
+    }
+    .laurel-right {
+      background-image: url('/images/laurel_right.png');
+      background-position: right center;
+    }
+    .stat-content {
+      text-align: center;
+    }
+    .stat-label {
+      font-size: 15px;
+      font-weight: 700;
+      color: #555;
+      line-height: 1.4;
+      margin: 0 0 6px;
+      min-height: 2.8em;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    .stat-num-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      white-space: nowrap;
+    }
+    .stats strong { font-size: 42px; color: #073b78; font-weight: 900; }
+    .stats-unit { font-weight: 800; margin-left: 3px; font-size: 17px; }
+
+    /* ====================================================
+       課題グリッド / 理由グリッド
+       ==================================================== */
+    .problem-heading {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .problem-heading-icon {
+      width: 32px;
+      height: auto;
+    }
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+    }
+    .problem-card {
+      background: #fff;
+      border: 1px solid #dce8f4;
+      border-radius: 10px;
+      padding: 18px 16px;
+      box-shadow: 0 4px 12px rgba(18, 65, 110, .05);
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .problem-icon {
+      width: 48px;
+      height: auto;
+      flex-shrink: 0;
+      mix-blend-mode: multiply;
+    }
+    .problem-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: #073b78;
+      margin: 0 0 4px;
+    }
+    .problem-desc {
+      font-size: 15px;
+      font-weight: bold;
+      margin: 0;
+      line-height: 1.5;
+    }
+    .reason-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .reason-card {
+      background: #fff;
+      border: 1px solid #dce8f4;
+      border-radius: 10px;
+      padding: 20px 18px;
+      box-shadow: 0 4px 12px rgba(18, 65, 110, .05);
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .reason-icon {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+    .reason-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: #073b78;
+      margin: 0 0 6px;
+    }
+    .reason-desc {
+      font-size: 15px;
+      color: #555;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* ====================================================
+       2カラム（コスト / 解決策）
+       ==================================================== */
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .panel-lead { color: #555; margin: 0 0 4px; }
+
+    /* ---- コストフロー ---- */
+    .cost-flow {
+      display: grid;
+      grid-template-columns: 1fr 28px 1fr 28px 1fr;
+      align-items: center;
+      gap: 8px;
+      margin: 20px 0 12px;
+    }
+    .cost-box {
+      background: #f6f9fc;
+      border: 1px solid #dce8f4;
+      border-radius: 10px;
+      padding: 16px 12px;
+      text-align: center;
+      font-weight: 800;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .cost-box--highlight {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+    }
+    .cost-label { font-size: 14px; font-weight: 700; color: #777; }
+    .cost-amount { color: #ff7a00; font-weight: 900; line-height: 1.1; white-space: nowrap; }
+    .cost-sub { font-size: 14px; font-weight: 400; color: #888; }
+    .cost-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .cost-arrow::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-top: 9px solid transparent;
+      border-bottom: 9px solid transparent;
+      border-left: 14px solid #005bac;
+    }
+    .note { font-size: 14px; color: #252525; margin: 0; }
+
+    /* ---- ROIバナー ---- */
+    .roi-banner {
+      margin-top: 16px;
+      background: linear-gradient(135deg, #003070, #004faa);
+      border-radius: 14px;
+      padding: 20px 24px;
+      color: #fff;
+    }
+    .roi-banner__lead {
+      font-size: 13px;
+      font-weight: 700;
+      opacity: 0.8;
+      margin-bottom: 10px;
+      letter-spacing: 0.04em;
+    }
+    .roi-banner__body {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .roi-banner__calc {
+      font-size: 16px;
+      font-weight: 800;
+      background: rgba(255,255,255,0.12);
+      border-radius: 8px;
+      padding: 6px 14px;
+      white-space: nowrap;
+    }
+    .roi-banner__eq {
+      font-size: 22px;
+      font-weight: 900;
+      opacity: 0.6;
+    }
+    .roi-banner__result {
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .roi-banner__result strong {
+      font-size: 34px;
+      font-weight: 900;
+      color: #ffd04a;
+      margin: 0 4px;
+      line-height: 1;
+    }
+    .roi-banner__note {
+      margin-top: 12px;
+      font-size: 13px;
+      font-weight: 700;
+      opacity: 0.75;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      padding-top: 10px;
+    }
+
+    /* ---- 解決策グリッド ---- */
+    .solution-tagline { font-size: 14px; color: #5a6b86; font-weight: 700; margin: -8px 0 14px; }
+    .solution-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
+    .solution-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: #fff;
+      border: 1px solid #dce8f4;
+      border-radius: 14px;
+      padding: 14px 16px;
+      box-shadow: 0 2px 8px rgba(18,65,110,.05);
+    }
+    .solution-card__left { display: flex; align-items: center; gap: 14px; min-width: 0; }
+    .solution-card__icon {
+      width: 68px; height: 68px;
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .solution-card__icon img { width: 60px; height: 60px; object-fit: contain; }
+    .solution-card__icon.blue  { background: #e8f0fe; }
+    .solution-card__icon.orange{ background: #fff1e0; }
+    .solution-card__icon.green { background: #e4f7ef; }
+    .solution-card__name { font-size: 16px; font-weight: 900; color: #0d2b50; margin: 0 0 3px; }
+    .solution-card__desc { font-size: 13px; color: #5a6b86; font-weight: 700; margin: 0; }
+    .solution-card__right {
+      display: flex; align-items: center; gap: 8px;
+      flex-shrink: 0; white-space: nowrap;
+    }
+    .stag {
+      font-size: 12px; font-weight: 800;
+      padding: 4px 10px; border-radius: 999px;
+    }
+    .stag.before { background: #f0f3f7; color: #8a9ab5; }
+    .stag.after-blue   { background: #deeaff; color: #1a56c4; }
+    .stag.after-orange { background: #ffe9cc; color: #c45c00; }
+    .stag.after-green  { background: #cdf2e2; color: #0b7a52; }
+    .solution-arrow { color: #b0bec9; font-size: 16px; font-weight: 900; }
+    .solution-footer {
+      margin-top: 14px;
+      background: linear-gradient(135deg, #003070, #004faa);
+      color: #fff;
+      border-radius: 12px;
+      padding: 14px 18px;
+      font-size: 14px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      white-space: nowrap;
+    }
+    .solution-footer-check {
+      width: 22px; height: 22px;
+      background: rgba(255,255,255,0.18);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px;
+      flex-shrink: 0;
+    }
+    .solution-footer mark {
+      background: none;
+      font-weight: 900;
+    }
+    .solution-footer mark.c-blue   { color: #7ec8f0; }
+    .solution-footer mark.c-orange { color: #ffb866; }
+    .solution-footer mark.c-green  { color: #6be0af; }
+
+    /* ====================================================
+       導入事例
+       ==================================================== */
+    .case-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
     }
     .case-card {
       background: #fff;
-      border-radius: 16px;
-      padding: 22px;
-      box-shadow: 0 10px 28px rgba(18, 38, 63, 0.07);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      cursor: default;
+      border: 1px solid #dce8f4;
+      border-radius: 10px;
+      padding: 18px;
+      box-shadow: 0 4px 12px rgba(18, 65, 110, .05);
     }
-    .case-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 24px 48px rgba(10, 79, 159, 0.15);
+    .case-badge {
+      display: inline-block;
+      background: #d9ecfb;
+      color: #073b78;
+      font-size: 14px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-bottom: 12px;
     }
-    .case-card h3 { margin: 0 0 8px; font-size: 0.95rem; font-weight: 700; color: #0a4f9f; }
-    .case-card p { margin: 0; font-size: 0.88rem; line-height: 1.65; color: #555; }
-
-    /* ---- ツール ---- */
-    .tools-section { background: #f5f8ff; }
-    .tools-list { padding-left: 20px; line-height: 2.1; margin: 0 0 16px; color: #444; }
-    .tools-desc { line-height: 1.85; color: #444; margin: 0 0 24px; }
-
-    /* ---- FAQ ---- */
-    .faq-section { background: #ffffff; }
-    .faq-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+    .case-body {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
     }
-    .faq-card {
-      background: #fff;
-      border-radius: 20px;
-      padding: 28px;
-      box-shadow: 0 14px 36px rgba(18, 38, 63, 0.08);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      cursor: default;
+    .case-img {
+      width: 72px;
+      height: 72px;
+      object-fit: contain;
+      flex-shrink: 0;
+      mix-blend-mode: multiply;
     }
-    .faq-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 24px 48px rgba(10, 79, 159, 0.15);
+    .case-text { flex: 1; min-width: 0; }
+    .case-card h3 {
+      font-size: 15px;
+      font-weight: 800;
+      color: #073b78;
+      margin: 0 0 6px;
     }
-    .faq-card.faq-full { grid-column: span 3; }
-    .faq-card h3 { margin: 0 0 12px; font-size: 0.95rem; color: #0a4f9f; font-weight: 700; }
-    .faq-card p { margin: 0; line-height: 1.75; font-size: 0.92rem; color: #444; }
-
-    /* ---- 最下部CTA ---- */
-    .cta-section { background: #f7f8fb; }
-    .cta-block {
-      background: #0a4f9f;
-      color: #fff;
-      border-radius: 24px;
-      padding: 56px 40px;
+    .case-card p {
+      font-size: 15px;
+      color: #555;
+      margin: 0 0 8px;
+      line-height: 1.6;
+    }
+    .case-metric {
+      display: block;
+      color: #ff7a00;
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .case-metric strong {
+      font-size: 16px;
+      font-weight: 900;
+    }
+    .case-more {
       text-align: center;
+      margin-top: 28px;
     }
-    .cta-block h2 { margin: 0 0 16px; font-size: 1.6rem; font-weight: 700; }
-    .cta-block p { margin: 0; line-height: 1.85; opacity: 0.9; }
-    .cta-block .btn-primary {
-      background: #ffffff;
-      color: #0a4f9f;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    .case-more a {
+      color: #005bac;
+      font-weight: 700;
+      font-size: 15px;
     }
-    .cta-block .btn-primary:hover { background: #e8f0fb; transform: translateY(-2px); }
-    .cta-block .btn-secondary {
-      background: transparent;
-      color: #fff;
-      border-color: rgba(255, 255, 255, 0.6);
-    }
-    .cta-block .btn-secondary:hover { background: rgba(255, 255, 255, 0.1); }
+    .case-more a:hover { text-decoration: underline; }
 
-    /* ---- レスポンシブ（ページ固有分） ---- */
-    @media (max-width: 900px) {
-      .hero { margin: 0 -32px; }
-      .hero h1 { font-size: 2.2rem; }
-      .hero-bottom { grid-template-columns: 1fr; padding: 24px 32px 48px; }
-      .stats { grid-template-columns: repeat(2, 1fr); }
-      .cases-grid { grid-template-columns: repeat(2, 1fr); }
-      .faq-grid { grid-template-columns: 1fr; }
-      .faq-card.faq-full { grid-column: span 1; }
-      .cta-block { padding: 40px 24px; }
+    /* ====================================================
+       料金
+       ==================================================== */
+    .price-section {
+      background: #fafbfc;
+      padding: 48px 0;
     }
-    @media (max-width: 480px) {
-      .hero { margin: 0 -16px; }
-      .hero-top { padding: 40px 16px 24px; }
-      .hero-bottom { padding: 16px 16px 40px; }
-      .hero h1 { font-size: 1.9rem; }
-      .stats { grid-template-columns: 1fr; }
-      .cases-grid { grid-template-columns: 1fr; }
+    .price-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    .price-card {
+      min-height: 200px;
+      border-radius: 9px;
+      padding: 28px 38px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+    .price-card.blue  { background: linear-gradient(90deg, #edf7ff, #f9fcff); }
+    .price-card.green { background: linear-gradient(90deg, #f0fbf3, #f9fff8); }
+    .price-card h3 {
+      color: #0a4a99;
+      font-size: 22px;
+      font-weight: 800;
+      margin: 0;
+    }
+    .price-card.green h3 { color: #2a7b43; }
+    .price-card .price {
+      font-size: 34px;
+      color: #0a4a99;
+      margin: 4px 0;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .price-card.green .price { color: #2a7b43; }
+    .price-card .price strong {
+      font-size: 58px;
+      line-height: 1;
+      font-weight: 900;
+    }
+    .price-card small {
+      display: block;
+      color: #444;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    .price-card p:last-of-type { font-size: 15px; margin: 0; }
+    .price-card .price-img {
+      max-width: 185px;
+      opacity: .85;
+      flex-shrink: 0;
+    }
+    .price-card .shield {
+      max-width: 190px;
+      opacity: .42;
+      transform: translate(20px, 4px);
+      flex-shrink: 0;
+    }
+    .price-footnote {
+      text-align: center;
+      color: #244668;
+      font-size: 14px;
+      margin: 12px 0 0;
+    }
+
+    /* ====================================================
+       下部CTA
+       ==================================================== */
+    .cta {
+      background: #003f82;
+      color: #fff;
+      padding: 56px 0;
+    }
+    .cta-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+    .cta h2 { color: #fff; font-size: 32px; margin-bottom: 8px; }
+    .cta p { color: rgba(255,255,255,0.85); margin: 0; font-size: 16px; }
+    .cta-points {
+      display: flex;
+      gap: 28px;
+      margin-top: 20px;
+      font-weight: 700;
+      font-size: 14px;
+      color: rgba(255,255,255,0.8);
+      flex-wrap: wrap;
+    }
+
+    /* ====================================================
+       レスポンシブ
+       ==================================================== */
+    @media (max-width: 1100px) {
+      .laurel-left,
+      .laurel-right {
+        width: 40px;
+        height: 86px;
+        background-size: auto 86px;
+      }
+      .stats strong { font-size: 36px; }
+      .stats-unit { font-size: 15px; }
+      .stat-label { font-size: 13px; }
+    }
+    @media (max-width: 900px) {
+      .hero-inner,
+      .two-column,
+      .price-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 34px; }
+      .hero-visual {
+        flex-direction: column;
+        gap: 16px;
+      }
+      .hero-visual img {
+        height: auto;
+        width: min(340px, 100%);
+      }
+      .hero-arrow { transform: rotate(90deg); }
+      .stats-grid,
+      .reason-grid,
+      .case-grid { grid-template-columns: 1fr 1fr; }
+      .problem-grid { grid-template-columns: 1fr 1fr; }
+      .cta-inner { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 560px) {
+      .hero h1 { font-size: 28px; }
+      .hero-buttons { flex-direction: column; }
+      .stats-grid,
+      .problem-grid,
+      .reason-grid,
+      .case-grid,
+      .solution-grid { grid-template-columns: 1fr; }
+      .cost-flow { grid-template-columns: 1fr; }
+      .cost-flow span { text-align: center; }
+      .cta-points { flex-direction: column; gap: 8px; }
     }
   </style>
 
-  <!-- ヒーロー（3ゾーン構成） -->
-  <section id="hero" class="hero">
-    <div class="hero-top">
-      <p class="hero-eyebrow">現場のExcel管理に、終止符を。</p>
-      <h1>そのExcel管理、そろそろ限界じゃないですか？</h1>
+  <!--/* ヒーロー */-->
+  <section class="hero pb-5 pt-5">
+    <div class="container hero-inner pb-4">
+      <div class="hero-copy">
+        <h1>
+          そのExcel管理、<br>
+          そろそろ<span>限界</span>じゃないですか？
+        </h1>
+        <p style="font-size:17px;">
+          入力ミス、集計作業、属人化…<br>
+          現場の業務を整理し、使いやすいシステムに置き換えます。
+        </p>
+        <div class="hero-buttons">
+          <a class="btn primary" href="/contact">
+            <svg xmlns="http://www.w3.org/2000/svg" style="margin:2px 5px 0 0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            無料相談する
+          </a>
+          <a class="btn secondary" href="/cases">導入事例を見る</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-visual-item">
+          <span class="hero-badge">Excel・紙・FAXで管理</span>
+          <img src="/images/hero-left.png" alt="Excel・紙・FAXで管理している状態">
+        </div>
+        <div class="hero-arrow">→</div>
+        <div class="hero-visual-item">
+          <span class="hero-badge blue">システムで一元管理・自動化</span>
+          <img src="/images/hero-right.png" alt="システムで一元管理・自動化された状態">
+        </div>
+      </div>
     </div>
-    <div class="hero-bottom">
+  </section>
+
+  <!--/* 実績数字 */-->
+  <section class="stats py-4 mt-4">
+    <div class="container stats-grid">
       <div>
-        <p class="hero-lead">
-          ビズシスは、業務システム開発・保守に特化した少数精鋭チームです。<br />
-          Excelの限界を解消し、現場業務を自動化して、運用負担を軽減します。
+        <div class="laurel-left" aria-hidden="true"></div>
+        <div class="stat-content">
+          <p class="stat-label">業務改善システム<br>導入実績</p>
+          <div class="stat-num-row"><strong>25</strong><span class="stats-unit">社以上</span></div>
+        </div>
+        <div class="laurel-right" aria-hidden="true"></div>
+      </div>
+
+      <div>
+        <div class="laurel-left" aria-hidden="true"></div>
+        <div class="stat-content">
+          <p class="stat-label">楽天・Yahoo出品<br>支援システム導入</p>
+          <div class="stat-num-row"><strong>90</strong><span class="stats-unit">社以上</span></div>
+        </div>
+        <div class="laurel-right" aria-hidden="true"></div>
+      </div>
+      <div>
+        <div class="laurel-left" aria-hidden="true"></div>
+        <div class="stat-content">
+          <p class="stat-label">開発経験</p>
+          <div class="stat-num-row"><strong>15</strong><span class="stats-unit">年以上</span></div>
+        </div>
+        <div class="laurel-right" aria-hidden="true"></div>
+      </div>
+      <div>
+        <div class="laurel-left" aria-hidden="true"></div>
+        <div class="stat-content">
+          <p class="stat-label">ココナラでの<br>システム販売実績</p>
+          <div class="stat-num-row"><strong>550</strong><span class="stats-unit">件以上</span></div>
+        </div>
+        <div class="laurel-right" aria-hidden="true"></div>
+      </div>      
+    </div>
+  </section>
+
+  <!--/* こんな状態になっていませんか？ */-->
+  <section class="section light py-5 my-3">
+    <div class="container py-4 my-2">
+      <h2 class="problem-heading">
+        <img src="/images/konna-state/section-icon.png" alt="" class="problem-heading-icon" aria-hidden="true">
+        こんな状態になっていませんか？
+      </h2>
+      <div class="problem-grid">
+        <div class="problem-card">
+          <img src="/images/konna-state/hacchu.png" alt="" class="problem-icon">
+          <div>
+            <h3 class="problem-title">受発注管理</h3>
+            <p class="problem-desc">ミスや漏れが発生する</p>
+          </div>
+        </div>
+        <div class="problem-card">
+          <img src="/images/konna-state/zaiko.png" alt="" class="problem-icon">
+          <div>
+            <h3 class="problem-title">在庫管理</h3>
+            <p class="problem-desc">Excelが複数存在する</p>
+          </div>
+        </div>
+        <div class="problem-card">
+          <img src="/images/konna-state/anken.png" alt="" class="problem-icon">
+          <div>
+            <h3 class="problem-title">案件管理</h3>
+            <p class="problem-desc">担当者しか分からない</p>
+          </div>
+        </div>
+        <div class="problem-card">
+          <img src="/images/konna-state/uriage.png" alt="" class="problem-icon">
+          <div>
+            <h3 class="problem-title">売上集計</h3>
+            <p class="problem-desc">毎月手作業で時間がかかる</p>
+          </div>
+        </div>
+        <div class="problem-card">
+          <img src="/images/konna-state/joho.png" alt="" class="problem-icon">
+          <div>
+            <h3 class="problem-title">情報共有</h3>
+            <p class="problem-desc">メール、電話頼みで非効率</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--/* Excel管理コスト / 解決策 */-->
+  <section class="section">
+    <div class="container two-column">
+      <div class="panel">
+        <h2>Excel管理は安いようで高い</h2>
+        <p class="panel-lead">
+          受発注・在庫・請求書・納品書など、Excelでの管理は意外と時間とお金がかかっています。
         </p>
-        <div class="cta-group">
-          <a class="btn-primary" href="/contact">まずは相談する</a>
-          <a class="btn-secondary" href="/cases">導入事例を見る</a>
+        <div class="cost-flow">
+          <div class="cost-box">毎日30分<br>Excelの<br/>確認/入力/集計</div>
+          <span class="cost-arrow"></span>
+          <div class="cost-box">年間120時間<br><span class="cost-sub">（20日/月換算）</span></div>
+          <span class="cost-arrow"></span>
+          <div class="cost-box cost-box--highlight">
+            <span class="cost-label">時給2,000円換算</span>
+            <strong class="cost-amount"><span class="fs-36">24</span> 万円</strong>
+            <div class="cost-label" style="font-size:12px;">※1人当たりの金額</div>
+          </div>
+        </div>
+        <p class="note">確認ミス・入力ミス・担当者依存によるリスクは計算に含まれていません。</p>
+        <div class="roi-banner">
+          <div class="roi-banner__lead">もし5人が毎日30分早く終われたら</div>
+          <div class="roi-banner__body">
+            <span class="roi-banner__calc">5人 × 24万円</span>
+            <span class="roi-banner__eq">=</span>
+            <span class="roi-banner__result">年間 <strong>120万円</strong> の利益UP</span>
+          </div>
+          <div class="roi-banner__note">システム化のコストは、すぐに回収できます。</div>
         </div>
       </div>
-      <div class="hero-card">
-        <h2>Excel管理は見えないコストを生む</h2>
-        <ul>
-          <li>入力ミスによるデータ不整合</li>
-          <li>バージョン管理の混乱</li>
-          <li>集計作業の二度手間</li>
-          <li>担当者依存による属人化</li>
-        </ul>
+      <div class="panel">
+        <h2>BizSysが解決できること</h2>
+        <p class="solution-tagline">現場の3つの課題を、仕組みで解決します。</p>
+        <div class="solution-grid">
+          <div class="solution-card">
+            <div class="solution-card__left">
+              <div class="solution-card__icon blue">
+                <img src="/images/solution-mieruka.png" alt="" />
+              </div>
+              <div>
+                <p class="solution-card__name">見える化</p>
+                <p class="solution-card__desc">案件・在庫・売上を一元管理</p>
+              </div>
+            </div>
+            <div class="solution-card__right">
+              <span class="stag before">情報がバラバラ</span>
+              <span class="solution-arrow">→</span>
+              <span class="stag after-blue">ひと目で把握</span>
+            </div>
+          </div>
+          <div class="solution-card">
+            <div class="solution-card__left">
+              <div class="solution-card__icon orange">
+                <img src="/images/solution-jidoka.png" alt="" />
+              </div>
+              <div>
+                <p class="solution-card__name">自動化</p>
+                <p class="solution-card__desc">転記や集計作業を削減</p>
+              </div>
+            </div>
+            <div class="solution-card__right">
+              <span class="stag before">手作業で集計</span>
+              <span class="solution-arrow">→</span>
+              <span class="stag after-orange">自動で集計</span>
+            </div>
+          </div>
+          <div class="solution-card">
+            <div class="solution-card__left">
+              <div class="solution-card__icon green">
+                <img src="/images/solution-zokujinka.png" alt="" />
+              </div>
+              <div>
+                <p class="solution-card__name">属人化解消</p>
+                <p class="solution-card__desc">誰でも同じ情報を確認可能</p>
+              </div>
+            </div>
+            <div class="solution-card__right">
+              <span class="stag before">担当者しか分からない</span>
+              <span class="solution-arrow">→</span>
+              <span class="stag after-green">誰でも対応できる</span>
+            </div>
+          </div>
+        </div>
+        <div class="solution-footer">
+          <span class="solution-footer-check">✓</span>
+          3つの仕組みで、現場の<mark class="c-blue">トラブル</mark>・<mark class="c-orange">ムダ</mark>・<mark class="c-green">ミス</mark>を解消します。
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 実績数字（6項目） -->
-  <section id="stats" class="section stats-section">
-    <div class="section-inner">
-      <div class="stats">
-        <div class="stat"><strong>14年</strong><span>エンジニア歴</span></div>
-        <div class="stat"><strong>★5.0</strong><span>ココナラ評価</span></div>
-        <div class="stat"><strong>550件以上</strong><span>販売実績</span></div>
-        <div class="stat"><strong>25社以上</strong><span>業務システム導入</span></div>
-        <div class="stat"><strong>89社以上</strong><span>楽天・Yahoo出品ツール</span></div>
-        <div class="stat"><strong>10社以上</strong><span>保守継続中</span></div>
+  <!--/* 導入事例 */-->
+  <section class="section light">
+    <div class="container">
+      <h2 class="problem-heading">
+        <img src="/images/konna-state/section-icon.png" alt="" class="problem-heading-icon" aria-hidden="true">
+        導入事例
+      </h2>
+      <div class="case-grid">
+        <div class="case-card">
+          <span class="case-badge">引越業</span>
+          <div class="case-body">
+            <img src="/images/cases/hikkoshi.png" alt="引越業" class="case-img">
+            <div class="case-text">
+              <h3>案件管理システム</h3>
+              <p>Excelでの案件管理から脱却し、案件管理システムを導入。</p>
+              <span class="case-metric">月末集計時間 <strong>70%削減</strong></span>
+            </div>
+          </div>
+        </div>
+        <div class="case-card">
+          <span class="case-badge">訪問看護</span>
+          <div class="case-body">
+            <img src="/images/cases/kango.png" alt="訪問看護" class="case-img">
+            <div class="case-text">
+              <h3>記録管理システム</h3>
+              <p>紙の記録とLINEでの連絡をシステムに一本化。情報共有がスムーズに。</p>
+              <span class="case-metric">業務効率 <strong>50%向上</strong></span>
+            </div>
+          </div>
+        </div>
+        <div class="case-card">
+          <span class="case-badge">製造業</span>
+          <div class="case-body">
+            <img src="/images/cases/seizo.png" alt="製造業" class="case-img">
+            <div class="case-text">
+              <h3>見積・工程管理</h3>
+              <p>見積・工程・納品・請求を一元管理し、二重入力を削減。</p>
+              <span class="case-metric">作業時間 <strong>60%削減</strong></span>
+            </div>
+          </div>
+        </div>
+        <div class="case-card">
+          <span class="case-badge">介護施設</span>
+          <div class="case-body">
+            <img src="/images/cases/kaigo.png" alt="介護施設" class="case-img">
+            <div class="case-text">
+              <h3>在庫管理システム</h3>
+              <p>介護用品の在庫・発注をシステム化。欠品や発注ミスを防止。</p>
+              <span class="case-metric">発注ミス <strong>90%削減</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="case-more">
+        <a href="/cases">その他の事例を見る &rsaquo;</a>
       </div>
     </div>
   </section>
 
-  <!-- チーム紹介文 -->
-  <section id="team" class="section team-section">
-    <div class="section-inner">
-      <h2 class="section-title">少数精鋭チームが業務システム化をワンストップで支援</h2>
-      <p class="team-body">
-        ビズシスは、システム開発・保守を専門とする少数精鋭のチームです。<br />
-        エンジニア歴14年・ココナラ評価★5.0・販売実績550件以上の実績を持ち、<br />
-        要件整理〜設計〜実装〜保守まで一貫して対応します。
-      </p>
-      <ul class="team-list">
-        <li>Excel管理の限界を理解した現場寄りの設計</li>
-        <li>追加費用を抑えるシンプル設計</li>
-        <li>相談しやすい少数精鋭体制</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- サービス内容 -->
-  <section id="services" class="section services-section">
-    <div class="section-inner">
-      <h2 class="section-title">Excel管理から脱却する提供サービス</h2>
-      <div class="card-grid">
-        <div class="card">
-          <svg class="card-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#0a4f9f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="4" y="6" width="32" height="22" rx="3"/>
-            <path d="M14 34h12M20 28v6"/>
-            <path d="M13 17l4 4 8-8"/>
-          </svg>
-          <h3>業務システム開発</h3>
-          <p>Excel・スプレッドシート管理から脱却したい中小企業向け。案件管理・在庫管理・売上管理などの現場システムを構築します。</p>
+  <!--/* BizSysが選ばれる理由 */-->
+  <section class="section">
+    <div class="container">
+      <h2 class="problem-heading">
+        <img src="/images/konna-state/section-icon.png" alt="" class="problem-heading-icon" aria-hidden="true">
+        BizSysが選ばれる理由
+      </h2>
+      <div class="reason-grid">
+        <div class="reason-card">
+          <img src="/images/reasons/r1.png" alt="" class="reason-icon">
+          <div>
+            <h3 class="reason-title">現場目線の設計</h3>
+            <p class="reason-desc">実際の業務フローを理解し、現場で使いやすいシステムを設計します。</p>
+          </div>
         </div>
-        <div class="card">
-          <svg class="card-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#0a4f9f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M17 4.5l-1.2 4.4a10.5 10.5 0 00-3.8 2.2L7.6 9.7 4 15.8l3.2 3.3a10.5 10.5 0 000 4.3L4 26.5l3.6 6.2 4.4-1.4a10.5 10.5 0 003.8 2.2L17 37.5h6l1.2-4.4a10.5 10.5 0 003.8-2.2l4.4 1.4 3.6-6.2-3.2-3.3a10.5 10.5 0 000-4.3l3.2-3.3-3.6-6.2-4.4 1.4a10.5 10.5 0 00-3.8-2.2L23 4.5h-6z"/>
-            <circle cx="20" cy="21" r="5"/>
-          </svg>
-          <h3>ツール・Webシステム開発</h3>
-          <p>楽天・Yahoo出品ツールや在庫管理ツールなど、現場で使える仕組みを作ります。既存ツールとの連携やデータ自動化にも対応します。</p>
+        <div class="reason-card">
+          <img src="/images/reasons/r2.png" alt="" class="reason-icon">
+          <div>
+            <h3 class="reason-title">少数精鋭の対応</h3>
+            <p class="reason-desc">営業から開発まで一貫対応。無駄なコストを抑え、スピーディーに対応します。</p>
+          </div>
         </div>
-        <div class="card">
-          <svg class="card-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#0a4f9f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M20 4l14 5v10c0 9.5-7 15-14 17C13 34 6 28.5 6 19V9l14-5z"/>
-            <path d="M14 20l4 4 8-8"/>
-          </svg>
-          <h3>保守・運用サポート</h3>
-          <p>システムを導入して終わりではなく、継続的な改善と安定運用をサポートします。月1万円〜の保守プランで安心して任せられる体制を提供します。</p>
+        <div class="reason-card">
+          <img src="/images/reasons/r3.png" alt="" class="reason-icon">
+          <div>
+            <h3 class="reason-title">保守・運用サポート</h3>
+            <p class="reason-desc">作って終わりではなく、継続的な改善と安定運用をしっかりサポートします。</p>
+          </div>
         </div>
-      </div>
-      <div class="pricing-box">
-        <h3>料金の目安</h3>
-        <ul>
-          <li>業務システム開発：30万円〜</li>
-          <li>保守・運用サポート：月1万円〜</li>
-        </ul>
-        <p>※規模・機能によって異なります。まずはご相談ください。</p>
-      </div>
-      <div class="cta-group">
-        <a class="btn-primary" href="/contact">見積もりを相談する</a>
-        <a class="btn-secondary" href="/cases">導入事例を見る</a>
+        <div class="reason-card">
+          <img src="/images/reasons/r4.png" alt="" class="reason-icon">
+          <div>
+            <h3 class="reason-title">相談しやすい体制</h3>
+            <p class="reason-desc">文字ベースでの相談が基本。気軽に相談できる体制を整えています。</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 開発事例（8件） -->
-  <section id="cases" class="section cases-section">
-    <div class="section-inner">
-      <h2 class="section-title">Excel運用を変えた導入事例</h2>
-      <p style="margin: 0 0 24px; color: #555;">業種別の現場課題を解決した事例を紹介します。</p>
-      <div class="cases-grid">
-        <div class="case-card"><h3>引越業者</h3><p>案件管理システムによりExcel管理から脱却</p></div>
-        <div class="case-card"><h3>訪問看護</h3><p>記録・勤務・お知らせを一元管理</p></div>
-        <div class="case-card"><h3>EC・BUYMA</h3><p>商品分析・バイヤー分析を実装</p></div>
-        <div class="case-card"><h3>製造業</h3><p>見積・工程・納品・請求を一元管理</p></div>
-        <div class="case-card"><h3>福祉施設</h3><p>在庫管理のリアルタイム化</p></div>
-        <div class="case-card"><h3>レンタカー</h3><p>発注・在庫・進捗を一元管理</p></div>
-        <div class="case-card"><h3>入場管理</h3><p>QRコード入場管理を複数店舗対応</p></div>
-        <div class="case-card"><h3>物流</h3><p>発注管理で大手企業の受発注業務を効率化</p></div>
+  <!--/* 料金の目安 */-->
+  <section class="section price-section">
+    <div class="container">
+      <h2>
+        <img src="/images/konna-state/section-icon.png" alt="" class="problem-heading-icon" aria-hidden="true">      
+        料金の目安
+      </h2>
+      <div class="price-grid">
+        <article class="price-card blue">
+          <div>
+            <h3>業務システム開発</h3>
+            <p class="price"><strong>50</strong>万円〜</p>
+            <small>※規模・範囲により異なります</small>
+            <p>小規模なシステムから大規模システムまで、ご予算に合わせて最適なプランをご提案します。</p>
+          </div>
+          <img src="/images/pricing/monitor.png" alt="モニターアイコン" class="price-img">
+        </article>
+        <article class="price-card green">
+          <div>
+            <h3>保守・運用サポート</h3>
+            <p class="price">月額<strong>1.5</strong>万円〜</p>
+            <small>※システム規模により異なります</small>
+            <p>システムを安心・安全に運用していただくための継続的なサポートを提供します。</p>
+          </div>
+          <img src="/images/pricing/support.png" alt="保守・運用サポートのアイコン" class="shield">
+        </article>
       </div>
-      <div class="cta-group">
-        <a class="btn-primary" href="/contact">同じような課題で相談する</a>
-        <a class="btn-secondary" href="/cases">事例をもっと見る</a>
-      </div>
+      <p class="price-footnote">まずは見積りだけでもOKです。費用感を知りたい方もお気軽にご相談ください。</p>
     </div>
   </section>
 
-  <!-- ツール提供実績 -->
-  <section id="tools" class="section tools-section">
-    <div class="section-inner">
-      <h2 class="section-title">ツール提供実績</h2>
-      <ul class="tools-list">
-        <li>楽天・Yahoo出品ツール：89社以上（取引件数378件以上）</li>
-        <li>オンライン抽選システム：30件</li>
-        <li>予約管理サイト：40件</li>
-      </ul>
-      <p class="tools-desc">
-        現場の担当者視点で使いやすさを最優先に設計。<br />
-        手動作業を減らし、精度・スピードを高める仕組みと、長期保守での安定化を両立します。
-      </p>
-      <div class="cta-group">
-        <a class="btn-primary" href="/contact">ツール導入について相談する</a>
-        <a class="btn-secondary" href="/cases">事例を見る</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- よくある質問（5問） -->
-  <section id="faq" class="section faq-section">
-    <div class="section-inner">
-      <h2 class="section-title">よくある質問</h2>
-      <div class="faq-grid">
-        <div class="faq-card">
-          <h3>保守費用は必要ですか？</h3>
-          <p>はい。システムは作って終わりではなく、継続的な改善と安定運用が重要です。月1万円〜の保守プランで安心を提供します。</p>
-        </div>
-        <div class="faq-card">
-          <h3>開発期間はどれくらいですか？</h3>
-          <p>規模にもよりますが、簡単な業務システムであれば約1〜2か月程度が目安です。要件によって調整します。</p>
-        </div>
-        <div class="faq-card">
-          <h3>Excel管理からシステムに移行したい場合、まず何をすればいいですか？</h3>
-          <p>まずは現状の運用と課題をヒアリングします。Excelの課題を整理したうえで、必要な機能を絞り込みます。</p>
-        </div>
-        <div class="faq-card">
-          <h3>料金はいくらですか？</h3>
-          <p>業務システム開発は30万円〜、保守は月1万円〜。機能・規模により変動しますので、まずはご相談ください。</p>
-        </div>
-        <div class="faq-card faq-full">
-          <h3>相談だけでもできますか？</h3>
-          <p>はい。まずはお気軽にご相談ください。文字ベースでのやり取りを基本としています。</p>
+  <!--/* 下部CTA */-->
+  <section class="cta">
+    <div class="container cta-inner">
+      <div>
+        <h2>現場の困りごとを聞かせてください</h2>
+        <p>Excelが限界なのか、システム化が必要なのか、まずは一緒に整理します。<br>どんなことでもお気軽にご相談ください。</p>
+        <div class="cta-points">
+          <span>🕐 24時間受付中</span>
+          <span>✉ 1営業日以内に返信</span>
         </div>
       </div>
-      <div class="cta-group">
-        <a class="btn-primary" href="/contact">お問い合わせはこちら</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- 最下部CTA -->
-  <section id="contact-cta" class="section cta-section">
-    <div class="section-inner">
-      <div class="cta-block">
-        <h2>まずは相談フォームから、現状と課題を教えてください</h2>
-        <p>
-          文字ベースでの相談が基本です。電話やZoomは不要です。<br />
-          どんな相談でも構いません。現状の課題や業務の流れをお聞かせください。<br />
-          送信後、1日以内に一次回答をお送りします。
-        </p>
-        <div class="cta-group" style="justify-content: center;">
-          <a class="btn-primary" href="/contact">まずは相談する</a>
-          <a class="btn-secondary" href="/cases">導入事例を見る</a>
-        </div>
-      </div>
+      <a class="btn primary large" href="/contact">無料相談する</a>
     </div>
   </section>
 

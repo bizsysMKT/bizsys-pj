@@ -1,7 +1,8 @@
 ---
 title: "Excel管理から脱却できない会社に共通する3つの理由と、その乗り越え方"
 date: 2026-04-11
-tags: [Excel, 業務改善, DX]
+tags: [Excel脱却, 業務改善, DX]
+icon: "blog-thumb-default.png"
 author: "ビズシス"
 description: "Excelから脱却できない会社には共通する理由があります。あなただけではない、解決策はあります。3つの理由と具体的な乗り越え方を解説します。"
 ---

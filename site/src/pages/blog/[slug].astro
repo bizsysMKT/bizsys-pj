@@ -1,5 +1,7 @@
 ---
 import Layout from '../../components/Layout.astro';
+import '../../styles/blog-detail.css';
+
 const { slug } = Astro.params;
 
 export async function getStaticPaths() {
@@ -21,56 +23,136 @@ const { title, date, description, tags } = post.frontmatter || {};
 const Content = post.default;
 const headings = typeof post.getHeadings === 'function' ? post.getHeadings() : [];
 const h2headings = headings.filter(h => h.depth === 2);
+
+// 関連記事：同タグの記事を優先、最大4件（自記事除く）
+const allPosts = Object.entries(blogModules)
+  .filter(([path]) => !path.endsWith('article-template.md') && !path.endsWith(`${slug}.md`))
+  .map(([path, p]) => ({
+    slug: path.split('/').pop().replace(/\.md$/, ''),
+    ...(p.frontmatter || {}),
+  }))
+  .sort((a, b) => new Date(b.date) - new Date(a.date));
+
+const sameTags = allPosts.filter(p => (p.tags || []).some(t => (tags || []).includes(t)));
+const related = [...sameTags, ...allPosts.filter(p => !sameTags.includes(p))].slice(0, 3);
+
+// 全タグ
+const allTags = [...new Set(
+  Object.entries(blogModules)
+    .filter(([path]) => !path.endsWith('article-template.md'))
+    .flatMap(([, p]) => p.frontmatter?.tags ?? [])
+)];
+
+function formatDate(d) {
+  const dt = new Date(d);
+  return `${dt.getFullYear()}/${dt.getMonth() + 1}/${dt.getDate()}`;
+}
+
+const pageUrl = `https://bizsys.jp/blog/${slug}`;
 ---
 
-<Layout title={`${title || 'ブログ記事'} | ビズシス`}>
+<Layout title={`${title || 'ブログ記事'} | BizSys`}>
+  <div class="blog-detail-page">
 
-  <!-- ページヘッダー -->
-  <section class="section page-header">
-    <div class="section-inner">
-      <p style="font-size: 0.88rem; color: #888; margin: 0 0 8px;">
-        <a href="/blog" style="color: #0a4f9f; text-decoration: none;">ブログ</a> &rsaquo; 記事
-      </p>
-      <h1 style="font-size: 1.6rem; font-weight: 900; color: #111; margin: 0 0 8px;">{title}</h1>
-      <p class="page-lead">{description}</p>
-    </div>
-  </section>
+    <!-- メイン -->
+    <div class="container layout">
 
-  <!-- 記事本文 -->
-  <section class="section bg-white">
-    <div class="section-inner">
-      <div class="blog-article">
-        <p class="blog-meta">{new Date(date).toLocaleDateString('ja-JP')}</p>
-        {tags && tags.length > 0 && (
-          <p class="blog-tags">
-            タグ：{tags.map((tag, i) => (
-              <>
-                {i > 0 && ' / '}
-                <a href={`/blog/tag/${tag}`} class="blog-tag-link">{tag}</a>
-              </>
-            ))}
-          </p>
-        )}
+      <!-- 記事 -->
+      <article class="article">
+
+        <header class="article-header">
+          <time class="article-date">{formatDate(date)}</time>
+          <h1>{title}</h1>
+          {description && <p class="article-description">{description}</p>}
+          {tags && tags.length > 0 && (
+            <div class="article-tags">
+              {tags.map(tag => (
+                <a href={`/blog/tag/${tag}`}>{tag}</a>
+              ))}
+            </div>
+          )}
+        </header>
+
         {h2headings.length >= 2 && (
           <nav class="toc">
             <p class="toc-title">もくじ</p>
-            <ul class="toc-list">
-              {h2headings.map(h => (
-                <li>
-                  <a href={`#${h.slug}`}>{h.text}</a>
-                </li>
+            <ol>
+              {h2headings.map((h) => (
+                <li><a href={`#${h.slug}`}>{h.text}</a></li>
               ))}
-            </ul>
+            </ol>
           </nav>
         )}
+
         <div class="prose">
           <Content />
         </div>
-      </div>
-      <div class="cta-group" style="margin-top: 40px;">
-        <a class="btn-secondary" href="/blog">記事一覧へ戻る</a>
-      </div>
-    </div>
-  </section>
 
+
+        <!-- 戻るリンク -->
+        <a class="back-link" href="/blog">
+          <img src="/images/blog/icon-arrow-left.png" alt="" />
+          記事一覧へ戻る
+        </a>
+
+      </article>
+
+      <!-- サイドバー -->
+      <aside class="sidebar">
+
+        <!-- サイドCTA -->
+        <section class="side-card side-cta">
+          <h3>現場の課題、まずは<br />お気軽にご相談ください</h3>
+          <p>業務のムダやExcel管理の限界を<br/>一緒に整理します。</p>
+          <a href="/contact" class="btn-side-cta">無料相談する</a>
+        </section>
+
+        <!-- 関連記事 -->
+        {related.length > 0 && (
+          <section class="side-card related">
+            <h3>
+              <img src="/images/blog/icon-doc.png" alt="" />
+              関連記事
+            </h3>
+            {related.map(p => (
+              <a href={`/blog/${p.slug}`}>
+                <span class="related-title">{p.title}</span>
+                <time>{formatDate(p.date)}</time>
+              </a>
+            ))}
+            
+          </section>
+        )}
+
+        <!-- 人気タグ -->
+        <section class="side-card">
+          <h3>
+            <img src="/images/blog/icon-tag.png" alt="" />
+            人気のタグ
+          </h3>
+          <div class="side-tags-wrap">
+            {allTags.map(tag => (
+              <a href={`/blog/tag/${tag}`}>{tag}</a>
+            ))}
+          </div>
+        </section>
+
+      </aside>
+
+    </div>
+
+    <!-- ボトムCTA -->
+    <section class="bottom-cta">
+      <div class="container bottom-cta-inner">
+        <div class="cta-icon-wrap">✉</div>
+        <div>
+          <h2>現場の困りごと、まずはお聞かせください</h2>
+          <p>システム化が必要かどうかも含めて、丁寧にご相談に対応します。</p>
+          <div class="cta-points"><span>🕐 24時間受付中</span><span>✉ 1営業日以内に返信</span></div>
+        </div>
+        <a href="/contact" class="btn-bottom-cta">無料相談する</a>
+      </div>
+    </section>
+
+  </div>
 </Layout>

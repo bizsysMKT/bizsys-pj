@@ -196,6 +196,54 @@
   margin: 32px 0;
 }
 
+/* ----------------------------------------
+   記事内テーブル（markdownの表）
+---------------------------------------- */
+.blog-detail-page .prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 24px;
+  font-size: 15px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 6px rgba(7, 59, 120, 0.08);
+}
+.blog-detail-page .prose thead th {
+  background: var(--blue);
+  color: #fff;
+  font-weight: 900;
+  text-align: left;
+  padding: 12px 14px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.blog-detail-page .prose tbody td {
+  padding: 11px 14px;
+  border-bottom: 1px solid #e7eef6;
+  vertical-align: top;
+}
+
+/* 一番下の行は下線を消す */
+.blog-detail-page .prose tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* 偶数行に薄い背景（ストライプ）で視認性を上げる */
+.blog-detail-page .prose tbody tr:nth-child(even) td {
+  background: #f5f9fd;
+}
+
+/* 行ホバーで強調（PCのみ効果あり） */
+.blog-detail-page .prose tbody tr:hover td {
+  background: #eaf3fc;
+}
+
+/* テーブル内のstrongは濃色で目立たせる */
+.blog-detail-page .prose table strong {
+  color: var(--deep);
+}
+
 /* ====================================================
    記事内CTA
    ==================================================== */
@@ -515,4 +563,15 @@
   }
   .blog-detail-page .cta-icon-wrap { display: none; }
   .blog-detail-page .btn-bottom-cta { width: 100%; }
+}
+
+@media (max-width: 640px) {
+
+  /* スマホで表が画面幅を超える場合は横スクロールさせる（見切れ防止） */
+  .blog-detail-page .prose table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
 }

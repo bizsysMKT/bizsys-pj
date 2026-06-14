@@ -599,17 +599,26 @@ import Layout from '../components/Layout.astro';
       .case-grid,
       .solution-grid { grid-template-columns: 1fr; }
       .cost-flow { grid-template-columns: 1fr; }
+      .price-card .price-img { display: none; }
       .cost-flow span { text-align: center; }
+      .cost-arrow::after {
+        border-top: 14px solid #005bac;
+        border-bottom: none;
+        border-left: 9px solid transparent;
+        border-right: 9px solid transparent;
+      }
       .cta-points { flex-direction: column; gap: 8px; }
-      /* solutionカードのright側タグをスマホで折り返し */
-      .solution-card { flex-wrap: wrap; }
-      .solution-card__right { flex-wrap: wrap; }
-      /* ROIバナーのcalcを折り返し許可 */
-      .roi-banner__calc { white-space: normal; }
-      .roi-banner__body { flex-direction: column; align-items: flex-start; }
+      /* solutionカードをスマホで縦積みにしてタグのはみ出しを防ぐ */
+      .solution-card { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .solution-card__right { white-space: normal; flex-shrink: 1; }
+      /* ROIバナー：calc＋eqを1行、resultを次の行に */
+      .roi-banner { padding: 20px 10px; }
+      .roi-banner__body { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 8px; }
+      .roi-banner__result { width: 100%; }
       /* solution-footer を3行表示 */
       .sf-text { display: flex; flex-direction: column; gap: 2px; }
       .sf-l1, .sf-l2, .sf-l3 { display: block; }
+      .solution-footer { padding: 8px 10px; gap: 6px; }
     }
   </style>
 
@@ -659,15 +668,6 @@ import Layout from '../components/Layout.astro';
         </div>
         <div class="laurel-right" aria-hidden="true"></div>
       </div>
-
-      <div>
-        <div class="laurel-left" aria-hidden="true"></div>
-        <div class="stat-content">
-          <p class="stat-label">楽天・Yahoo出品<br>支援システム導入</p>
-          <div class="stat-num-row"><strong>90</strong><span class="stats-unit">社以上</span></div>
-        </div>
-        <div class="laurel-right" aria-hidden="true"></div>
-      </div>
       <div>
         <div class="laurel-left" aria-hidden="true"></div>
         <div class="stat-content">
@@ -684,6 +684,14 @@ import Layout from '../components/Layout.astro';
         </div>
         <div class="laurel-right" aria-hidden="true"></div>
       </div>      
+      <div>
+        <div class="laurel-left" aria-hidden="true"></div>
+        <div class="stat-content">
+          <p class="stat-label">楽天・Yahoo出品<br>支援システム導入</p>
+          <div class="stat-num-row"><strong>90</strong><span class="stats-unit">社以上</span></div>
+        </div>
+        <div class="laurel-right" aria-hidden="true"></div>
+      </div>
     </div>
   </section>
 
@@ -811,9 +819,9 @@ import Layout from '../components/Layout.astro';
               </div>
             </div>
             <div class="solution-card__right">
-              <span class="stag before">担当者しか分からない</span>
+              <span class="stag before">担当者しか<br>分からない</span>
               <span class="solution-arrow">→</span>
-              <span class="stag after-green">誰でも対応できる</span>
+              <span class="stag after-green">誰でも<br>対応できる</span>
             </div>
           </div>
         </div>
@@ -840,7 +848,6 @@ import Layout from '../components/Layout.astro';
             <div class="case-text">
               <h3>案件管理システム</h3>
               <p>Excelでの案件管理から脱却し、案件管理システムを導入。</p>
-              <span class="case-metric">月末集計時間 <strong>70%削減</strong></span>
             </div>
           </div>
         </div>
@@ -851,7 +858,6 @@ import Layout from '../components/Layout.astro';
             <div class="case-text">
               <h3>記録管理システム</h3>
               <p>紙の記録とLINEでの連絡をシステムに一本化。情報共有がスムーズに。</p>
-              <span class="case-metric">業務効率 <strong>50%向上</strong></span>
             </div>
           </div>
         </div>
@@ -862,7 +868,6 @@ import Layout from '../components/Layout.astro';
             <div class="case-text">
               <h3>見積・工程管理</h3>
               <p>見積・工程・納品・請求を一元管理し、二重入力を削減。</p>
-              <span class="case-metric">作業時間 <strong>60%削減</strong></span>
             </div>
           </div>
         </div>
@@ -873,7 +878,6 @@ import Layout from '../components/Layout.astro';
             <div class="case-text">
               <h3>在庫管理システム</h3>
               <p>介護用品の在庫・発注をシステム化。欠品や発注ミスを防止。</p>
-              <span class="case-metric">発注ミス <strong>90%削減</strong></span>
             </div>
           </div>
         </div>

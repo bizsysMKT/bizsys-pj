@@ -813,3 +813,11 @@
   .p3-page .p3-hero-visual { display: none; }
   .p3-page .p3-hero-inner { min-height: auto; }
 }
+
+.sp-only { display: none; }
+@media (max-width: 560px) {
+  .sp-only { display: inline; }
+  .p3-page .p3-hero { padding-top: 40px; }
+  .p3-page .p3-hero-inner { padding: 0; }
+  .p3-page .p3-hero-copy h1 { font-size: 28px; }
+}

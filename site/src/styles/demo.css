@@ -496,7 +496,7 @@
 
 @media (max-width: 640px) {
   .demo-page .demo-hero {
-    padding: 20px 0 40px;
+    padding: 40px 0 0;
   }
   .demo-page .demo-hero-text h1 {
     font-size: 28px;

@@ -627,6 +627,9 @@
 }
 
 @media (max-width: 640px) {
+  .pricing-page .pricing-hero {
+    padding-top: 40px;
+  }
   .pricing-page .pricing-hero h1 {
     font-size: 28px;
   }

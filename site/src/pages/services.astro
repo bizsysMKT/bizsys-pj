@@ -49,6 +49,7 @@ import Layout from '../components/Layout.astro';
       margin: 0 0 24px;
       color: #071225;
     }
+    .sp-only { display: none; }
     .svc-hero h1 span { color: #0b4a93; }
     .svc-hero .lead {
       font-size: 17px;
@@ -117,7 +118,7 @@ import Layout from '../components/Layout.astro';
       background: #fff;
       border: 1px solid #dce7f2;
       border-radius: 8px;
-      padding: 32px 24px 20px;
+      padding: 32px 24px 24px;
       min-height: 420px;
       box-shadow: 0 12px 30px rgba(3,34,70,.08);
       display: flex;
@@ -166,9 +167,7 @@ import Layout from '../components/Layout.astro';
     .svc-card ul {
       list-style: none;
       padding: 0;
-      margin: 0 0 14px;
-      border-bottom: 1px solid #e7eef6;
-      padding-bottom: 14px;
+      margin: 0;
       flex: 1;
     }
     .svc-card li {
@@ -398,17 +397,21 @@ import Layout from '../components/Layout.astro';
       .flow-arrow:nth-child(4), .flow-arrow:nth-child(8) { display: none; }
     }
     @media (max-width: 760px) {
-      .svc-hero h1 { font-size: 34px; }
+      .svc-hero { padding-top: 40px; }
+      .svc-hero h1 { font-size: 28px; }
+      .sp-only { display: inline; }
       .svc-hero .lead { font-size: 17px; }
       .svc-hero-points { flex-direction: column; gap: 12px; }
       .svc-hero-actions { flex-direction: column; }
       .svc-hero-actions .btn { width: 100%; }
       .svc-cards { grid-template-columns: 1fr; }
       .industry-box { grid-template-columns: 1fr 1fr; }
-      .industry-item:nth-child(2n) { border-right: 0; }
       .industry-item { border-bottom: 1px solid #dce7f2; }
+      .industry-item:nth-child(odd) { border-right: 1px solid #dce7f2; }
+      .industry-item:nth-child(2n) { border-right: 0; }
       .flow-list { flex-direction: column; align-items: center; }
-      .flow-step { flex: 0 0 auto; width: 100%; max-width: 300px; }
+      .flow-step { flex: 0 0 auto; width: 100%; max-width: 300px; margin: 12px 0; }
+      .flow-arrow:nth-child(4), .flow-arrow:nth-child(8) { display: flex; }
       .flow-arrow { margin-top: 0; transform: rotate(90deg); }
       .svc-cta-inner { grid-template-columns: 1fr; }
       .svc-cta-icon { display: none; }
@@ -419,7 +422,7 @@ import Layout from '../components/Layout.astro';
   <section class="svc-hero">
     <div class="container svc-hero-grid">
       <div class="svc-hero-copy">
-        <h1 style="font-size:38px;">BizSysで<span>解決できること</span></h1>
+        <h1 class="svc-hero-h1">BizSysで<br class="sp-only"><span>解決できること</span></h1>
         <p class="lead" style="font-size:17px;">
           現場のムダ・手間・ミスを減らし、<br>
           業務を見える化・自動化・効率化する<br>
@@ -478,7 +481,6 @@ import Layout from '../components/Layout.astro';
             <li>売上管理</li>
             <li>請求管理 など</li>
           </ul>
-          <a href="#">詳しく見る →</a>
         </article>
         <article class="svc-card">
           <span class="svc-num">02</span>
@@ -494,7 +496,6 @@ import Layout from '../components/Layout.astro';
             <li>メール・LINE通知</li>
             <li>定型業務の自動化 など</li>
           </ul>
-          <a href="#">詳しく見る →</a>
         </article>
         <article class="svc-card">
           <span class="svc-num">03</span>
@@ -510,7 +511,6 @@ import Layout from '../components/Layout.astro';
             <li>権限管理</li>
             <li>外部システム連携 など</li>
           </ul>
-          <a href="#">詳しく見る →</a>
         </article>
         <article class="svc-card">
           <span class="svc-num">04</span>
@@ -526,7 +526,6 @@ import Layout from '../components/Layout.astro';
             <li>定期メンテナンス</li>
             <li>システムの安定運用</li>
           </ul>
-          <a href="#">詳しく見る →</a>
         </article>
       </div>
     </div>
@@ -621,14 +620,14 @@ import Layout from '../components/Layout.astro';
           <span class="flow-step-num">05</span>
           <div class="flow-step-img"><img src="/images/flow/flow5.png" alt="運用開始"></div>
           <strong>運用開始</strong>
-          <small>予約説明・データ移行を行い、スムーズに運用開始。</small>
+          <small>スムーズに運用開始。</small>
         </div>
         <div class="flow-arrow">▶</div>
         <div class="flow-step">
           <span class="flow-step-num">06</span>
           <div class="flow-step-img"><img src="/images/flow/flow6.png" alt="保守・改善"></div>
           <strong>保守・改善</strong>
-          <small>運用後も継続サポートと改善提案を行います。</small>
+          <small>運用後も継続サポートを行います。</small>
         </div>
       </div>
     </div>

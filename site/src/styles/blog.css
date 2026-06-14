@@ -489,6 +489,9 @@
 }
 
 @media (max-width: 640px) {
+  .blog-page .blog-hero {
+    padding-top: 40px;
+  }
   .blog-page .blog-hero h1 {
     font-size: 28px;
   }

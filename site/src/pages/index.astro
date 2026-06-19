@@ -78,66 +78,188 @@ import Layout from '../components/Layout.astro';
     }
 
     /* ====================================================
-       実績数字
+       実績数字（豊富な実績で安心してお任せいただけます）
        ==================================================== */
-    .stats {
-      background: #fff;
-      padding: 28px 0;
+    .results-section {
+      padding: 64px 20px;
+      background: #ffffff;
     }
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      text-align: center;
-      gap: 24px;
+    .results-container {
+      max-width: 920px;
+      margin: 0 auto;
     }
-    .stats-grid > div {
+    .section-title-wrap {
       display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      gap: 4px;
-    }
-    .laurel-left,
-    .laurel-right {
-      flex-shrink: 0;
-      width: 44px;
-      height: 100px;
-      background-size: auto 100px;
-      background-repeat: no-repeat;
-    }
-    .laurel-left {
-      background-image: url('/images/laurel_left.png');
-      background-position: left center;
-    }
-    .laurel-right {
-      background-image: url('/images/laurel_right.png');
-      background-position: right center;
-    }
-    .stat-content {
-      text-align: center;
-      display: flex;
-      flex-direction: column;
       align-items: center;
+      justify-content: center;
+      gap: 28px;
+      margin-bottom: 38px;
     }
-    .stat-label {
-      font-size: 15px;
+    .section-title-wrap h2 {
+      margin: 0;
+      color: #10243e;
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1.35;
+      letter-spacing: 0.06em;
+      text-align: center;
+    }
+    .section-line {
+      width: 86px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #2368c4, transparent);
+    }
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+    .result-card {
+      position: relative;
+      min-height: 248px;
+      padding: 22px 16px 20px;
+      background: #ffffff;
+      border: 2px solid #d6e7f7;
+      border-radius: 14px;
+      box-shadow: 0 8px 22px rgba(31, 70, 112, 0.08);
+      text-align: center;
+    }
+    .result-card--featured {
+      border-color: #e5af32;
+      box-shadow: 0 16px 42px rgba(199, 138, 0, 0.13);
+    }
+    .result-icon {
+      height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+    .result-icon img {
+      width: 54px;
+      height: 54px;
+      object-fit: contain;
+    }
+    .result-label {
+      min-height: 48px;
+      margin: 0 0 10px;
+      color: #10243e;
+      font-size: 17px;
+      font-weight: 800;
+      line-height: 1.35;
+      letter-spacing: 0.04em;
+    }
+    .result-label sup {
+      font-size: 11px;
       font-weight: 700;
-      color: #555;
-      line-height: 1.4;
-      margin: 0 0 6px;
-      height: 2.8em;
+      vertical-align: super;
+    }
+    .result-number {
       display: flex;
       align-items: flex-end;
       justify-content: center;
-      text-align: center;
+      gap: 10px;
+      margin-bottom: 18px;
     }
-    .stat-num-row {
-      display: flex;
-      align-items: baseline;
-      justify-content: center;
+    .result-number span {
+      display: inline-block;
+      color: #2368c4;
+      font-size: 40px;
+      font-weight: 800;
+      line-height: 0.92;
+      letter-spacing: -0.04em;
+    }
+    .result-number strong {
+      color: #2368c4;
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 1.2;
+      text-align: left;
       white-space: nowrap;
     }
-    .stats strong { font-size: 42px; color: #073b78; font-weight: 900; }
-    .stats-unit { font-weight: 800; margin-left: 3px; font-size: 17px; }
+    .result-card--gold .result-number span,
+    .result-card--gold .result-number strong {
+      color: #c78a00;
+    }
+    .result-card--green .result-number span,
+    .result-card--green .result-number strong {
+      color: #5aac68;
+    }
+    .result-description {
+      margin: 0;
+      color: #17243a;
+      font-size: 13.5px;
+      line-height: 1.8;
+      letter-spacing: 0.02em;
+    }
+    .result-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #516071;
+      font-size: 12px;
+      text-decoration: underline;
+    }
+    .results-note {
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      gap: 22px;
+      align-items: center;
+      padding: 18px 22px;
+      margin: 0 0 30px;
+      background: rgba(255, 255, 255, 0.86);
+      border: 1px dashed #8eb8df;
+      border-radius: 14px;
+    }
+    .note-badge {
+      width: 66px;
+      height: 66px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      justify-self: center;
+      border-radius: 50%;
+      color: #ffffff;
+      background: linear-gradient(135deg, #1558b4, #2372d1);
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 1.35;
+      text-align: center;
+    }
+    .note-text p {
+      margin: 0;
+      color: #17243a;
+      font-size: 13.5px;
+      line-height: 1.8;
+    }
+    .team-message {
+      display: grid;
+      grid-template-columns: 88px 1fr;
+      gap: 24px;
+      align-items: center;
+      padding: 24px 28px;
+      border-radius: 14px;
+      background: linear-gradient(90deg, #eaf4ff 0%, #f8fcff 100%);
+      box-shadow: 0 12px 30px rgba(31, 70, 112, 0.08);
+    }
+    .team-icon img {
+      width: 66px;
+      height: 66px;
+      object-fit: contain;
+    }
+    .team-message h3 {
+      margin: 0 0 8px;
+      color: #2368c4;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+    .team-message p {
+      margin: 0;
+      color: #17243a;
+      font-size: 13.5px;
+      line-height: 1.85;
+    }
 
     /* ====================================================
        課題グリッド / 理由グリッド
@@ -563,16 +685,46 @@ import Layout from '../components/Layout.astro';
     /* ====================================================
        レスポンシブ
        ==================================================== */
-    @media (max-width: 1100px) {
-      .laurel-left,
-      .laurel-right {
-        width: 40px;
-        height: 86px;
-        background-size: auto 86px;
+    @media (max-width: 960px) {
+      .results-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
       }
-      .stats strong { font-size: 36px; }
-      .stats-unit { font-size: 15px; }
-      .stat-label { font-size: 13px; }
+      .result-card { min-height: auto; }
+      .result-label { min-height: auto; }
+      .section-title-wrap { gap: 16px; }
+      .section-line { width: 42px; }
+    }
+    @media (max-width: 640px) {
+      .results-section { padding: 48px 16px; }
+      .section-title-wrap {
+        display: block;
+        margin-bottom: 28px;
+      }
+      .section-line { display: none; }
+      .section-title-wrap h2 {
+        font-size: 22px;
+        text-align: center;
+      }
+      .result-card { padding: 22px 16px; }
+      .result-label { font-size: 17px; }
+      .result-number span { font-size: 40px; }
+      .result-number strong { font-size: 16px; }
+      .results-note,
+      .team-message {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 22px 18px;
+      }
+      .note-badge {
+        justify-self: start;
+        width: auto;
+        height: auto;
+        padding: 8px 14px;
+        border-radius: 999px;
+      }
+      .team-message h3 { font-size: 18px; }
+      .results-section .pc-only { display: none; }
     }
     @media (max-width: 900px) {
       .hero-inner,
@@ -588,7 +740,6 @@ import Layout from '../components/Layout.astro';
         width: min(340px, 100%);
       }
       .hero-arrow { transform: rotate(90deg); }
-      .stats-grid,
       .reason-grid,
       .case-grid { grid-template-columns: 1fr 1fr; }
       .problem-grid { grid-template-columns: 1fr 1fr; }
@@ -597,7 +748,6 @@ import Layout from '../components/Layout.astro';
     @media (max-width: 560px) {
       .hero h1 { font-size: 28px; }
       .hero-buttons { flex-direction: column; }
-      .stats-grid,
       .problem-grid,
       .reason-grid,
       .case-grid,
@@ -662,42 +812,81 @@ import Layout from '../components/Layout.astro';
   </section>
 
   <!--/* 実績数字 */-->
-  <section class="stats py-4 mt-4">
-    <div class="container stats-grid">
-      <div>
-        <div class="laurel-left" aria-hidden="true"></div>
-        <div class="stat-content">
-          <p class="stat-label">業務改善システム<br>導入実績</p>
-          <div class="stat-num-row"><strong>25</strong><span class="stats-unit">社以上</span></div>
-        </div>
-        <div class="laurel-right" aria-hidden="true"></div>
+  <section class="results-section" aria-labelledby="results-title">
+    <div class="results-container">
+      <h2 class="problem-heading"> <img src="/images/konna-state/section-icon.png" alt="" class="problem-heading-icon" aria-hidden="true">
+        数字で見る、BizSysの対応実績
+      </h2>
+
+      <div class="results-grid">
+        <article class="result-card result-card--blue">
+          <div class="result-icon">
+            <img src="/images/results/icon-building-transparent.png" alt="" aria-hidden="true">
+          </div>
+          <p class="result-label">導入実績 <sup>※1</sup></p>
+          <div class="result-number">
+            <span>25</span>
+            <strong>社以上</strong>
+          </div>
+          <p class="result-description">
+            業務システムの開発・導入・保守を<br class="pc-only">
+            25社以上の企業様にご提供
+          </p>
+        </article>
+
+        <article class="result-card result-card--gold result-card--featured">
+          <div class="result-icon">
+            <img src="/images/results/icon-growth-transparent.png" alt="" aria-hidden="true">
+          </div>
+          <p class="result-label">業務効率化・自動化<br>支援実績 <sup>※2</sup></p>
+          <div class="result-number">
+            <span>100</span>
+            <strong>事業主<br>以上</strong>
+          </div>
+          <p class="result-description">
+            業務効率化や自動化について<br class="pc-only">
+            100以上の中小企業様・個人事業主様の<br/>ご支援
+          </p>
+        </article>
+
+        <article class="result-card result-card--green">
+          <div class="result-icon">
+            <img src="/images/results/icon-shop-transparent.png" alt="" aria-hidden="true">
+          </div>
+          <p class="result-label">ココナラでの<br>システム販売実績 <sup>※2</sup></p>
+          <div class="result-number">
+            <span>500</span>
+            <strong>件以上</strong>
+          </div>
+          <p class="result-description">
+            ココナラでのシステム販売・開発実績が<br class="pc-only">
+            500件以上
+          </p>
+          <a class="result-link" href="https://coconala.com/users/2625918" target="_blank" rel="noopener noreferrer">実績・評価を見る →</a>
+        </article>
       </div>
-      <div>
-        <div class="laurel-left" aria-hidden="true"></div>
-        <div class="stat-content">
-          <p class="stat-label">経験豊富な<br/>技術者が体制支援</p>
-          <div class="stat-num-row"><strong>15</strong><span class="stats-unit" style="font-size:15px;">年以上の知見</span></div>
+
+      <div class="results-note">
+        <div class="note-badge">実績に<br>ついて</div>
+        <div class="note-text">
+          <p>※1 当社（株式会社SOB）としての導入・保守実績です。</p>
+          <p>※2 在籍メンバーの累計実績を含みます。</p>
+          <p>在籍メンバーがこれまでに携わってきた業務効率化・自動化支援およびココナラでのシステム販売・開発の実績を含んでおります。</p>
         </div>
-        <div class="laurel-right" aria-hidden="true"></div>
       </div>
-      <div>
-        <div class="laurel-left" aria-hidden="true"></div>
-        <div class="stat-content">
-          <p class="stat-label">楽天・Yahoo出品<br>支援システム導入</p>
-          <div class="stat-num-row"><strong>100</strong><span class="stats-unit">事業主以上</span></div>
+
+      <div class="team-message">
+        <div class="team-icon">
+          <img src="/images/results/icon-team.svg" alt="" aria-hidden="true">
         </div>
-        <div class="laurel-right" aria-hidden="true"></div>
+        <div>
+          <h3>経験豊富な技術者が丁寧にサポート</h3>
+          <p>
+            豊富な経験を持つメンバーが、お客様の課題や業務に合わせて最適なシステムをご提案・開発いたします。
+            初めての方でも安心してご相談いただける体制を整えています。
+          </p>
+        </div>
       </div>
-      <div>
-        <div class="laurel-left" aria-hidden="true"></div>
-        <div class="stat-content">
-          <p class="stat-label">ココナラでの<br>システム販売実績</p>
-          <div class="stat-num-row"><strong>500</strong><span class="stats-unit">件以上</span></div>
-          <div style="font-size:12px;color:#888;margin-top:4px;line-height:1.5;">在籍メンバーの<br/>販売・支援実績を含みます。</div>
-          <a href="https://coconala.com/users/2625918" target="_blank" rel="noopener noreferrer" style="font-size:12px;color:#999;margin-top:6px;text-decoration:underline;">実績・評価を見る →</a>
-        </div>
-        <div class="laurel-right" aria-hidden="true"></div>
-      </div>      
     </div>
   </section>
 

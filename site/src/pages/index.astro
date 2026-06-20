@@ -154,7 +154,7 @@ import Layout from '../components/Layout.astro';
     .result-label sup {
       font-size: 11px;
       font-weight: 700;
-      vertical-align: super;
+      vertical-align: sub;
     }
     .result-number {
       display: flex;
@@ -234,6 +234,17 @@ import Layout from '../components/Layout.astro';
       color: #17243a;
       font-size: 13.5px;
       line-height: 1.8;
+    }
+    .sob-link {
+      color: #2368c4;
+      text-decoration: underline;
+      white-space: nowrap;
+    }
+    .ext-icon {
+      width: 1.1em;
+      height: 1.1em;
+      margin-left: 3px;
+      vertical-align: -0.17em;
     }
     .team-message {
       display: grid;
@@ -1010,7 +1021,13 @@ import Layout from '../components/Layout.astro';
       <div class="team-message">
         <div class="note-badge">実績に<br>ついて</div>
         <div class="note-text">
-          <p>※1 当社（株式会社SOB）としての開発・導入・保守実績です。</p>
+          <p>
+            ※1 当社（株式会社SOB
+            <a class="sob-link" href="https://s-o-b.jp/" target="_blank" rel="noopener noreferrer">
+              <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+            ）としての開発・導入・保守実績です。
+          </p>
           <p>※2 在籍メンバーが携わった支援・販売実績を含みます。</p>
         </div>
       </div>

@@ -82,7 +82,7 @@ import Layout from '../components/Layout.astro';
        ==================================================== */
     .results-section {
       padding: 35px 0;
-      background: #f4f9fe;
+      background: #ffffff;
     }
     .section-title-wrap {
       display: flex;
@@ -181,11 +181,14 @@ import Layout from '../components/Layout.astro';
     }
     .result-card--gold .result-number span,
     .result-card--gold .result-number strong {
-      color: #c78a00;
+      color: #9f5903;
     }
     .result-card--green .result-number span,
     .result-card--green .result-number strong {
       color: #5aac68;
+    }
+    .result-card--blue .result-number span {
+      font-size: 46px;
     }
     .result-description {
       margin: 0;
@@ -809,12 +812,12 @@ import Layout from '../components/Layout.astro';
     </div>
   </section>
 
-  <!--/* こんな状態になっていませんか？ */-->
+  <!--/* 現場でよくある困りごと */-->
   <section class="section py-5 my-3">
     <div class="container py-0 my-0">
       <h2 class="problem-heading">
         <img src="/images/konna-state/section-icon.png" alt="" class="problem-heading-icon" aria-hidden="true">
-        こんな状態になっていませんか？
+        現場でよくある困りごと
       </h2>
       <div class="problem-grid">
         <div class="problem-card">
@@ -856,77 +859,8 @@ import Layout from '../components/Layout.astro';
     </div>
   </section>
 
-  <!--/* 実績数字 */-->
-  <section class="results-section" aria-labelledby="results-title">
-    <div class="container">
-      <h2 class="problem-heading"> <img src="/images/konna-state/section-icon.png" alt="" class="problem-heading-icon" aria-hidden="true">
-        開発・支援実績
-      </h2>
-
-      <div class="results-grid">
-        <article class="result-card result-card--blue">
-          <div class="result-head">
-            <div class="result-icon">
-              <img src="/images/results/icon-building-transparent.png" alt="" aria-hidden="true">
-            </div>
-            <p class="result-label">導入実績 <sup>※1</sup></p>
-          </div>
-          <div class="result-number">
-            <span>25</span>
-            <strong>社以上</strong>
-          </div>
-          <p class="result-description">
-            業務システムの開発・導入・保守を<br class="pc-only">
-            25社以上の企業様にご提供
-          </p>
-        </article>
-
-        <article class="result-card result-card--gold result-card--featured">
-          <div class="result-head">
-            <div class="result-icon">
-              <img src="/images/results/icon-growth-transparent.png" alt="" aria-hidden="true">
-            </div>
-            <p class="result-label">業務効率化・自動化<br>支援実績 <sup>※2</sup></p>
-          </div>
-          <div class="result-number">
-            <span>100</span>
-            <strong>事業主<br>以上</strong>
-          </div>
-          <p class="result-description">
-            中小企業・個人事業主様を中心に<br/>業務効率化・自動化を支援
-          </p>
-        </article>
-
-        <article class="result-card result-card--green">
-          <div class="result-head">
-            <div class="result-icon">
-              <img src="/images/results/icon-shop-transparent.png" alt="" aria-hidden="true">
-            </div>
-            <p class="result-label">ココナラでの<br>システム販売実績 <sup>※2</sup></p>
-          </div>
-          <div class="result-number">
-            <span>500</span>
-            <strong>件以上</strong>
-          </div>
-          <p class="result-description">
-            星5の評価も多数<br/>
-            <a class="result-link" href="https://coconala.com/users/2625918" target="_blank" rel="noopener noreferrer">ココナラ実績を見る →</a>
-          </p>
-        </article>
-      </div>
-
-      <div class="team-message">
-        <div class="note-badge">実績に<br>ついて</div>
-        <div class="note-text">
-          <p>※1 当社（株式会社SOB）としての開発・導入・保守実績です。</p>
-          <p>※2 在籍メンバーが携わった支援・販売実績を含みます。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!--/* Excel管理コスト / 解決策 */-->
-  <section class="section">
+  <section class="section light">
     <div class="container two-column">
       <div class="panel">
         <h2>Excel管理は安いようで高い</h2>
@@ -1014,6 +948,75 @@ import Layout from '../components/Layout.astro';
     </div>
   </section>
 
+  <!--/* 実績数字 */-->
+  <section class="results-section" aria-labelledby="results-title">
+    <div class="container">
+      <h2 class="problem-heading"> <img src="/images/konna-state/section-icon.png" alt="" class="problem-heading-icon" aria-hidden="true">
+        開発・支援実績
+      </h2>
+
+      <div class="results-grid">
+        <article class="result-card result-card--blue">
+          <div class="result-head">
+            <div class="result-icon">
+              <img src="/images/results/icon-building-transparent.png" alt="" aria-hidden="true">
+            </div>
+            <p class="result-label">導入実績 <sup>※1</sup></p>
+          </div>
+          <div class="result-number">
+            <span>25</span>
+            <strong>社以上</strong>
+          </div>
+          <p class="result-description">
+            業務システムの開発・導入・保守を<br class="pc-only">
+            25社以上の企業様にご提供
+          </p>
+        </article>
+
+        <article class="result-card result-card--gold result-card--featured">
+          <div class="result-head">
+            <div class="result-icon">
+              <img src="/images/results/icon-growth-transparent.png" alt="" aria-hidden="true">
+            </div>
+            <p class="result-label">業務効率化・自動化<br>支援実績 <sup>※2</sup></p>
+          </div>
+          <div class="result-number">
+            <span>100</span>
+            <strong>事業主<br>以上</strong>
+          </div>
+          <p class="result-description">
+            中小企業・個人事業主様を中心に<br/>業務効率化・自動化を支援
+          </p>
+        </article>
+
+        <article class="result-card result-card--green">
+          <div class="result-head">
+            <div class="result-icon">
+              <img src="/images/results/icon-shop-transparent.png" alt="" aria-hidden="true">
+            </div>
+            <p class="result-label">外部サービスでの<br>システム販売実績 <sup>※2</sup></p>
+          </div>
+          <div class="result-number">
+            <span>500</span>
+            <strong>件以上</strong>
+          </div>
+          <p class="result-description">
+            星5の評価も多数<br/>
+            <a class="result-link" href="https://coconala.com/users/2625918" target="_blank" rel="noopener noreferrer">外部サービスの実績を見る →</a>
+          </p>
+        </article>
+      </div>
+
+      <div class="team-message">
+        <div class="note-badge">実績に<br>ついて</div>
+        <div class="note-text">
+          <p>※1 当社（株式会社SOB）としての開発・導入・保守実績です。</p>
+          <p>※2 在籍メンバーが携わった支援・販売実績を含みます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!--/* 導入事例 */-->
   <section class="section light">
     <div class="container">
@@ -1087,7 +1090,7 @@ import Layout from '../components/Layout.astro';
         <div class="reason-card">
           <img src="/images/icon-reason-06.png" alt="" class="reason-icon">
           <div>
-            <h3 class="reason-title">少数精鋭の対応</h3>
+            <h3 class="reason-title">技術者が直接対応</h3>
             <p class="reason-desc">営業から開発まで一貫対応。無駄なコストを抑え、スピーディーに対応します。</p>
           </div>
         </div>

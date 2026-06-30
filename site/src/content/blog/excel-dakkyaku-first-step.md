@@ -67,5 +67,5 @@ Excel脱却の第一歩は「全部を変えようとしないこと」です。
 ---
 
 **関連記事**
-- [Excel在庫管理の限界サイン5つ｜中小企業が気づくべきタイミング](/blog/2026-04-10-excel-zaiko-kanri-genkai)
-- [Excel管理から脱却できない会社に共通する3つの理由](/blog/2026-04-11-excel-dakkyaku-dekinai-riyuu)
+- [Excel在庫管理の限界サイン5つ｜中小企業が気づくべきタイミング](/blog/excel-zaiko-kanri-genkai)
+- [Excel管理から脱却できない会社に共通する3つの理由](/blog/excel-dakkyaku-dekinai-riyuu)

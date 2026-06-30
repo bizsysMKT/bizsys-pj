@@ -105,6 +105,6 @@ Excelからシステムへの移行は、次の6ステップで進みます。
 ---
 
 **関連記事**
-- [Excel管理をシステム化する費用はいくら？中小企業の現実的な相場と内訳](/blog/2026-06-14-excel-system-ka-hiyou)
-- [Excel脱却の第一歩｜まず何をすればいい？中小企業向け実践ガイド](/blog/2026-05-29-excel-dakkyaku-first-step)
-- [システム発注で失敗しないための5つのチェックポイント](/blog/2026-05-01-system-hatchuu-checklist)
+- [Excel管理をシステム化する費用はいくら？中小企業の現実的な相場と内訳](/blog/excel-system-ka-hiyou)
+- [Excel脱却の第一歩｜まず何をすればいい？中小企業向け実践ガイド](/blog/excel-dakkyaku-first-step)
+- [システム発注で失敗しないための5つのチェックポイント](/blog/system-hatchuu-checklist)

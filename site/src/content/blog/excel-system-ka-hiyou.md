@@ -117,6 +117,6 @@ Excel管理のシステム化費用は、会社の状況によって変わりま
 ---
 
 **関連記事**
-- [Excel脱却の第一歩｜まず何をすればいい？中小企業向け実践ガイド](/blog/2026-05-29-excel-dakkyaku-first-step)
-- [中小企業がシステム化で得られる3つのメリット｜小さく始めて大きく変わる](/blog/2026-05-01-system-ka-merit)
-- [良いシステム会社の選び方｜安さだけで選ぶと失敗する理由](/blog/2026-05-01-system-kaisha-erabi)
+- [Excel脱却の第一歩｜まず何をすればいい？中小企業向け実践ガイド](/blog/excel-dakkyaku-first-step)
+- [中小企業がシステム化で得られる3つのメリット｜小さく始めて大きく変わる](/blog/system-ka-merit)
+- [良いシステム会社の選び方｜安さだけで選ぶと失敗する理由](/blog/system-kaisha-erabi)

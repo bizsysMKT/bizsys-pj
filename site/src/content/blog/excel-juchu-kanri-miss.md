@@ -137,16 +137,18 @@ Excelの受注管理で起きやすいミスは、次の5つです。
 
 「うちの受注管理、システム化したらどう変わる？」という相談も大歓迎です。現状の受注業務の流れをお聞かせいただければ、規模感に合わせた現実的なご提案をいたします。まずはお気軽に[お問い合わせ](/contact)ください。
 
-あわせて、こちらもご覧ください。
+<p class="page-links-lead">あわせて、こちらもご覧ください。</p>
 
-- [サービス内容](/services)：システム開発の概要・流れ
-- [導入事例](/cases)：他社の改善イメージ
-- [操作デモ](/demo)：実際の画面の動き
-- [料金](/pricing)：費用の目安
+<div class="page-links">
+<a target="_blank" rel="noopener" href="/services"><b>サービス内容</b>システム開発の概要・流れ</a>
+<a target="_blank" rel="noopener" href="/cases"><b>導入事例</b>他社の改善イメージ</a>
+<a target="_blank" rel="noopener" href="/demo"><b>操作デモ</b>実際の画面の動き</a>
+<a target="_blank" rel="noopener" href="/pricing"><b>料金</b>費用の目安</a>
+</div>
 
 ---
 
 **関連記事**
-- [Excel集計作業を減らす方法｜毎月の集計に追われる中小企業のための効率化ガイド](/blog/2026-06-15-excel-shukei-sagyou-herasu)
-- [Excel在庫管理の限界サイン5つ｜中小企業が気づくべきタイミング](/blog/2026-04-10-excel-zaiko-kanri-genkai)
-- [Excel管理をシステム化する費用はいくら？中小企業の現実的な相場と内訳](/blog/2026-06-14-excel-system-ka-hiyou)
+- [Excel集計作業を減らす方法｜毎月の集計に追われる中小企業のための効率化ガイド](/blog/excel-shukei-sagyou-herasu)
+- [Excel在庫管理の限界サイン5つ｜中小企業が気づくべきタイミング](/blog/excel-zaiko-kanri-genkai)
+- [Excel管理をシステム化する費用はいくら？中小企業の現実的な相場と内訳](/blog/excel-system-ka-hiyou)

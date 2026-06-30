@@ -122,16 +122,18 @@ AIの登場で、在庫管理システムを自作するハードルは確実に
 
 「AIで作ってみたけど限界を感じた」「うちはどっちがいい？」という相談も大歓迎です。作りかけのものをお見せいただければ、それを活かす形で率直にご提案します。まずはお気軽に[お問い合わせ](/contact)ください。
 
-あわせて、こちらもご覧ください。
+<p class="page-links-lead">あわせて、こちらもご覧ください。</p>
 
-- [サービス内容](/services)：システム開発の概要・流れ
-- [導入事例](/cases)：他社の改善イメージ
-- [操作デモ](/demo)：実際の画面の動き
-- [料金](/pricing)：費用の目安
+<div class="page-links">
+<a target="_blank" rel="noopener" href="/services"><b>サービス内容</b>システム開発の概要・流れ</a>
+<a target="_blank" rel="noopener" href="/cases"><b>導入事例</b>他社の改善イメージ</a>
+<a target="_blank" rel="noopener" href="/demo"><b>操作デモ</b>実際の画面の動き</a>
+<a target="_blank" rel="noopener" href="/pricing"><b>料金</b>費用の目安</a>
+</div>
 
 ---
 
 **関連記事**
-- [業務システムは自作できる？ExcelやVBAで作る限界と、プロに依頼すべき判断基準](/blog/2026-06-15-gyomu-system-jisaku-hikaku)
-- [Excel在庫管理の限界サイン5つ｜中小企業が気づくべきタイミング](/blog/2026-04-10-excel-zaiko-kanri-genkai)
-- [Excel管理をシステム化する費用はいくら？中小企業の現実的な相場と内訳](/blog/2026-06-14-excel-system-ka-hiyou)
+- [業務システムは自作できる？ExcelやVBAで作る限界と、プロに依頼すべき判断基準](/blog/gyomu-system-jisaku-hikaku)
+- [Excel在庫管理の限界サイン5つ｜中小企業が気づくべきタイミング](/blog/excel-zaiko-kanri-genkai)
+- [Excel管理をシステム化する費用はいくら？中小企業の現実的な相場と内訳](/blog/excel-system-ka-hiyou)

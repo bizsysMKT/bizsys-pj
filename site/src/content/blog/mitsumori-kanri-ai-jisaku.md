@@ -1,6 +1,6 @@
 ---
 title: "見積管理システムをAIで自作する方法と限界｜つまずきやすい4つのポイント"
-date: 2026-07-05
+date: 2026-07-08
 tags: [見積管理, AI活用, システム発注]
 icon: "blog-thumb-default.png"
 author: "ビズシス"

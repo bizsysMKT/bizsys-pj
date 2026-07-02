@@ -1,6 +1,6 @@
 ---
 title: "仕掛品管理をエクセルでやる4つの限界｜数が合わない原因とシステム化の進め方"
-date: 2026-07-03
+date: 2026-07-06
 tags: [製造業, 仕掛品管理, Excel脱却]
 icon: "blog-thumb-default.png"
 author: "ビズシス"

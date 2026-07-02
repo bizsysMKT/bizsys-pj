@@ -1,6 +1,6 @@
 ---
 title: "販売管理をエクセルでやる限界｜見積から請求までバラバラ管理の4つのリスクと解決策"
-date: 2026-07-15
+date: 2026-07-06
 tags: [販売管理, Excel脱却, 業務効率化]
 icon: "blog-thumb-default.png"
 author: "ビズシス"

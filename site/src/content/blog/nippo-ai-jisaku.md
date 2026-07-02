@@ -1,6 +1,6 @@
 ---
 title: "営業日報アプリをAIで自作する方法と限界｜「書かれない日報」を変える3つのコツ"
-date: 2026-07-16
+date: 2026-07-07
 tags: [営業日報, AI活用, 業務効率化]
 icon: "blog-thumb-default.png"
 author: "ビズシス"

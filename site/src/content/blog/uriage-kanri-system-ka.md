@@ -1,6 +1,6 @@
 ---
 title: "売上管理をエクセルからシステム化するには｜集計・請求もれのよくある4つの悩みと解決策"
-date: 2026-07-13
+date: 2026-07-04
 tags: [売上管理, Excel脱却, 業務効率化]
 icon: "blog-thumb-default.png"
 author: "ビズシス"

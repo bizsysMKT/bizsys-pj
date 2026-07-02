@@ -1,6 +1,6 @@
 ---
 title: "勤怠管理をエクセルからシステム化するには｜集計ミスと申請の手間を解決"
-date: 2026-07-09
+date: 2026-07-02
 tags: [勤怠管理, Excel脱却, 業務効率化]
 icon: "blog-thumb-default.png"
 author: "ビズシス"

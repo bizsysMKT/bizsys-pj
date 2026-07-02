@@ -1,6 +1,6 @@
 ---
 title: "製造業の生産管理をエクセルで回す限界｜システム化で変わること"
-date: 2026-07-04
+date: 2026-07-02
 tags: [製造業, 生産管理, Excel脱却]
 icon: "blog-thumb-default.png"
 author: "ビズシス"

@@ -1,6 +1,6 @@
 ---
 title: "見積管理をエクセルからシステム化するには｜作成・履歴管理のよくある悩み"
-date: 2026-07-10
+date: 2026-07-02
 tags: [見積管理, Excel脱却, 業務効率化]
 icon: "blog-thumb-default.png"
 author: "ビズシス"

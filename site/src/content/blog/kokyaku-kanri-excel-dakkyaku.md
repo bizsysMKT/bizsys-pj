@@ -1,6 +1,6 @@
 ---
 title: "顧客管理（CRM）をエクセルから脱却するには｜中小企業向けの始め方"
-date: 2026-07-08
+date: 2026-07-02
 tags: [顧客管理, CRM, Excel脱却]
 icon: "blog-thumb-default.png"
 author: "ビズシス"

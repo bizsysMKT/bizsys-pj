@@ -1,6 +1,6 @@
 ---
 title: "案件・プロジェクト管理をエクセルからシステム化するには｜進捗の見える化"
-date: 2026-07-11
+date: 2026-07-02
 tags: [案件管理, プロジェクト管理, Excel脱却]
 icon: "blog-thumb-default.png"
 author: "ビズシス"

@@ -1,6 +1,6 @@
 ---
 title: "エクセル配車の4つの失敗パターンと限界｜運送業の配車管理をシステム化するには"
-date: 2026-07-03
+date: 2026-07-02
 tags: [配車, 運送業, Excel脱却]
 icon: "blog-thumb-default.png"
 author: "ビズシス"

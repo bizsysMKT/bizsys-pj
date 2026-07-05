@@ -44,5 +44,11 @@ export default defineConfig({
     '/blog/2026-06-29-shokuhin-genka-kanri': '/blog/shokuhin-genka-kanri',
     '/blog/2026-06-30-system-yoken-teigi': '/blog/system-yoken-teigi',
     '/blog/2026-07-01-unsougyou-tenko-system': '/blog/unsougyou-tenko-system',
+
+    // 過去に存在し削除済みのページ（検索インデックスに残っておりクリック流入が404になっていた）。
+    // トップへ転送する（2026-07-05）。
+    '/tools': '/',
+    '/faq': '/',
+    '/about': '/',
   },
 });

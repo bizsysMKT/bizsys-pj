@@ -117,8 +117,8 @@ docs/
 ├── operation.md           ← 日常運用フロー＋トラブル対応
 ├── handover.md            ← 引き継ぎチェックリスト
 ├── phases.md              ← 各フェーズの詳細タスク（任意）
+├── article-generation.md  ← ブログ記事のルール・テンプレート（唯一の正）
 └── templates/
-    ├── blog_template.md   ← ブログ記事テンプレート
     └── monthly_report.md  ← 月次レポートテンプレート
 ```
 

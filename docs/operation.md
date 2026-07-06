@@ -18,7 +18,7 @@
 **タスク**：週2～3本のブログ記事を追加
 
 **やることリスト**：
-1. [ ] Markdown 形式で記事を作成する（`docs/templates/blog_template.md` 参照）
+1. [ ] Markdown 形式で記事を作成する（**ルール・テンプレートは `docs/article-generation.md` を参照**）
 2. [ ] `site/src/content/blog/` フォルダに `.md` ファイルを保存
 3. [ ] GitHub Desktop を開く
 4. [ ] GitHub Desktop で「Commit」→「Push origin」を実行
@@ -27,7 +27,7 @@
 7. [ ] X に自動投稿されたことを確認（@bizsys_x のタイムラインを確認）
 8. [ ] 問題がなければ「完了」
 
-**記事テンプレート**（使用例も docs/templates/blog_template.md に記載）
+**記事テンプレート**（最新のテンプレート・ルール一式は docs/article-generation.md に集約。以下は概略）
 ```markdown
 ---
 title: "記事のタイトル（SEOキーワードを含める）"

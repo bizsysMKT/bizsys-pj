@@ -224,6 +224,11 @@
   vertical-align: top;
 }
 
+/* 1列目は項目名のため改行させない（「同時利用」等が2行に折れるのを防ぐ） */
+.blog-detail-page .prose tbody td:first-child {
+  white-space: nowrap;
+}
+
 /* 一番下の行は下線を消す */
 .blog-detail-page .prose tbody tr:last-child td {
   border-bottom: none;

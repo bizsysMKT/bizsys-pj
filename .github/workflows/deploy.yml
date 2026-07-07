@@ -20,11 +20,6 @@ jobs:
       TZ: Asia/Tokyo
     steps:
       - uses: actions/checkout@v4
-
-      # Pages設定が無効化されている場合に自動で有効化する（private化→public復帰時の復旧用）
-      - uses: actions/configure-pages@v5
-        with:
-          enablement: true
       - uses: actions/setup-node@v4
         with:
           node-version: 22

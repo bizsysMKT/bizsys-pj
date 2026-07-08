@@ -99,9 +99,9 @@ Excelや個人管理は手軽ですが、案件と売上が増えてくると弱
 制作会社では、案件・売上管理以外にもExcelや個人管理で同じような悩みを抱えやすい業務があります。あわせて見直すと効果的です。
 
 <div class="biz-links">
-<a target="_blank" rel="noopener" href="/blog/mitsumori-kanri-system-ka"><b>見積管理</b>見積管理をエクセルからシステム化するには｜作成・履歴管理のよくある悩み</a>
-<a target="_blank" rel="noopener" href="/blog/anken-project-kanri"><b>案件・プロジェクト管理</b>案件・プロジェクト管理をエクセルからシステム化するには｜進捗の見える化</a>
-<a target="_blank" rel="noopener" href="/blog/kokyaku-kanri-excel-dakkyaku"><b>顧客管理</b>顧客管理（CRM）をエクセルから脱却するには｜中小企業向けの始め方</a>
+<a target="_blank" rel="noopener" href="/blog/mitsumori-kanri-system-ka/"><b>見積管理</b>見積管理をエクセルからシステム化するには｜作成・履歴管理のよくある悩み</a>
+<a target="_blank" rel="noopener" href="/blog/anken-project-kanri/"><b>案件・プロジェクト管理</b>案件・プロジェクト管理をエクセルからシステム化するには｜進捗の見える化</a>
+<a target="_blank" rel="noopener" href="/blog/kokyaku-kanri-excel-dakkyaku/"><b>顧客管理</b>顧客管理（CRM）をエクセルから脱却するには｜中小企業向けの始め方</a>
 </div>
 
 ## 小さく始めるなら、どの機能から
@@ -163,6 +163,6 @@ A. 内容によりますが、Excelからの脱却・案件の一元管理を中
 ---
 
 **関連記事**
-- [受注管理システム｜受注から出荷・請求までの転記と二重入力をなくすには](/blog/juchu-kanri-system)
-- [原価管理をExcelからシステム化するには｜建設・製造・食品の現場でよくある悩みと解決策](/blog/genka-kanri-system)
-- [顧客管理システムをAIで自作する方法と限界｜個人情報を扱うときの注意点](/blog/kokyaku-kanri-ai-jisaku)
+- [受注管理システム｜受注から出荷・請求までの転記と二重入力をなくすには](/blog/juchu-kanri-system/)
+- [原価管理をExcelからシステム化するには｜建設・製造・食品の現場でよくある悩みと解決策](/blog/genka-kanri-system/)
+- [顧客管理システムをAIで自作する方法と限界｜個人情報を扱うときの注意点](/blog/kokyaku-kanri-ai-jisaku/)

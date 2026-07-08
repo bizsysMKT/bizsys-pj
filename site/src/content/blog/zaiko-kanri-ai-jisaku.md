@@ -151,6 +151,6 @@ AIの登場で、在庫管理システムを自作するハードルは確実に
 ---
 
 **関連記事**
-- [業務システムは自作できる？ExcelやVBAで作る限界と、プロに依頼すべき判断基準](/blog/gyomu-system-jisaku-hikaku)
-- [Excel在庫管理の限界サイン5つ｜中小企業が気づくべきタイミング](/blog/excel-zaiko-kanri-genkai)
-- [Excel管理をシステム化する費用はいくら？中小企業の現実的な相場と内訳](/blog/excel-system-ka-hiyou)
+- [業務システムは自作できる？ExcelやVBAで作る限界と、プロに依頼すべき判断基準](/blog/gyomu-system-jisaku-hikaku/)
+- [Excel在庫管理の限界サイン5つ｜中小企業が気づくべきタイミング](/blog/excel-zaiko-kanri-genkai/)
+- [Excel管理をシステム化する費用はいくら？中小企業の現実的な相場と内訳](/blog/excel-system-ka-hiyou/)

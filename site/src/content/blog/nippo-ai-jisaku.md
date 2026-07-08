@@ -125,10 +125,10 @@ AIで一度試してみて「入力が続かない」「顧客データとつな
 日報は、顧客や案件の管理とつなげるほど価値が出ます。次のような業務に心当たりがあれば、各記事もあわせてご覧ください。
 
 <div class="biz-links">
-<a target="_blank" rel="noopener" href="/blog/eigyou-nippo-system"><b>営業日報のシステム化</b>営業日報システムで案件を見える化｜報告だけで終わらせないExcel脱却のコツ</a>
-<a target="_blank" rel="noopener" href="/blog/nippo-jidoka-houhou"><b>日報の自動化</b>日報・報告書を自動化する具体的な方法｜中小企業でも今日から始められる3ステップ</a>
-<a target="_blank" rel="noopener" href="/blog/kokyaku-kanri-excel-dakkyaku"><b>顧客管理</b>顧客管理（CRM）をエクセルから脱却するには｜中小企業向けの始め方</a>
-<a target="_blank" rel="noopener" href="/blog/anken-project-kanri"><b>案件管理</b>案件・プロジェクト管理をエクセルからシステム化するには｜進捗の見える化</a>
+<a target="_blank" rel="noopener" href="/blog/eigyou-nippo-system/"><b>営業日報のシステム化</b>営業日報システムで案件を見える化｜報告だけで終わらせないExcel脱却のコツ</a>
+<a target="_blank" rel="noopener" href="/blog/nippo-jidoka-houhou/"><b>日報の自動化</b>日報・報告書を自動化する具体的な方法｜中小企業でも今日から始められる3ステップ</a>
+<a target="_blank" rel="noopener" href="/blog/kokyaku-kanri-excel-dakkyaku/"><b>顧客管理</b>顧客管理（CRM）をエクセルから脱却するには｜中小企業向けの始め方</a>
+<a target="_blank" rel="noopener" href="/blog/anken-project-kanri/"><b>案件管理</b>案件・プロジェクト管理をエクセルからシステム化するには｜進捗の見える化</a>
 </div>
 
 ## 相談前に準備しておくとスムーズなもの
@@ -180,7 +180,7 @@ AIの登場で、営業日報アプリを自作するハードルは確実に下
 ---
 
 **関連記事**
-- [営業日報システムで案件を見える化｜報告だけで終わらせないExcel脱却のコツ](/blog/eigyou-nippo-system)
-- [日報・報告書を自動化する具体的な方法｜中小企業でも今日から始められる3ステップ](/blog/nippo-jidoka-houhou)
-- [顧客管理システムをAIで自作する方法と限界｜個人情報を扱うときの注意点](/blog/kokyaku-kanri-ai-jisaku)
-- [在庫管理システムをAIで自作する方法と限界｜中小企業が知っておきたい判断ポイント](/blog/zaiko-kanri-ai-jisaku)
+- [営業日報システムで案件を見える化｜報告だけで終わらせないExcel脱却のコツ](/blog/eigyou-nippo-system/)
+- [日報・報告書を自動化する具体的な方法｜中小企業でも今日から始められる3ステップ](/blog/nippo-jidoka-houhou/)
+- [顧客管理システムをAIで自作する方法と限界｜個人情報を扱うときの注意点](/blog/kokyaku-kanri-ai-jisaku/)
+- [在庫管理システムをAIで自作する方法と限界｜中小企業が知っておきたい判断ポイント](/blog/zaiko-kanri-ai-jisaku/)

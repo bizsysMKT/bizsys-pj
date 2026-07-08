@@ -87,10 +87,10 @@ QRコードを軸に在庫管理をシステム化する場合、たとえば次
 QRコード導入の相談は、たいてい在庫まわりの別の悩みとセットです。心当たりがあれば、各記事もあわせてご覧ください。
 
 <div class="biz-links">
-<a target="_blank" rel="noopener" href="/blog/barcode-zaiko-kanri"><b>バーコード在庫管理</b>バーコードを使った在庫管理システム｜手入力のミスと棚卸しの手間をなくすには</a>
-<a target="_blank" rel="noopener" href="/blog/excel-zaiko-kanri-genkai"><b>Excel在庫管理の限界</b>Excel在庫管理の限界サイン5つ｜中小企業が気づくべきタイミング</a>
-<a target="_blank" rel="noopener" href="/blog/seizougyou-zaiko-kanri"><b>製造業の在庫管理</b>製造業の在庫管理システム｜部品・仕掛品・ロットをExcelから卒業するには</a>
-<a target="_blank" rel="noopener" href="/blog/shikakarihin-kanri-excel"><b>仕掛品管理</b>仕掛品管理をエクセルでやる4つの限界｜数が合わない原因とシステム化の進め方</a>
+<a target="_blank" rel="noopener" href="/blog/barcode-zaiko-kanri/"><b>バーコード在庫管理</b>バーコードを使った在庫管理システム｜手入力のミスと棚卸しの手間をなくすには</a>
+<a target="_blank" rel="noopener" href="/blog/excel-zaiko-kanri-genkai/"><b>Excel在庫管理の限界</b>Excel在庫管理の限界サイン5つ｜中小企業が気づくべきタイミング</a>
+<a target="_blank" rel="noopener" href="/blog/seizougyou-zaiko-kanri/"><b>製造業の在庫管理</b>製造業の在庫管理システム｜部品・仕掛品・ロットをExcelから卒業するには</a>
+<a target="_blank" rel="noopener" href="/blog/shikakarihin-kanri-excel/"><b>仕掛品管理</b>仕掛品管理をエクセルでやる4つの限界｜数が合わない原因とシステム化の進め方</a>
 </div>
 
 ## 小さく始めるなら、どの機能から
@@ -148,6 +148,6 @@ QRコードを使った在庫管理のポイントは次のとおりです。
 ---
 
 **関連記事**
-- [バーコードを使った在庫管理システム｜手入力のミスと棚卸しの手間をなくすには](/blog/barcode-zaiko-kanri)
-- [Excel在庫管理の限界サイン5つ｜中小企業が気づくべきタイミング](/blog/excel-zaiko-kanri-genkai)
-- [製造業の在庫管理システム｜部品・仕掛品・ロットをExcelから卒業するには](/blog/seizougyou-zaiko-kanri)
+- [バーコードを使った在庫管理システム｜手入力のミスと棚卸しの手間をなくすには](/blog/barcode-zaiko-kanri/)
+- [Excel在庫管理の限界サイン5つ｜中小企業が気づくべきタイミング](/blog/excel-zaiko-kanri-genkai/)
+- [製造業の在庫管理システム｜部品・仕掛品・ロットをExcelから卒業するには](/blog/seizougyou-zaiko-kanri/)

@@ -6,8 +6,13 @@ const {
   ogImage = '/images/hero-right.png',
 } = Astro.props;
 const siteUrl = 'https://bizsys.jp';
+
+// canonicalは常に「末尾スラッシュあり」に正規化する（2026-07-08）。
+// 内部リンクやリダイレクトがスラッシュなしURLを指しても、canonicalを一本化することで
+// /blog/foo と /blog/foo/ の二重インデックス（SEO評価の分散）を防ぐ。
 const path = Astro.url.pathname;
-const canonicalUrl = `${siteUrl}${path}`;
+const normalizedPath = path.endsWith('/') ? path : `${path}/`;
+const canonicalUrl = `${siteUrl}${normalizedPath}`;
 ---
 <html lang="ja">
   <head>

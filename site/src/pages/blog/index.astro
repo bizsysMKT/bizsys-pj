@@ -46,9 +46,9 @@ const allTags = [...new Set(posts.flatMap(p => p.tags || []))];
 
         <!-- カテゴリチップ -->
         <div class="category-chips">
-          <a class="active" href="/blog">すべて</a>
+          <a class="active" href="/blog/">すべて</a>
           {allTags.map(tag => (
-            <a href={`/blog/tag/${tag}`}>{tag}</a>
+            <a href={`/blog/tag/${tag}/`}>{tag}</a>
           ))}
         </div>
 
@@ -66,13 +66,13 @@ const allTags = [...new Set(posts.flatMap(p => p.tags || []))];
                   </div>
                   <div class="row-body">
                     <time>{formatDate(post.date)}</time>
-                    <h2><a href={`/blog/${post.slug}`}>{post.title}</a></h2>
+                    <h2><a href={`/blog/${post.slug}/`}>{post.title}</a></h2>
                     <p>{post.description}</p>
                     <div class="article-bottom">
                       <div class="tags">
                         {(post.tags || []).map(tag => <span>{tag}</span>)}
                       </div>
-                      <a class="read-link" href={`/blog/${post.slug}`}>記事を読む →</a>
+                      <a class="read-link" href={`/blog/${post.slug}/`}>記事を読む →</a>
                     </div>
                   </div>
                 </article>
@@ -94,7 +94,7 @@ const allTags = [...new Set(posts.flatMap(p => p.tags || []))];
               <h3>人気タグ</h3>
               <div class="side-tags">
                 {allTags.map(tag => (
-                  <a href={`/blog/tag/${tag}`}>{tag}</a>
+                  <a href={`/blog/tag/${tag}/`}>{tag}</a>
                 ))}
               </div>
             </section>

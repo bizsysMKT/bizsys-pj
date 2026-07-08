@@ -105,9 +105,9 @@ description: "製造業の生産管理をエクセルで回すと進捗が見え
 製造業では、生産管理以外にもExcelや個人管理で同じような悩みを抱えやすい業務があります。あわせて見直すと効果的です。
 
 <div class="biz-links">
-<a target="_blank" rel="noopener" href="/blog/genka-kanri-system"><b>原価管理</b>原価管理をExcelからシステム化するには｜建設・製造・食品の現場でよくある悩みと解決策</a>
-<a target="_blank" rel="noopener" href="/blog/juchu-kanri-system"><b>受注管理</b>受注管理システム｜受注から出荷・請求までの転記と二重入力をなくすには</a>
-<a target="_blank" rel="noopener" href="/blog/mitsumori-kanri-system-ka"><b>見積管理</b>見積管理をエクセルからシステム化するには｜作成・履歴管理のよくある悩み</a>
+<a target="_blank" rel="noopener" href="/blog/genka-kanri-system/"><b>原価管理</b>原価管理をExcelからシステム化するには｜建設・製造・食品の現場でよくある悩みと解決策</a>
+<a target="_blank" rel="noopener" href="/blog/juchu-kanri-system/"><b>受注管理</b>受注管理システム｜受注から出荷・請求までの転記と二重入力をなくすには</a>
+<a target="_blank" rel="noopener" href="/blog/mitsumori-kanri-system-ka/"><b>見積管理</b>見積管理をエクセルからシステム化するには｜作成・履歴管理のよくある悩み</a>
 </div>
 
 ## 小さく始めるなら、どの機能から
@@ -168,6 +168,6 @@ A. 内容によります。Excelからの脱却・情報の一元管理が中心
 ---
 
 **関連記事**
-- [製造業の生産・在庫管理をExcelからシステム化するには｜現場のよくある悩みと解決策](/blog/seizougyou-seisan-system)
-- [製造業の在庫管理システム｜部品・仕掛品・ロットをExcelから卒業するには](/blog/seizougyou-zaiko-kanri)
-- [Excel在庫管理の限界サイン5つ｜中小企業が気づくべきタイミング](/blog/excel-zaiko-kanri-genkai)
+- [製造業の生産・在庫管理をExcelからシステム化するには｜現場のよくある悩みと解決策](/blog/seizougyou-seisan-system/)
+- [製造業の在庫管理システム｜部品・仕掛品・ロットをExcelから卒業するには](/blog/seizougyou-zaiko-kanri/)
+- [Excel在庫管理の限界サイン5つ｜中小企業が気づくべきタイミング](/blog/excel-zaiko-kanri-genkai/)

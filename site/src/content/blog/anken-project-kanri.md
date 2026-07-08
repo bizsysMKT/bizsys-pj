@@ -105,9 +105,9 @@ Excelは手軽で便利なツールですが、案件・プロジェクト管理
 案件・プロジェクト管理以外にも、Excelや個人管理で同じような悩みを抱えやすい業務があります。あわせて見直すと効果的です。
 
 <div class="biz-links">
-<a target="_blank" rel="noopener" href="/blog/mitsumori-kanri-system-ka"><b>見積管理</b>見積管理をエクセルからシステム化するには｜作成・履歴管理のよくある悩み</a>
-<a target="_blank" rel="noopener" href="/blog/kokyaku-kanri-excel-dakkyaku"><b>顧客管理</b>顧客管理（CRM）をエクセルから脱却するには｜中小企業向けの始め方</a>
-<a target="_blank" rel="noopener" href="/blog/kintai-kanri-system-ka"><b>勤怠管理</b>勤怠管理をエクセルからシステム化するには｜集計ミスと申請の手間を解決</a>
+<a target="_blank" rel="noopener" href="/blog/mitsumori-kanri-system-ka/"><b>見積管理</b>見積管理をエクセルからシステム化するには｜作成・履歴管理のよくある悩み</a>
+<a target="_blank" rel="noopener" href="/blog/kokyaku-kanri-excel-dakkyaku/"><b>顧客管理</b>顧客管理（CRM）をエクセルから脱却するには｜中小企業向けの始め方</a>
+<a target="_blank" rel="noopener" href="/blog/kintai-kanri-system-ka/"><b>勤怠管理</b>勤怠管理をエクセルからシステム化するには｜集計ミスと申請の手間を解決</a>
 </div>
 
 ## 小さく始めるなら、どの機能から
@@ -168,6 +168,6 @@ A. 内容によりますが、Excelからの脱却・情報の一元管理を中
 ---
 
 **関連記事**
-- [受注管理システム｜受注から出荷・請求までの転記と二重入力をなくすには](/blog/juchu-kanri-system)
-- [営業日報システムで案件を見える化｜報告だけで終わらせないExcel脱却のコツ](/blog/eigyou-nippo-system)
-- [顧客管理システムをAIで自作する方法と限界｜個人情報を扱うときの注意点](/blog/kokyaku-kanri-ai-jisaku)
+- [受注管理システム｜受注から出荷・請求までの転記と二重入力をなくすには](/blog/juchu-kanri-system/)
+- [営業日報システムで案件を見える化｜報告だけで終わらせないExcel脱却のコツ](/blog/eigyou-nippo-system/)
+- [顧客管理システムをAIで自作する方法と限界｜個人情報を扱うときの注意点](/blog/kokyaku-kanri-ai-jisaku/)

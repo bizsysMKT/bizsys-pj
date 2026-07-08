@@ -109,10 +109,10 @@ AIが書いたコードの「なぜ動くか」を理解していないと、計
 見積管理は、前後の業務とつなげるほど効果が大きくなります。次のような業務に心当たりがあれば、各記事もあわせてご覧ください。
 
 <div class="biz-links">
-<a target="_blank" rel="noopener" href="/blog/mitsumori-kanri-system-ka"><b>見積管理のシステム化</b>見積管理をエクセルからシステム化するには｜作成・履歴管理のよくある悩み</a>
-<a target="_blank" rel="noopener" href="/blog/juchu-kanri-system"><b>受注管理</b>受注管理システム｜受注から出荷・請求までの転記と二重入力をなくすには</a>
-<a target="_blank" rel="noopener" href="/blog/uriage-kanri-system-ka"><b>売上管理</b>売上管理をエクセルからシステム化するには｜集計・請求もれのよくある4つの悩みと解決策</a>
-<a target="_blank" rel="noopener" href="/blog/genka-kanri-system"><b>原価管理</b>原価管理をExcelからシステム化するには｜建設・製造・食品の現場でよくある悩みと解決策</a>
+<a target="_blank" rel="noopener" href="/blog/mitsumori-kanri-system-ka/"><b>見積管理のシステム化</b>見積管理をエクセルからシステム化するには｜作成・履歴管理のよくある悩み</a>
+<a target="_blank" rel="noopener" href="/blog/juchu-kanri-system/"><b>受注管理</b>受注管理システム｜受注から出荷・請求までの転記と二重入力をなくすには</a>
+<a target="_blank" rel="noopener" href="/blog/uriage-kanri-system-ka/"><b>売上管理</b>売上管理をエクセルからシステム化するには｜集計・請求もれのよくある4つの悩みと解決策</a>
+<a target="_blank" rel="noopener" href="/blog/genka-kanri-system/"><b>原価管理</b>原価管理をExcelからシステム化するには｜建設・製造・食品の現場でよくある悩みと解決策</a>
 </div>
 
 ## 相談前に準備しておくとスムーズなもの
@@ -165,7 +165,7 @@ AIの登場で、見積管理システムを自作するハードルは確実に
 ---
 
 **関連記事**
-- [見積管理をエクセルからシステム化するには｜作成・履歴管理のよくある悩み](/blog/mitsumori-kanri-system-ka)
-- [顧客管理システムをAIで自作する方法と限界｜個人情報を扱うときの注意点](/blog/kokyaku-kanri-ai-jisaku)
-- [在庫管理システムをAIで自作する方法と限界｜中小企業が知っておきたい判断ポイント](/blog/zaiko-kanri-ai-jisaku)
-- [業務システムは自作できる？ExcelやVBAで作る限界と、プロに依頼すべき判断基準](/blog/gyomu-system-jisaku-hikaku)
+- [見積管理をエクセルからシステム化するには｜作成・履歴管理のよくある悩み](/blog/mitsumori-kanri-system-ka/)
+- [顧客管理システムをAIで自作する方法と限界｜個人情報を扱うときの注意点](/blog/kokyaku-kanri-ai-jisaku/)
+- [在庫管理システムをAIで自作する方法と限界｜中小企業が知っておきたい判断ポイント](/blog/zaiko-kanri-ai-jisaku/)
+- [業務システムは自作できる？ExcelやVBAで作る限界と、プロに依頼すべき判断基準](/blog/gyomu-system-jisaku-hikaku/)

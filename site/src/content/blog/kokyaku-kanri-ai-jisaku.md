@@ -151,6 +151,6 @@ AIの登場で、顧客管理システムを自作するハードルは確実に
 ---
 
 **関連記事**
-- [業務システムは自作できる？ExcelやVBAで作る限界と、プロに依頼すべき判断基準](/blog/gyomu-system-jisaku-hikaku)
-- [在庫管理システムをAIで自作する方法と限界｜中小企業が知っておきたい判断ポイント](/blog/zaiko-kanri-ai-jisaku)
-- [Excel管理をシステム化する費用はいくら？中小企業の現実的な相場と内訳](/blog/excel-system-ka-hiyou)
+- [業務システムは自作できる？ExcelやVBAで作る限界と、プロに依頼すべき判断基準](/blog/gyomu-system-jisaku-hikaku/)
+- [在庫管理システムをAIで自作する方法と限界｜中小企業が知っておきたい判断ポイント](/blog/zaiko-kanri-ai-jisaku/)
+- [Excel管理をシステム化する費用はいくら？中小企業の現実的な相場と内訳](/blog/excel-system-ka-hiyou/)

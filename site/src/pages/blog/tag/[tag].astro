@@ -54,7 +54,7 @@ function formatDate(date) {
           <h1>タグ：<span>{tag}</span></h1>
           <p class="hero-lead">
             「{tag}」に関する記事一覧です。<br />
-            <a href="/blog" style="color: var(--blue); font-weight: 900;">← すべての記事を見る</a>
+            <a href="/blog/" style="color: var(--blue); font-weight: 900;">← すべての記事を見る</a>
           </p>
         </div>
         <div class="hero-visual">
@@ -69,9 +69,9 @@ function formatDate(date) {
 
         <!-- カテゴリチップ -->
         <div class="category-chips">
-          <a href="/blog">すべて</a>
+          <a href="/blog/">すべて</a>
           {allTags.map(t => (
-            <a class={t === tag ? 'active' : ''} href={`/blog/tag/${t}`}>{t}</a>
+            <a class={t === tag ? 'active' : ''} href={`/blog/tag/${t}/`}>{t}</a>
           ))}
         </div>
 
@@ -96,7 +96,7 @@ function formatDate(date) {
                         <div class="tags">
                           {(post.tags || []).map(t => <span>{t}</span>)}
                         </div>
-                        <a class="read-link" href={`/blog/${post.slug}`}>記事を読む →</a>
+                        <a class="read-link" href={`/blog/${post.slug}/`}>記事を読む →</a>
                       </div>
                     </div>
                   </article>
@@ -112,7 +112,7 @@ function formatDate(date) {
               <h3>人気タグ</h3>
               <div class="side-tags">
                 {allTags.map(t => (
-                  <a class={t === tag ? 'active' : ''} href={`/blog/tag/${t}`}>{t}</a>
+                  <a class={t === tag ? 'active' : ''} href={`/blog/tag/${t}/`}>{t}</a>
                 ))}
               </div>
             </section>

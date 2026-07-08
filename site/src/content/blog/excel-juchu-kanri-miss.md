@@ -149,6 +149,6 @@ Excelの受注管理で起きやすいミスは、次の5つです。
 ---
 
 **関連記事**
-- [Excel集計作業を減らす方法｜毎月の集計に追われる中小企業のための効率化ガイド](/blog/excel-shukei-sagyou-herasu)
-- [Excel在庫管理の限界サイン5つ｜中小企業が気づくべきタイミング](/blog/excel-zaiko-kanri-genkai)
-- [Excel管理をシステム化する費用はいくら？中小企業の現実的な相場と内訳](/blog/excel-system-ka-hiyou)
+- [Excel集計作業を減らす方法｜毎月の集計に追われる中小企業のための効率化ガイド](/blog/excel-shukei-sagyou-herasu/)
+- [Excel在庫管理の限界サイン5つ｜中小企業が気づくべきタイミング](/blog/excel-zaiko-kanri-genkai/)
+- [Excel管理をシステム化する費用はいくら？中小企業の現実的な相場と内訳](/blog/excel-system-ka-hiyou/)

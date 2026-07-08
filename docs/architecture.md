@@ -58,7 +58,8 @@
 │ • Google Search Console：検索キーワード・CTR確認             │
 │ • GA4ダッシュボード：月次KPI確認（HP訪問数・回遊率等）      │
 │ • サイトマップ（sitemap-index.xml）：Search Consoleへ送信済み│
-│ • canonical タグ：全ページに設定済み（SEO重複対策）         │
+│ • canonical タグ：全ページに設定済み・末尾スラッシュに正規化 │
+│   （SEO重複対策。詳細は 2.1.1 URL正規化ポリシー）           │
 └──────────────────────────────────────────────────────────────┘
 ```
 
@@ -78,7 +79,7 @@
   - `site/src/pages/contact.astro`：問い合わせフォーム
   - `site/src/pages/blog/index.astro`：ブログ一覧
   - `site/src/pages/blog/[slug].astro`：ブログ個別記事
-- `site/src/content/blog/`：Markdown 記事の保存先。URL は `/blog/[slug]` 形式で公開される。
+- `site/src/content/blog/`：Markdown 記事の保存先。URL は `/blog/[slug]/` 形式（末尾スラッシュあり）で公開される（2.1.1 参照）。
 - `site/src/components/`（必要に応じて）：共通ヘッダー・フッター・CTA など再利用コンポーネントを配置する。
 - GitHub Pages の公開ブランチは `main`。Astro は `dist/` へのビルド出力を公開用ファイルとして扱う。
 - `CNAME` は `site/public/CNAME` に `bizsys.jp` を記載するか、GitHub Pages のカスタムドメイン設定で管理する。
@@ -95,6 +96,31 @@
 | `/contact` | 問い合わせ | Formspree フォーム、連絡先、相談の流れ |
 | `/blog/` | ブログ一覧 | 最新記事リスト、人気記事、カテゴリ紹介 |
 | `/blog/[slug]` | 個別ブログ | 記事本文、CTA、関連記事へのリンク |
+
+### 2.1.1 URL正規化ポリシー：末尾スラッシュあり（2026-07-08追加・重要）
+
+サイトの全URLは**「末尾スラッシュあり」を正規URLとする**（例：`https://bizsys.jp/blog/foo/`）。これを外れたリンクが混在すると、同一ページが `/blog/foo` と `/blog/foo/` の2URLとしてGoogleに二重インデックスされ、SEO評価（表示回数・被リンク）が分散して順位が上がらなくなる。2026-07-08にこの混在（記事本文222リンク＋雛形＋リダイレクト先）を全面統一した。
+
+構築・改修時は以下を必ず守る：
+
+| 対象 | ルール | 実装箇所 |
+|------|--------|---------|
+| ビルド設定 | `trailingSlash: 'always'` と `build.format: 'directory'` を指定する（外さない） | `site/astro.config.mjs` |
+| canonicalタグ | 常に末尾スラッシュ付きに正規化して出力する（`path.endsWith('/') ? path : path + '/'`） | `site/src/components/Layout.astro` |
+| リダイレクト先 | `redirects` の**転送先（値）は必ず末尾スラッシュ付き**にする。無いと転送stubのcanonicalが正規URLと食い違い二重インデックスの原因になる | `site/astro.config.mjs` |
+| 内部リンク（.astro） | `href` は末尾スラッシュ付きで書く（`/blog/${slug}/`・`/pricing/` 等） | 各 `.astro` |
+| 内部リンク（記事md） | 本文の内部リンクも末尾スラッシュ付き（記事作成ルール `docs/article-generation.md` の「4. 内部リンクは必ず末尾スラッシュ付きで書く」に集約） | `site/src/content/blog/*.md` |
+| sitemap | `@astrojs/sitemap` は `trailingSlash` 設定に自動追従するため、上記を守れば末尾スラッシュ付きで出力される（手当て不要） | 自動 |
+
+**検証コマンド**（`site/` でビルド後、いずれも `0` が正常）：
+```bash
+# スラッシュ無しの内部blogリンク残存数（tag除く）
+grep -roE 'href="/blog/[a-z0-9-]+"' dist/ | grep -v '/blog/tag/' | wc -l
+# 二重スラッシュ混入数
+grep -roE '/blog/[a-z0-9-]+//' dist/ | wc -l
+```
+
+> 補足：GitHub Pages はスラッシュ無しURLへのアクセスをスラッシュ付きへ301リダイレクトする。したがってスラッシュ無しリンクでも「表示」はできるが、上記のとおりSEO上の重複を生むため必ずスラッシュ付きで書く。
 
 ### 2.2 output/ と site/ の役割分離
 - `site/`：実装担当が編集・開発する開発領域。Astro のソースコード・テンプレート・コンテンツを含む。

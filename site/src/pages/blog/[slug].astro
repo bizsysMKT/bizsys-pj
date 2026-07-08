@@ -52,7 +52,7 @@ function formatDate(d) {
   return `${dt.getFullYear()}/${dt.getMonth() + 1}/${dt.getDate()}`;
 }
 
-const pageUrl = `https://bizsys.jp/blog/${slug}`;
+const pageUrl = `https://bizsys.jp/blog/${slug}/`;
 ---
 
 <Layout title={`${title || 'ブログ記事'} | BizSys`} description={description} ogType="article">
@@ -71,7 +71,7 @@ const pageUrl = `https://bizsys.jp/blog/${slug}`;
           {tags && tags.length > 0 && (
             <div class="article-tags">
               {tags.map(tag => (
-                <a href={`/blog/tag/${tag}`}>{tag}</a>
+                <a href={`/blog/tag/${tag}/`}>{tag}</a>
               ))}
             </div>
           )}
@@ -94,7 +94,7 @@ const pageUrl = `https://bizsys.jp/blog/${slug}`;
 
 
         <!-- 戻るリンク -->
-        <a class="back-link" href="/blog">
+        <a class="back-link" href="/blog/">
           <img src="/images/blog/icon-arrow-left.png" alt="" />
           記事一覧へ戻る
         </a>
@@ -119,7 +119,7 @@ const pageUrl = `https://bizsys.jp/blog/${slug}`;
               関連記事
             </h3>
             {related.map(p => (
-              <a href={`/blog/${p.slug}`}>
+              <a href={`/blog/${p.slug}/`}>
                 <span class="related-title">{p.title}</span>
                 <time>{formatDate(p.date)}</time>
               </a>

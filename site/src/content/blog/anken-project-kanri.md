@@ -168,6 +168,7 @@ A. 内容によりますが、Excelからの脱却・情報の一元管理を中
 ---
 
 **関連記事**
+- [動画制作業（映像制作）の案件・進行管理をシステム化するには｜よくある4つの悩みと解決策](/blog/douga-seisaku-shinkou-kanri/)
 - [受注管理システム｜受注から出荷・請求までの転記と二重入力をなくすには](/blog/juchu-kanri-system/)
 - [営業日報システムで案件を見える化｜報告だけで終わらせないExcel脱却のコツ](/blog/eigyou-nippo-system/)
 - [顧客管理システムをAIで自作する方法と限界｜個人情報を扱うときの注意点](/blog/kokyaku-kanri-ai-jisaku/)

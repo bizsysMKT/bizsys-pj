@@ -397,7 +397,8 @@ A. 料金ページの数値（40万円〜/80万円〜/100万円〜/月1万円〜
 3. **内部リンクの末尾スラッシュチェック**：本文の内部リンクがスラッシュ無しで書かれていないか確認する（二重インデックス防止・前述「4. 内部リンクは必ず末尾スラッシュ付きで書く」）。以下を実行し**何も出なければOK**。出たらその記事の該当リンクにスラッシュを足す：
    ```bash
    # markdown記法・HTMLタグ記法の両方で、スラッシュ無しの内部リンクを検出（tag・アンカー・外部URLは対象外）
-   grep -rnE '\]\(/(blog|services|cases|demo|pricing|contact)/[a-z0-9-]+\)|href="/(blog|services|cases|demo|pricing|contact)/[a-z0-9-]+"' site/src/content/blog/
+   # ※ /pricing のようなLPページ直リンク（サブパスなし）も検出対象（2026-07-14修正：旧パターンはサブパス付きしか検出せず273箇所の漏れが発生した）
+   grep -rnE '\]\(/(blog|services|cases|demo|pricing|contact)(/[a-z0-9-]+)?\)|href="/(blog|services|cases|demo|pricing|contact)(/[a-z0-9-]+)?"' site/src/content/blog/
    ```
 
 ### チェックリスト

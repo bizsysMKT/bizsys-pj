@@ -114,7 +114,7 @@ A. 事前に現場の通信環境をお聞きして設計します。Wi-Fiの届
 
 ### Q. 費用はどれくらいかかりますか？
 
-A. 内容によりますが、在庫の一元管理を中心としたExcel脱却で40万円〜、スマホ最適化画面・バーコード/QR読み取りまで含む業務効率化で80万円〜が目安です。詳しくは[料金ページ](/pricing)をご覧ください。
+A. 内容によりますが、在庫の一元管理を中心としたExcel脱却で40万円〜、スマホ最適化画面・バーコード/QR読み取りまで含む業務効率化で80万円〜が目安です。詳しくは[料金ページ](/pricing/)をご覧ください。
 
 ## まとめ・次のアクション
 
@@ -126,15 +126,15 @@ A. 内容によりますが、在庫の一元管理を中心としたExcel脱却
 
 複数人で入力する・バーコード/QRで運用したい・受注や棚卸しまでつなげたい会社は、③が本命です。
 
-「うちはどの方法が合う？」という相談も大歓迎です。現状の在庫管理の流れをお聞かせいただければ、規模感に合わせた現実的なご提案をいたします。まずはお気軽に[お問い合わせ](/contact)ください。
+「うちはどの方法が合う？」という相談も大歓迎です。現状の在庫管理の流れをお聞かせいただければ、規模感に合わせた現実的なご提案をいたします。まずはお気軽に[お問い合わせ](/contact/)ください。
 
 <p class="page-links-lead">あわせて、こちらもご覧ください。</p>
 
 <div class="page-links">
-<a target="_blank" rel="noopener" href="/services"><b>サービス内容</b>システム開発の概要・流れ</a>
-<a target="_blank" rel="noopener" href="/cases"><b>導入事例</b>他社の改善イメージ</a>
-<a target="_blank" rel="noopener" href="/demo"><b>操作デモ</b>実際の画面の動き</a>
-<a target="_blank" rel="noopener" href="/pricing"><b>料金</b>費用の目安</a>
+<a target="_blank" rel="noopener" href="/services/"><b>サービス内容</b>システム開発の概要・流れ</a>
+<a target="_blank" rel="noopener" href="/cases/"><b>導入事例</b>他社の改善イメージ</a>
+<a target="_blank" rel="noopener" href="/demo/"><b>操作デモ</b>実際の画面の動き</a>
+<a target="_blank" rel="noopener" href="/pricing/"><b>料金</b>費用の目安</a>
 </div>
 
 ---

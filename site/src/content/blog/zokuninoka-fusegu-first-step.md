@@ -118,13 +118,13 @@ description: "「あの人しかわからない」業務をなくすために、
 2. **担当者に箇条書きメモを作ってもらう**（完璧なマニュアルは不要。30分で書ける粒度でOK）
 3. **別の人が一度やってみて、穴を見つけてメモに追記する**
 
-一気に全部を変えようとせず、まず1つの業務を「誰でも対応できる状態」にすることが属人化解消への確実な一歩です。「どこから手をつければいいかわからない」という方は、ぜひ[ビズシスにご相談ください](/contact)。
+一気に全部を変えようとせず、まず1つの業務を「誰でも対応できる状態」にすることが属人化解消への確実な一歩です。「どこから手をつければいいかわからない」という方は、ぜひ[ビズシスにご相談ください](/contact/)。
 
 <p class="page-links-lead">あわせて、こちらもご覧ください。</p>
 
 <div class="page-links">
-<a target="_blank" rel="noopener" href="/services"><b>サービス内容</b>システム開発の概要・流れ</a>
-<a target="_blank" rel="noopener" href="/cases"><b>導入事例</b>他社の改善イメージ</a>
-<a target="_blank" rel="noopener" href="/demo"><b>操作デモ</b>実際の画面の動き</a>
-<a target="_blank" rel="noopener" href="/pricing"><b>料金</b>費用の目安</a>
+<a target="_blank" rel="noopener" href="/services/"><b>サービス内容</b>システム開発の概要・流れ</a>
+<a target="_blank" rel="noopener" href="/cases/"><b>導入事例</b>他社の改善イメージ</a>
+<a target="_blank" rel="noopener" href="/demo/"><b>操作デモ</b>実際の画面の動き</a>
+<a target="_blank" rel="noopener" href="/pricing/"><b>料金</b>費用の目安</a>
 </div>

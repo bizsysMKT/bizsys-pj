@@ -658,8 +658,10 @@
    レスポンシブ
    ==================================================== */
 @media (max-width: 980px) {
+  /* minmax(0, 1fr) にしないと 1fr = minmax(auto, 1fr) となり、
+     表など min-content が広い要素の分だけ列が広がってスマホで記事が見切れる */
   .blog-detail-page .layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   .blog-detail-page .article {
     padding: 26px 22px;

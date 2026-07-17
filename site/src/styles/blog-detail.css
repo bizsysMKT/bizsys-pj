@@ -696,6 +696,21 @@
 
 @media (max-width: 640px) {
 
+  /* スマホは物理幅が狭いので、余白を削って本文の幅を確保する（2026-07-17追加）。
+     従来は 393px(Pixel 6a) のうち約104px（26%）が余白に消えて本文289px＝約18字/行しかなかった。
+     原因は .container が「width で28px削る」のと「padding 15px×2」を二重に効かせていたこと。
+     ここでは padding を落とし、カード外側の余白も8px×2に詰めて本文343px＝約21字/行にする。
+     .blog-detail-page 配下にスコープを限定しているため、LP等の他ページには影響しない。 */
+  .blog-detail-page .container {
+    width: calc(100% - 16px);
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .blog-detail-page .article {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
   /* スマホで表が画面幅を超える場合は横スクロールさせる（見切れ防止） */
   .blog-detail-page .prose table {
     display: block;

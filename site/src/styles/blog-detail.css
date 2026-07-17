@@ -36,6 +36,21 @@
 /* ====================================================
    レイアウト
    ==================================================== */
+
+/* 記事本文を読みやすくするため、ブログ詳細ページだけコンテナを広げる（2026-07-17追加）。
+   サイト共通は Layout.astro の .container{width:min(1180px, calc(100% - 48px))}、
+   さらにBootstrapが ≧1200px で max-width:1140px を掛けており、本文の実効幅が
+   666px（約41字/行）しか取れなかった。width と max-width の両方を上書きする。
+   .blog-detail-page 配下にスコープを限定しているため、LP等の他ページには影響しない。
+   ※日本語は40〜50字/行が読みやすい範囲のため、広げすぎないよう1280pxで止めている。
+   calc(100% - 48px) を維持しているので、狭いPC幅でも左右の余白は残る。 */
+@media (min-width: 1200px) {
+  .blog-detail-page .container {
+    width: min(1280px, calc(100% - 48px));
+    max-width: 1280px;
+  }
+}
+
 .blog-detail-page .layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 320px;

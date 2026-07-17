@@ -53,9 +53,78 @@ function formatDate(d) {
 }
 
 const pageUrl = `https://bizsys.jp/blog/${slug}/`;
+
+//------------------------------------------
+// 構造化データ（JSON-LD・2026-07-17追加）
+// AIアシスタント・Googleに記事内容を機械可読で渡すためのもの。
+// FAQは本文markdownの「### Q. 〜」「A. 〜」を自動抽出するので、記事側の個別対応は不要。
+//------------------------------------------
+const siteUrl = 'https://bizsys.jp';
+const isoDate = date ? new Date(date).toISOString().slice(0, 10) : undefined;
+
+// markdown記法・HTMLタグを除いたプレーンテキストにする（JSON-LDのtextに記法が混ざるのを防ぐ）
+function stripMd(s) {
+  let t = s;
+
+  // リンクはテキスト部分だけ残す
+  t = t.replace(/\[([^\]]*)\]\([^)]*\)/g, '$1');
+
+  // 太字記号・HTMLタグを除去
+  t = t.replace(/\*\*/g, '');
+  t = t.replace(/<[^>]+>/g, '');
+  return t.replace(/\s+/g, ' ').trim();
+}
+
+// 本文から「### Q. 質問」→「A. 回答」のペアを抽出（回答は次の見出しの手前まで）。
+// 改行は (?:\r?\n)+ で受ける（既存記事はCRLFのため \r?\n+ だとCRLF空行にマッチせず全滅する）。
+// 末尾判定は (?![\s\S])＝真の文字列末尾を使う（mフラグ下の $ は行末に一致し回答が1行目で切れるため）。
+const rawMd = typeof post.rawContent === 'function' ? post.rawContent() : '';
+const faqItems = [];
+const faqRe = /^###\s*Q[.．]\s*(.+?)(?:\r?\n)+A[.．]\s*([\s\S]*?)(?=(?:\r?\n)+#{2,3}\s|(?![\s\S]))/gm;
+let faqMatch;
+while ((faqMatch = faqRe.exec(rawMd)) !== null) {
+  faqItems.push({ q: stripMd(faqMatch[1]), a: stripMd(faqMatch[2]) });
+}
+
+const articleJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: title,
+  description: description,
+  datePublished: isoDate,
+  dateModified: isoDate,
+  inLanguage: 'ja',
+  mainEntityOfPage: pageUrl,
+  author: { '@type': 'Organization', name: 'ビズシス', url: `${siteUrl}/` },
+  publisher: {
+    '@type': 'Organization',
+    name: 'ビズシス',
+    url: `${siteUrl}/`,
+    logo: { '@type': 'ImageObject', url: `${siteUrl}/apple-touch-icon.png` },
+  },
+};
+
+// FAQが1件も無い記事ではFAQPage自体を出力しない
+let faqJsonLd = null;
+if (faqItems.length > 0) {
+  faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqItems.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  };
+}
 ---
 
 <Layout title={`${title || 'ブログ記事'} | BizSys`} description={description} ogType="article">
+
+  <!-- 構造化データ（BlogPosting / FAQPage）：AIアシスタント・Google向け -->
+  <script type="application/ld+json" set:html={JSON.stringify(articleJsonLd)} />
+  {faqJsonLd && <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />}
+
   <div class="blog-detail-page">
 
     <!-- メイン -->

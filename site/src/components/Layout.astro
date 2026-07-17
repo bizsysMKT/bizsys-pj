@@ -13,6 +13,20 @@ const siteUrl = 'https://bizsys.jp';
 const path = Astro.url.pathname;
 const normalizedPath = path.endsWith('/') ? path : `${path}/`;
 const canonicalUrl = `${siteUrl}${normalizedPath}`;
+
+// Organization構造化データ（2026-07-17追加）。
+// Google/AIアシスタントに「ビズシスが何者か」をエンティティとして認識させるための全ページ共通情報。
+// 記事個別のArticle/FAQPageは blog/[slug].astro 側で出力する。
+const orgJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'ビズシス',
+  alternateName: 'BizSys',
+  url: `${siteUrl}/`,
+  logo: `${siteUrl}/apple-touch-icon.png`,
+  description:
+    '中小企業向けのオーダーメイド業務システムの企画・開発・保守。Excel管理からの脱却、在庫・受注・見積・原価などの業務システム化を支援。開発は40万円〜、保守は月1万円〜。',
+};
 ---
 <html lang="ja">
   <head>
@@ -42,6 +56,9 @@ const canonicalUrl = `${siteUrl}${normalizedPath}`;
     <meta name="twitter:title" content={title} />
     {description && <meta name="twitter:description" content={description} />}
     <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
+
+    <!-- 構造化データ（Organization）：Google・AIアシスタント向けの会社エンティティ情報 -->
+    <script type="application/ld+json" set:html={JSON.stringify(orgJsonLd)} />
     {/* 本番ビルド時のみGA4を発火させる（localhost等の開発アクセスを計測に混入させないため） */}
     {import.meta.env.PROD && (
       <>

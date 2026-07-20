@@ -212,6 +212,33 @@
 }
 
 /* ----------------------------------------
+   記事冒頭の要点ボックス（2026-07-20追加）
+   AI引用・流し読み用のサマリ。即答を本文の地の文に書くと
+   読み物のリズムが崩れるため、囲みに分離して両立させる
+---------------------------------------- */
+.blog-detail-page .prose .article-summary {
+  background: var(--light-blue);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px 18px 12px;
+  margin: 0 0 28px;
+}
+.blog-detail-page .prose .article-summary-title {
+  font-weight: 900;
+  color: var(--navy);
+  margin: 0 0 6px;
+  font-size: 15px;
+}
+.blog-detail-page .prose .article-summary ul {
+  margin: 0;
+  padding-left: 20px;
+}
+.blog-detail-page .prose .article-summary li {
+  margin: 3px 0;
+  font-size: 15px;
+}
+
+/* ----------------------------------------
    記事内テーブル（markdownの表）
 ---------------------------------------- */
 .blog-detail-page .prose table {

@@ -1,0 +1,481 @@
+<mxfile host="65bd71144e">
+    <diagram name="システムイメージ" id="sysimg1">
+        <mxGraphModel dx="1459" dy="1139" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2056" pageHeight="2681" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="s2" value="&amp;nbsp;顧客・受注管理システム" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=18;fontColor=#FF0000;fontStyle=1;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="79.5" y="404" width="1653.1" height="2237.4" as="geometry"/>
+                </mxCell>
+                <mxCell id="s3" value="&amp;nbsp;ログイン画面" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontSize=14;fontColor=#000000;fontStyle=1;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="119.8" y="482.2" width="260.6" height="144" as="geometry"/>
+                </mxCell>
+                <mxCell id="s4" value="メニュー" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontSize=14;fontColor=#000000;fontStyle=1;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="127.7" y="660.6" width="252.5" height="1921" as="geometry"/>
+                </mxCell>
+                <mxCell id="s5" value="アカウント" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#A5A5A5;strokeColor=#191919;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="130.6" y="533.7" width="87.5" height="27.3" as="geometry"/>
+                </mxCell>
+                <mxCell id="s6" value="パスワード" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#A5A5A5;strokeColor=#191919;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="239.6" y="531.3" width="95" height="30.3" as="geometry"/>
+                </mxCell>
+                <mxCell id="s7" value="ログイン" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0070C0;strokeColor=#000000;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="152.1" y="573.2" width="85.1" height="30.8" as="geometry"/>
+                </mxCell>
+                <mxCell id="s8" value="" style="shape=singleArrow;arrowWidth=0.55;arrowSize=0.45;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontColor=#FFFFFF;align=left;verticalAlign=top;rotation=90;" parent="1" vertex="1">
+                    <mxGeometry x="172.52" y="603.93" width="57.55" height="56.6" as="geometry"/>
+                </mxCell>
+                <mxCell id="s9" value="1" style="shape=note;size=14;whiteSpace=wrap;html=1;fillColor=#70AD47;strokeColor=#385624;fontSize=18;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="312.5" y="293" width="45.5" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="s9line" style="endArrow=none;dashed=1;html=1;strokeColor=#385624;strokeWidth=2;entryX=0;entryY=0;entryDx=23.5675;entryDy=18.022499999999997;entryPerimeter=0;" parent="1" source="s9" edge="1" target="s11">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="289.29999999999995" y="334.9" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="s10" value="&amp;nbsp;社員様" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontSize=16;fontColor=#000000;fontStyle=1;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="80.1" y="207.1" width="389.1" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="s11" value="" style="shape=singleArrow;arrowWidth=0.55;arrowSize=0.45;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontColor=#FFFFFF;align=left;verticalAlign=top;rotation=90;" parent="1" vertex="1">
+                    <mxGeometry x="179.98" y="305.47" width="110.55" height="80.1" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12" value="システムユーザ一覧画面" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontSize=14;fontColor=#000000;fontStyle=1;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="447" y="734.3" width="402.4" height="248.2" as="geometry"/>
+                </mxCell>
+                <mxCell id="s13" value="登録データ" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#000000;fontSize=11;fontColor=#000000;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="469.5" y="837.4" width="258.8" height="32.3" as="geometry"/>
+                </mxCell>
+                <mxCell id="s14" value="登録データ" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#000000;fontSize=11;fontColor=#000000;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="471" y="883" width="258.8" height="30.3" as="geometry"/>
+                </mxCell>
+                <mxCell id="s15" value="登録データ" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#000000;fontSize=11;fontColor=#000000;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="472.1" y="925.2" width="259.5" height="31.3" as="geometry"/>
+                </mxCell>
+                <mxCell id="s16" value="" style="shape=singleArrow;arrowWidth=0.55;arrowSize=0.45;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontColor=#FFFFFF;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="336.8" y="744.8" width="108.9" height="29.9" as="geometry"/>
+                </mxCell>
+                <mxCell id="s17" value="システムユーザ管理" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0070C0;strokeColor=#000000;fontSize=14;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="152" y="723.5" width="186.3" height="58.1" as="geometry"/>
+                </mxCell>
+                <mxCell id="s18" value="システムユーザ詳細画面" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontSize=14;fontColor=#000000;fontStyle=1;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="915.9" y="721.6" width="225.7" height="284.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="s19" value="登録・更新" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0070C0;strokeColor=#000000;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="960.9" y="947.2" width="135.1" height="32.1" as="geometry"/>
+                </mxCell>
+                <mxCell id="s20" value="詳細" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0070C0;strokeColor=#000000;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="767.2" y="842" width="48.9" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="s21" value="詳細" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0070C0;strokeColor=#000000;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="766.7" y="883.8" width="48.9" height="29.1" as="geometry"/>
+                </mxCell>
+                <mxCell id="s22" value="詳細" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0070C0;strokeColor=#000000;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="766.2" y="930" width="48.9" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="s23" value="新規登録" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0070C0;strokeColor=#000000;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="735.4" y="741.3" width="84.4" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="s24" value="登録内容（氏名、住所など）" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="473.8" y="785.4" width="247" height="34.8" as="geometry"/>
+                </mxCell>
+                <mxCell id="s27" value="1" style="shape=note;size=14;whiteSpace=wrap;html=1;fillColor=#70AD47;strokeColor=#385624;fontSize=18;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="268.1" y="576" width="44.4" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="s27line" style="endArrow=none;dashed=1;html=1;strokeColor=#385624;strokeWidth=2;" parent="1" source="s27" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="222.4" y="629.8" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="s28" value="初回のアカウント（アカウント・パスワード）は&lt;br&gt;当方が作成し、お渡しします。" style="shape=note;size=14;whiteSpace=wrap;html=1;fillColor=#ED7D31;strokeColor=#763E18;fontSize=16;fontColor=#FFFFFF;fontStyle=1;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="502" y="328" width="392.1" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="s28line" style="endArrow=none;dashed=1;html=1;strokeColor=#763E18;strokeWidth=2;entryX=0.442;entryY=0.235;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="s28" edge="1" target="s11">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="357.9" y="376.9" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="s29" value="全ての一覧画面で検索条件の項目を用意し絞り込み機能を実装する想定です。" style="shape=note;size=14;whiteSpace=wrap;html=1;fillColor=#ED7D31;strokeColor=#763E18;fontSize=16;fontColor=#FFFFFF;fontStyle=1;align=left;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="85" y="103" width="698.3" height="65.7" as="geometry"/>
+                </mxCell>
+                <mxCell id="s30" value="　凡例" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontSize=14;fontColor=#000000;fontStyle=1;align=left;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="79.49999999999993" y="24" width="1108.3" height="57.9" as="geometry"/>
+                </mxCell>
+                <mxCell id="s31" value="ボタン名" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0070C0;strokeColor=#000000;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="400.00000000000006" y="37.8" width="79.1" height="27.1" as="geometry"/>
+                </mxCell>
+                <mxCell id="s32" value="表示項目（項目説明・表示例）" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="489.50000000000006" y="36.400000000000006" width="220.9" height="29.3" as="geometry"/>
+                </mxCell>
+                <mxCell id="s33" value="データ・補足・例" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#000000;fontSize=11;fontColor=#000000;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="729.25" y="36.099999999999994" width="130.2" height="29.3" as="geometry"/>
+                </mxCell>
+                <mxCell id="s34" value="補足" style="shape=note;size=14;whiteSpace=wrap;html=1;fillColor=#ED7D31;strokeColor=#763E18;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="875.1999999999999" y="36.8" width="110" height="29.2" as="geometry"/>
+                </mxCell>
+                <mxCell id="s35" value="実施順序" style="shape=note;size=14;whiteSpace=wrap;html=1;fillColor=#70AD47;strokeColor=#385624;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="138.49999999999991" y="35.8" width="79.6" height="29.9" as="geometry"/>
+                </mxCell>
+                <mxCell id="s36" value="疑問・要検討事項など" style="shape=note;size=14;whiteSpace=wrap;html=1;fillColor=#FF0000;strokeColor=#763E18;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="1000.6999999999998" y="36.1" width="154.1" height="31.2" as="geometry"/>
+                </mxCell>
+                <mxCell id="s37" value="入力項目（入力例） " style="rounded=0;whiteSpace=wrap;html=1;fillColor=#A5A5A5;strokeColor=#191919;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="239.19999999999993" y="37.050000000000004" width="147.9" height="29.3" as="geometry"/>
+                </mxCell>
+                <mxCell id="s38" value="システムにログインできるユーザを管理します。&lt;br&gt;社員様1人につき１データを登録いただく想定です。" style="shape=note;size=14;whiteSpace=wrap;html=1;fillColor=#ED7D31;strokeColor=#763E18;fontSize=14;fontColor=#FFFFFF;fontStyle=1;align=left;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="456.6" y="556" width="349.4" height="61.3" as="geometry"/>
+                </mxCell>
+                <mxCell id="s38line" style="endArrow=none;dashed=1;html=1;strokeColor=#763E18;strokeWidth=2;" parent="1" source="s38" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="332.1" y="731.2" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="s39" value="アカウント" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#A5A5A5;strokeColor=#191919;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="966.1" y="771.6" width="125" height="30.9" as="geometry"/>
+                </mxCell>
+                <mxCell id="s40" value="パスワード" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#A5A5A5;strokeColor=#191919;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="965.7" y="850.5" width="125" height="30.9" as="geometry"/>
+                </mxCell>
+                <mxCell id="s41" value="氏名" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#A5A5A5;strokeColor=#191919;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="966.1" y="812.4" width="125" height="30.9" as="geometry"/>
+                </mxCell>
+                <mxCell id="s42" value="メールアドレス" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#A5A5A5;strokeColor=#191919;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="964.2" y="893.7" width="125" height="30.9" as="geometry"/>
+                </mxCell>
+                <mxCell id="s43" value="顧客一覧画面" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontSize=14;fontColor=#000000;fontStyle=1;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="449.8" y="1080.1" width="402.4" height="249.9" as="geometry"/>
+                </mxCell>
+                <mxCell id="s44" value="登録データ" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#000000;fontSize=11;fontColor=#000000;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="472.3" y="1184.9" width="258.8" height="32.3" as="geometry"/>
+                </mxCell>
+                <mxCell id="s45" value="登録データ" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#000000;fontSize=11;fontColor=#000000;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="473.7" y="1230.5" width="258.8" height="30.3" as="geometry"/>
+                </mxCell>
+                <mxCell id="s46" value="登録データ" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#000000;fontSize=11;fontColor=#000000;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="474.9" y="1271" width="259.5" height="31.3" as="geometry"/>
+                </mxCell>
+                <mxCell id="s47" value="" style="shape=singleArrow;arrowWidth=0.55;arrowSize=0.45;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontColor=#FFFFFF;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="339.5" y="1092.3" width="108.9" height="29.9" as="geometry"/>
+                </mxCell>
+                <mxCell id="s48" value="顧客管理" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0070C0;strokeColor=#000000;fontSize=14;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="160.6" y="1071" width="180.5" height="58.1" as="geometry"/>
+                </mxCell>
+                <mxCell id="s49" value="顧客詳細画面" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontSize=14;fontColor=#000000;fontStyle=1;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="918.6" y="1069.1" width="438.3" height="473.1" as="geometry"/>
+                </mxCell>
+                <mxCell id="s50" value="登録・更新" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0070C0;strokeColor=#000000;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="1041.7" y="1500.4" width="135.1" height="32.1" as="geometry"/>
+                </mxCell>
+                <mxCell id="s51" value="詳細" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0070C0;strokeColor=#000000;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="769.9" y="1189.5" width="48.9" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="s52" value="詳細" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0070C0;strokeColor=#000000;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="769.4" y="1231.3" width="48.9" height="29.1" as="geometry"/>
+                </mxCell>
+                <mxCell id="s53" value="詳細" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0070C0;strokeColor=#000000;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="768.9" y="1277.5" width="48.9" height="26.3" as="geometry"/>
+                </mxCell>
+                <mxCell id="s54" value="新規登録" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0070C0;strokeColor=#000000;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="738.1" y="1088.8" width="84.4" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="s55" value="登録内容（顧客名、住所など）" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="476.7" y="1137.5" width="246.4" height="30.3" as="geometry"/>
+                </mxCell>
+                <mxCell id="s57" value="" style="shape=singleArrow;arrowWidth=0.5454545454545454;arrowSize=0.36065573770491804;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontColor=#FFFFFF;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="822.5" y="1081.8" width="90.5" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="s58" value="顧客名" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#A5A5A5;strokeColor=#191919;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="959.7" y="1113.4" width="125" height="30.9" as="geometry"/>
+                </mxCell>
+                <mxCell id="s59" value="担当者名" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#A5A5A5;strokeColor=#191919;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="959.7" y="1157" width="125" height="30.9" as="geometry"/>
+                </mxCell>
+                <mxCell id="s60" value="電話番号" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#A5A5A5;strokeColor=#191919;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1102.4" y="1156.6" width="125" height="30.9" as="geometry"/>
+                </mxCell>
+                <mxCell id="s61" value="メールアドレス" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#A5A5A5;strokeColor=#191919;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1102.1" y="1198.9" width="125" height="30.9" as="geometry"/>
+                </mxCell>
+                <mxCell id="s62" value="住所" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#A5A5A5;strokeColor=#191919;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1100.2" y="1112.8" width="125" height="30.9" as="geometry"/>
+                </mxCell>
+                <mxCell id="s63" value="受注一覧画面" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontSize=14;fontColor=#000000;fontStyle=1;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="948" y="1254.9" width="367.7" height="212.1" as="geometry"/>
+                </mxCell>
+                <mxCell id="s64" value="受注一覧画面" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontSize=14;fontColor=#000000;fontStyle=1;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="429.7" y="1663" width="402.4" height="302.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="s65" value="登録データ" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#000000;fontSize=11;fontColor=#000000;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="461.2" y="1765.8" width="258.8" height="32.3" as="geometry"/>
+                </mxCell>
+                <mxCell id="s66" value="登録データ" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#000000;fontSize=11;fontColor=#000000;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="462.6" y="1810.6" width="258.8" height="30.3" as="geometry"/>
+                </mxCell>
+                <mxCell id="s67" value="登録データ" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#000000;fontSize=11;fontColor=#000000;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="463.8" y="1854" width="259.5" height="31.3" as="geometry"/>
+                </mxCell>
+                <mxCell id="s68" value="" style="shape=singleArrow;arrowWidth=0.55;arrowSize=0.45;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontColor=#FFFFFF;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="319.4" y="1673.3" width="108.9" height="29.9" as="geometry"/>
+                </mxCell>
+                <mxCell id="s69" value="受注管理" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0070C0;strokeColor=#000000;fontSize=14;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="149.5" y="1651" width="171.5" height="59.1" as="geometry"/>
+                </mxCell>
+                <mxCell id="s70" value="受注詳細画面" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontSize=14;fontColor=#000000;fontStyle=1;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1091.1" y="1628" width="580.1" height="875.4" as="geometry"/>
+                </mxCell>
+                <mxCell id="s71" value="登録・更新" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0070C0;strokeColor=#000000;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="1235.2" y="2426.5" width="135.1" height="32.1" as="geometry"/>
+                </mxCell>
+                <mxCell id="s72" value="詳細" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0070C0;strokeColor=#000000;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="749.8" y="1770.5" width="48.9" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="s73" value="詳細" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0070C0;strokeColor=#000000;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="749.4" y="1811.3" width="48.9" height="29.1" as="geometry"/>
+                </mxCell>
+                <mxCell id="s74" value="詳細" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0070C0;strokeColor=#000000;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="748.9" y="1858.5" width="48.9" height="28.3" as="geometry"/>
+                </mxCell>
+                <mxCell id="s75" value="新規登録" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0070C0;strokeColor=#000000;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="727.8" y="1669.8" width="74.7" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="s76" value="登録内容（受注日、顧客名、合計金額、対応状況など）" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="442.9" y="1724" width="355.8" height="30.9" as="geometry"/>
+                </mxCell>
+                <mxCell id="s78" value="" style="shape=singleArrow;arrowWidth=0.5220125786163636;arrowSize=0.11500701262272074;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontColor=#FFFFFF;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="803.6" y="1674.4" width="285.2" height="31.8" as="geometry"/>
+                </mxCell>
+                <mxCell id="s79" value="受注日" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#A5A5A5;strokeColor=#191919;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1143.5" y="1696.6" width="125" height="30.6" as="geometry"/>
+                </mxCell>
+                <mxCell id="s80" value="顧客名" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#A5A5A5;strokeColor=#191919;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1284" y="1696.1" width="125" height="30.6" as="geometry"/>
+                </mxCell>
+                <mxCell id="s81" value="CSV出力" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0070C0;strokeColor=#000000;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="573.7" y="1910" width="84.4" height="38.9" as="geometry"/>
+                </mxCell>
+                <mxCell id="s82" value="表示データをCSVに出力します。&lt;br&gt;表示データは事前に絞り込みしてからCSV出力できる想定です。検索条件などは別途検討します。" style="shape=note;size=14;whiteSpace=wrap;html=1;fillColor=#ED7D31;strokeColor=#763E18;fontSize=14;fontColor=#FFFFFF;fontStyle=1;align=left;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="356.9" y="1997.5" width="409.1" height="79.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="s82line" style="endArrow=none;dashed=1;html=1;strokeColor=#763E18;strokeWidth=2;" parent="1" source="s82" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="617.9" y="1948.8" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="s83" value="顧客管理で登録された顧客一覧の選択肢から指定します" style="shape=note;size=14;whiteSpace=wrap;html=1;fillColor=#ED7D31;strokeColor=#763E18;fontSize=14;fontColor=#FFFFFF;fontStyle=1;align=left;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="1449" y="1673.3" width="367.9" height="44.9" as="geometry"/>
+                </mxCell>
+                <mxCell id="s83line" style="endArrow=none;dashed=1;html=1;strokeColor=#763E18;strokeWidth=2;" parent="1" source="s83" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1408.3" y="1705.1" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="s84" value="対応状況の入力欄追加" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0070C0;strokeColor=#000000;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="1250.6" y="1871.3" width="163.6" height="31.6" as="geometry"/>
+                </mxCell>
+                <mxCell id="s85" value="対応日" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#A5A5A5;strokeColor=#191919;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1247.7" y="1941.9" width="92.9" height="30.9" as="geometry"/>
+                </mxCell>
+                <mxCell id="s86" value="対応状況の詳細" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=14;fontColor=#000000;fontStyle=1;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1102.4" y="1866.1" width="517.2" height="231.1" as="geometry"/>
+                </mxCell>
+                <mxCell id="s87" value="システムユーザ管理で登録されたシステムユーザ一覧の&lt;br&gt;選択肢から指定します" style="shape=note;size=14;whiteSpace=wrap;html=1;fillColor=#ED7D31;strokeColor=#763E18;fontSize=14;fontColor=#FFFFFF;fontStyle=1;align=left;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="1458" y="1749.45" width="378.2" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="s87line" style="endArrow=none;dashed=1;html=1;strokeColor=#763E18;strokeWidth=2;" parent="1" source="s87" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1414" y="1786.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="s88" value="メイン対応者" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#A5A5A5;strokeColor=#191919;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1286.9" y="1774.9" width="125" height="31.8" as="geometry"/>
+                </mxCell>
+                <mxCell id="s89" value="対応日" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#A5A5A5;strokeColor=#191919;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1252.3" y="1998.6" width="92.9" height="30.9" as="geometry"/>
+                </mxCell>
+                <mxCell id="s90" value="対応状況" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#A5A5A5;strokeColor=#191919;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1142.7" y="1774.7" width="125" height="30.9" as="geometry"/>
+                </mxCell>
+                <mxCell id="s91" value="対応日" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#A5A5A5;strokeColor=#191919;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1253.4" y="2048.6" width="92.9" height="30.9" as="geometry"/>
+                </mxCell>
+                <mxCell id="s92" value="下記から選択します&lt;br&gt;・未着手&lt;br&gt;・対応中&lt;br&gt;・完了" style="shape=note;size=14;whiteSpace=wrap;html=1;fillColor=#ED7D31;strokeColor=#763E18;fontSize=14;fontColor=#FFFFFF;fontStyle=1;align=left;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="906" y="1821.6" width="155.2" height="95.4" as="geometry"/>
+                </mxCell>
+                <mxCell id="s92line" style="endArrow=none;dashed=1;html=1;strokeColor=#763E18;strokeWidth=2;" parent="1" source="s92" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1140.6" y="1800.4" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="s93" value="対応内容" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#A5A5A5;strokeColor=#191919;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1351.5" y="1944.2" width="125" height="30.9" as="geometry"/>
+                </mxCell>
+                <mxCell id="s94" value="対応内容" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#A5A5A5;strokeColor=#191919;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1351.5" y="1996.3" width="125" height="30.9" as="geometry"/>
+                </mxCell>
+                <mxCell id="s95" value="対応内容" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#A5A5A5;strokeColor=#191919;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1352.6" y="2046.3" width="125" height="30.9" as="geometry"/>
+                </mxCell>
+                <mxCell id="s96" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#FFFFFF;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1120.9" y="1933.5" width="445.6" height="52.3" as="geometry"/>
+                </mxCell>
+                <mxCell id="s97" value="このボタンを押すと&lt;br&gt;下にある点線の行が１つ増えます&lt;br&gt;※対応者の内容はボタンを押した時の&lt;br&gt;　ログインユーザの名前が自動で設定されます" style="shape=note;size=14;whiteSpace=wrap;html=1;fillColor=#ED7D31;strokeColor=#763E18;fontSize=14;fontColor=#FFFFFF;fontStyle=1;align=left;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="1640.7" y="1875" width="322.3" height="89" as="geometry"/>
+                </mxCell>
+                <mxCell id="s97line" style="endArrow=none;dashed=1;html=1;strokeColor=#763E18;strokeWidth=2;" parent="1" source="s97" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1420.2" y="1891.1" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="s98" value="商品追加" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0070C0;strokeColor=#000000;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="1277" y="2157.6" width="131.8" height="31.6" as="geometry"/>
+                </mxCell>
+                <mxCell id="s99" value="受注の詳細" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=14;fontColor=#000000;fontStyle=1;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1105.5" y="2151.5" width="395.4" height="177.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="s100" value="商品名" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#A5A5A5;strokeColor=#191919;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1145.2" y="2214" width="125" height="30.9" as="geometry"/>
+                </mxCell>
+                <mxCell id="s101" value="単価" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#A5A5A5;strokeColor=#191919;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1284.9" y="2211.7" width="52.6" height="30.9" as="geometry"/>
+                </mxCell>
+                <mxCell id="s102" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#FFFFFF;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1131.8" y="2199.8" width="351.7" height="49.9" as="geometry"/>
+                </mxCell>
+                <mxCell id="s103" value="削除" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0070C0;strokeColor=#000000;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="1490.4" y="1941.2" width="60.6" height="32.1" as="geometry"/>
+                </mxCell>
+                <mxCell id="s104" value="削除" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0070C0;strokeColor=#000000;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="1487.2" y="1997" width="60.6" height="32.1" as="geometry"/>
+                </mxCell>
+                <mxCell id="s105" value="削除" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0070C0;strokeColor=#000000;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="1486.4" y="2046.2" width="60.6" height="32.1" as="geometry"/>
+                </mxCell>
+                <mxCell id="s106" value="削除" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0070C0;strokeColor=#000000;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="1415.1" y="2209" width="61.6" height="32.1" as="geometry"/>
+                </mxCell>
+                <mxCell id="s107" value="合計金額" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1115.7" y="2359.3" width="91" height="38.9" as="geometry"/>
+                </mxCell>
+                <mxCell id="s108" value="自動計算します" style="shape=note;size=14;whiteSpace=wrap;html=1;fillColor=#ED7D31;strokeColor=#763E18;fontSize=14;fontColor=#FFFFFF;fontStyle=1;align=left;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="946" y="2383" width="131.5" height="51" as="geometry"/>
+                </mxCell>
+                <mxCell id="s108line" style="endArrow=none;dashed=1;html=1;strokeColor=#763E18;strokeWidth=2;" parent="1" source="s108" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1116.3" y="2373.2" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="s109" value="金額" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#A5A5A5;strokeColor=#191919;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1350.7" y="2212.9" width="52.6" height="31.1" as="geometry"/>
+                </mxCell>
+                <mxCell id="s110" value="商品名" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#A5A5A5;strokeColor=#191919;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1142.2" y="2266" width="125" height="30.9" as="geometry"/>
+                </mxCell>
+                <mxCell id="s111" value="単価" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#A5A5A5;strokeColor=#191919;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1281.9" y="2264.2" width="52.6" height="30.9" as="geometry"/>
+                </mxCell>
+                <mxCell id="s112" value="削除" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0070C0;strokeColor=#000000;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="1412.5" y="2265.1" width="68.4" height="32.1" as="geometry"/>
+                </mxCell>
+                <mxCell id="s113" value="金額" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#A5A5A5;strokeColor=#191919;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1347.7" y="2264.9" width="52.6" height="31.6" as="geometry"/>
+                </mxCell>
+                <mxCell id="s114" value="このボタンを押すと&lt;br&gt;下にある点線の行が１つ増えます" style="shape=note;size=14;whiteSpace=wrap;html=1;fillColor=#ED7D31;strokeColor=#763E18;fontSize=14;fontColor=#FFFFFF;fontStyle=1;align=left;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="1567.9" y="2157.5" width="247.1" height="63.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="s114line" style="endArrow=none;dashed=1;html=1;strokeColor=#763E18;strokeWidth=2;" parent="1" source="s114" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1405.9" y="2175" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="s115" value="登録データ" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#000000;fontSize=11;fontColor=#000000;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="990.2" y="1334" width="258.8" height="32.3" as="geometry"/>
+                </mxCell>
+                <mxCell id="s116" value="登録データ" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#000000;fontSize=11;fontColor=#000000;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="991.7" y="1379.3999999999999" width="258.8" height="30.3" as="geometry"/>
+                </mxCell>
+                <mxCell id="s117" value="登録データ" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#000000;fontSize=11;fontColor=#000000;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="992.8" y="1422.2" width="259.5" height="31.3" as="geometry"/>
+                </mxCell>
+                <mxCell id="s118" value="登録内容（受注日、顧客名、金額、対応状況など）" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="959.55" y="1294" width="319.7" height="28.7" as="geometry"/>
+                </mxCell>
+                <mxCell id="s119" value="この画面では参照のみで&lt;br&gt;受注データは更新できません" style="shape=note;size=14;whiteSpace=wrap;html=1;fillColor=#ED7D31;strokeColor=#763E18;fontSize=14;fontColor=#FFFFFF;fontStyle=1;align=left;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="1348.9" y="1259" width="201.1" height="59.2" as="geometry"/>
+                </mxCell>
+                <mxCell id="s119line" style="endArrow=none;dashed=1;html=1;strokeColor=#763E18;strokeWidth=2;" parent="1" source="s119" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1323.8" y="1301.4" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="s120" value="２" style="shape=note;size=14;whiteSpace=wrap;html=1;fillColor=#70AD47;strokeColor=#385624;fontSize=18;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="992" width="45" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="s120line" style="endArrow=none;dashed=1;html=1;strokeColor=#385624;strokeWidth=2;entryX=0;entryY=0;entryDx=29.9475;entryDy=6.727499999999999;entryPerimeter=0;" parent="1" source="s120" edge="1" target="s47">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="408.1" y="1099.8" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="s121" value="２" style="shape=note;size=14;whiteSpace=wrap;html=1;fillColor=#70AD47;strokeColor=#385624;fontSize=18;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="849.25" y="1013" width="34.7" height="39.2" as="geometry"/>
+                </mxCell>
+                <mxCell id="s121line" style="endArrow=none;dashed=1;html=1;strokeColor=#385624;strokeWidth=2;entryX=0.365;entryY=0.254;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="s121" edge="1" target="s57">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="874.7" y="1099" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="s122" value="２" style="shape=note;size=14;whiteSpace=wrap;html=1;fillColor=#70AD47;strokeColor=#385624;fontSize=18;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="1087.1" y="1560.8" width="45.2" height="46.2" as="geometry"/>
+                </mxCell>
+                <mxCell id="s122line" style="endArrow=none;dashed=1;html=1;strokeColor=#385624;strokeWidth=2;" parent="1" source="s122" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1112.9" y="1532.6" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="s123" value="３" style="shape=note;size=14;whiteSpace=wrap;html=1;fillColor=#70AD47;strokeColor=#385624;fontSize=18;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="352.2" y="1609.9" width="53" height="44" as="geometry"/>
+                </mxCell>
+                <mxCell id="s123line" style="endArrow=none;dashed=1;html=1;strokeColor=#385624;strokeWidth=2;" parent="1" source="s123" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="365.5" y="1686.3" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="s124" value="３" style="shape=note;size=14;whiteSpace=wrap;html=1;fillColor=#70AD47;strokeColor=#385624;fontSize=18;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="907.5" y="1603.1" width="45.4" height="44" as="geometry"/>
+                </mxCell>
+                <mxCell id="s124line" style="endArrow=none;dashed=1;html=1;strokeColor=#385624;strokeWidth=2;" parent="1" source="s124" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="918.8" y="1679.6" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="s125" value="４" style="shape=note;size=14;whiteSpace=wrap;html=1;fillColor=#70AD47;strokeColor=#385624;fontSize=18;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="1416.1" y="2404.8" width="46.4" height="44" as="geometry"/>
+                </mxCell>
+                <mxCell id="s125line" style="endArrow=none;dashed=1;html=1;strokeColor=#385624;strokeWidth=2;" parent="1" source="s125" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1378.2" y="2433.3" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="s126" value="対応者" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1144.8" y="1941.5" width="84.2" height="30.9" as="geometry"/>
+                </mxCell>
+                <mxCell id="s127" value="対応者" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1149.3" y="1998.1" width="84.2" height="30.9" as="geometry"/>
+                </mxCell>
+                <mxCell id="s128" value="対応者" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontSize=11;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1150.5" y="2048.1" width="84.2" height="30.9" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="" style="shape=singleArrow;arrowWidth=0.5454545454545454;arrowSize=0.36065573770491804;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontColor=#FFFFFF;align=left;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="819.8" y="1178.5" width="97.2" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="shape=singleArrow;arrowWidth=0.5454545454545454;arrowSize=0.36065573770491804;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontColor=#FFFFFF;align=left;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="818.8" y="828.55" width="97.2" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="" style="shape=singleArrow;arrowWidth=0.5454545454545454;arrowSize=0.36065573770491804;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontColor=#FFFFFF;align=left;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="819.8" y="734.3" width="97.2" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="shape=singleArrow;arrowWidth=0.5220125786163636;arrowSize=0.11500701262272074;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontColor=#FFFFFF;align=left;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="799.5" y="1768.6000000000001" width="285.2" height="31.8" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

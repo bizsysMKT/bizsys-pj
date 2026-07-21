@@ -103,25 +103,25 @@
                     <mxGeometry x="79.49999999999993" y="24" width="1108.3" height="57.9" as="geometry"/>
                 </mxCell>
                 <mxCell id="s31" value="ボタン名" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0070C0;strokeColor=#000000;fontSize=14;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
-                    <mxGeometry x="466" y="38" width="74" height="30" as="geometry"/>
+                    <mxGeometry x="448" y="38" width="74" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="s32" value="表示項目（項目説明・表示例）" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontSize=14;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
-                    <mxGeometry x="559" y="38" width="200" height="30" as="geometry"/>
+                    <mxGeometry x="537" y="38" width="215" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="s33" value="データ・補足・例" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#000000;fontSize=14;fontColor=#000000;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
-                    <mxGeometry x="778" y="38" width="130" height="30" as="geometry"/>
+                    <mxGeometry x="767" y="38" width="130" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="s34" value="補足" style="shape=note;size=14;whiteSpace=wrap;html=1;fillColor=#ED7D31;strokeColor=#763E18;fontSize=14;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
-                    <mxGeometry x="927" y="38" width="60" height="30" as="geometry"/>
+                    <mxGeometry x="912" y="38" width="60" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="s35" value="実施順序" style="shape=note;size=14;whiteSpace=wrap;html=1;fillColor=#70AD47;strokeColor=#385624;fontSize=14;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
-                    <mxGeometry x="200" y="38" width="84" height="30" as="geometry"/>
+                    <mxGeometry x="190" y="38" width="84" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="s36" value="疑問・要検討事項など" style="shape=note;size=14;whiteSpace=wrap;html=1;fillColor=#FF0000;strokeColor=#763E18;fontSize=14;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
-                    <mxGeometry x="1006" y="38" width="168" height="30" as="geometry"/>
+                    <mxGeometry x="987" y="38" width="185" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="s37" value="入力項目（入力例） " style="rounded=0;whiteSpace=wrap;html=1;fillColor=#A5A5A5;strokeColor=#191919;fontSize=14;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
-                    <mxGeometry x="303" y="38" width="144" height="30" as="geometry"/>
+                    <mxGeometry x="289" y="38" width="144" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="s38" value="システムにログインできるユーザを管理します。&lt;br&gt;社員様1人につき１データを登録いただく想定です。" style="shape=note;size=14;whiteSpace=wrap;html=1;fillColor=#ED7D31;strokeColor=#763E18;fontSize=14;fontColor=#FFFFFF;fontStyle=1;align=left;spacingLeft=8;verticalAlign=middle;" parent="1" vertex="1">
                     <mxGeometry x="456.6" y="556" width="349.4" height="61.3" as="geometry"/>

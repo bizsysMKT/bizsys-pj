@@ -63,6 +63,9 @@ export default defineConfig({
     // トップへ転送する（2026-07-05）。
     '/tools': '/',
     '/faq': '/',
-    '/about': '/',
+
+    // /about は2026-07-21に運営者情報ページとして復活したためトップへの転送を解除。
+    // 一時的に /company で公開していた運営者情報のURLを /about へ転送する。
+    '/company': '/about/',
   },
 });

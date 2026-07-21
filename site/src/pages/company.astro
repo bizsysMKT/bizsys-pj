@@ -1,0 +1,199 @@
+---
+import Layout from '../components/Layout.astro';
+
+// 会社概要ページ。代表者名で検索ヒットさせない方針のため noindex を指定している（本人意向・2026-07-21）。
+// 目的は「すでにサイトに来ている検討者への信頼提示」なので、検索流入は狙わない。
+---
+
+<Layout title="会社概要 | BizSys" description="ビズシスの運営会社情報。株式会社SOBは中小企業向けの業務システムの企画・開発・保守を行っています。" noindex={true}>
+
+  <style>
+    .company-page {
+      --blue: #0052b4;
+      --deep: #082f63;
+      --line: #cfe1f5;
+    }
+    .company-hero {
+      padding: 48px 0 32px;
+      background: linear-gradient(90deg, #f0f7ff 0%, #fff 60%, #eef6ff 100%);
+      border-bottom: 1px solid var(--line);
+    }
+    .company-hero h1 {
+      font-size: 32px;
+      font-weight: 900;
+      color: var(--deep);
+      margin: 0 0 10px;
+      letter-spacing: -.03em;
+    }
+    .company-hero p {
+      color: #52687f;
+      font-size: 14px;
+      margin: 0;
+    }
+    .company-body {
+      padding: 48px 0 72px;
+    }
+    .company-content {
+      max-width: 780px;
+    }
+    .company-content h2 {
+      position: relative;
+      font-size: 18px;
+      font-weight: 900;
+      color: var(--deep);
+      margin: 40px 0 14px;
+      padding-left: 16px;
+    }
+    .company-content h2::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .2em;
+      width: 4px;
+      height: 1.1em;
+      border-radius: 4px;
+      background: var(--blue);
+    }
+    .company-content h2:first-child { margin-top: 0; }
+    .company-content p {
+      color: #2e4460;
+      line-height: 1.9;
+      margin: 0 0 14px;
+      font-size: 15px;
+    }
+    .company-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 0 14px;
+      font-size: 15px;
+    }
+    .company-table th,
+    .company-table td {
+      border: 1px solid var(--line);
+      padding: 12px 16px;
+      text-align: left;
+      vertical-align: top;
+      line-height: 1.8;
+    }
+    .company-table th {
+      background: #f0f7ff;
+      color: var(--deep);
+      font-weight: 900;
+      width: 30%;
+      white-space: nowrap;
+    }
+    .company-table td { color: #2e4460; }
+    .company-table a { color: var(--blue); font-weight: 700; }
+    .company-cta {
+      margin-top: 40px;
+      padding: 22px 24px;
+      background: #f0f7ff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+    .company-cta p { margin: 0 0 12px; }
+    .company-cta a.btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 28px;
+      border-radius: 999px;
+      background: #ff7a00;
+      color: #fff;
+      font-weight: 900;
+      font-size: 15px;
+      box-shadow: 0 8px 18px rgba(255,122,0,.25);
+    }
+    .company-cta a.btn:hover { background: #e06800; }
+    @media (max-width: 640px) {
+      .company-table th { width: 34%; white-space: normal; }
+    }
+  </style>
+
+  <div class="company-page">
+
+    <!-- ヒーロー -->
+    <section class="company-hero">
+      <div class="container">
+        <h1>会社概要</h1>
+        <p>ビズシス（BizSys）の運営会社について</p>
+      </div>
+    </section>
+
+    <!-- 本文 -->
+    <section class="company-body">
+      <div class="container">
+        <div class="company-content">
+
+          <h2>ビズシスについて</h2>
+          <p>
+            ビズシス（BizSys）は、株式会社SOBが運営する、中小企業向けオーダーメイド業務システムの開発・保守サービスです。
+            Excel（エクセル）管理からの脱却、在庫・受注・見積・原価・顧客管理などの業務システム化を、
+            要件の整理から設計・開発・導入・保守まで一貫してお手伝いしています。
+          </p>
+          <p>
+            2021年からオンラインを中心に340件以上のシステム開発のご相談に対応してきました。
+            既製パッケージに業務を合わせるのではなく、御社の実際の業務の流れに合わせて設計し、
+            「現場で使い続けられるシステム」を小さく始めて段階的に育てていく進め方を大切にしています。
+          </p>
+
+          <h2>会社概要</h2>
+          <table class="company-table">
+            <tbody>
+              <tr>
+                <th>会社名</th>
+                <td>株式会社SOB</td>
+              </tr>
+              <tr>
+                <th>代表者</th>
+                <td>代表取締役　漢那 拓哉</td>
+              </tr>
+              <tr>
+                <th>所在地</th>
+                <td>北海道札幌市中央区南1条西16丁目1-323 春野ビル3F</td>
+              </tr>
+              <tr>
+                <th>設立</th>
+                <td>2018年10月</td>
+              </tr>
+              <tr>
+                <th>資本金</th>
+                <td>500万円</td>
+              </tr>
+              <tr>
+                <th>事業内容</th>
+                <td>
+                  システムの企画、開発、保守<br />
+                  インターネットサービスの開発、運営
+                </td>
+              </tr>
+              <tr>
+                <th>コーポレートサイト</th>
+                <td><a href="https://s-o-b.jp/" target="_blank" rel="noopener noreferrer">https://s-o-b.jp/</a></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2>代表について</h2>
+          <p>
+            代表は実務経験10年以上のシステムエンジニアです。要件整理・設計・実装・デプロイ・保守・障害対応まで、
+            開発のすべての工程を自ら手がけてきました。だからこそ、打ち合わせの場で「それは技術的にできるか・いくらかかるか」に
+            その場でお答えできますし、作ったあとの運用まで見据えたご提案ができます。
+          </p>
+          <p>
+            対応はオンライン中心で、全国の中小企業のお客様とお取引しています。
+          </p>
+
+          <div class="company-cta">
+            <p>システム化のご相談は、状況の整理段階からで構いません。お気軽にご連絡ください。</p>
+            <a class="btn" href="/contact/">無料相談する</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</Layout>

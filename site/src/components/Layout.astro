@@ -4,6 +4,9 @@ const {
   description = '',
   ogType = 'website',
   ogImage = '/images/hero-right.png',
+
+  // trueにするとそのページに noindex を付ける（検索結果に出したくないページ用。会社概要で使用）
+  noindex = false,
 } = Astro.props;
 const siteUrl = 'https://bizsys.jp';
 
@@ -35,6 +38,7 @@ const orgJsonLd = {
     <title>{title}</title>
     {description && <meta name="description" content={description} />}
     <link rel="canonical" href={canonicalUrl} />
+    {noindex && <meta name="robots" content="noindex" />}
 
     <!-- favicon -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -498,6 +502,7 @@ const orgJsonLd = {
           <a href="/demo/" class:list={[{ active: path.startsWith('/demo') }]}>操作デモ</a>
           <a href="/pricing/" class:list={[{ active: path.startsWith('/pricing') }]}>料金</a>
           <a href="/blog/" class:list={[{ active: path.startsWith('/blog') }]}>ブログ</a>
+          <a href="/company/" class:list={[{ active: path.startsWith('/company') }]}>会社概要</a>
           <a href="/contact/" class="nav-cta">
             <svg xmlns="http://www.w3.org/2000/svg" style="margin:0 5px 0 0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
             無料相談する
@@ -515,6 +520,7 @@ const orgJsonLd = {
       <a href="/demo/" class:list={[{ active: path.startsWith('/demo') }]}>操作デモ</a>
       <a href="/pricing/" class:list={[{ active: path.startsWith('/pricing') }]}>料金</a>
       <a href="/blog/" class:list={[{ active: path.startsWith('/blog') }]}>ブログ</a>
+      <a href="/company/" class:list={[{ active: path.startsWith('/company') }]}>会社概要</a>
       <a href="/contact/" class="nav-cta">
          <svg xmlns="http://www.w3.org/2000/svg" style="margin:0 5px 0 0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
          無料相談する
@@ -553,6 +559,7 @@ const orgJsonLd = {
             <li><a href="/demo/">操作デモ</a></li>
             <li><a href="/pricing/">料金</a></li>
             <li><a href="/blog/">ブログ</a></li>
+            <li><a href="/company/">会社概要</a></li>
           </ul>
         </nav>
         <div class="site-footer__company">

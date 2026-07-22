@@ -21,3 +21,6 @@ automation/credentials/
 
 # 下書き出力
 output/
+
+# Pythonキャッシュ
+__pycache__/

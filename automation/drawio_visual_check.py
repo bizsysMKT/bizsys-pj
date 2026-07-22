@@ -28,12 +28,13 @@ def check_overlaps(src):
             continue
         style = c.get("style") or ""
 
-        # 塗りなし（外枠・タイトル等のコンテナ）と矢印は意図的な交差が多いため除外
-        if "fillColor=none" in style or "singleArrow" in style:
+        # 塗りなし（外枠・タイトル等のコンテナ）は意図的な交差が多いため除外
+        if "fillColor=none" in style:
             continue
         x, y = float(g.get("x", 0)), float(g.get("y", 0))
         w, h = float(g.get("width", 0)), float(g.get("height", 0))
-        rects.append((c.get("id"), (c.get("value") or "")[:15], x, y, x + w, y + h))
+        rects.append((c.get("id"), (c.get("value") or "")[:15], x, y, x + w, y + h,
+                      "singleArrow" in style, "shape=note" in style))
 
     found = 0
     for i in range(len(rects)):
@@ -49,6 +50,11 @@ def check_overlaps(src):
             a_in_b = a[2] >= b[2] and a[3] >= b[3] and a[4] <= b[4] and a[5] <= b[5]
             b_in_a = b[2] >= a[2] and b[3] >= a[3] and b[4] <= a[4] and b[5] <= a[5]
             if a_in_b or b_in_a:
+                continue
+
+            # 矢印が絡む重なりは、相手が付箋・マーカー（note）の場合だけ異常として報告する
+            # （画面ボックスの境界をまたぐ遷移矢印は意図的な交差のため）
+            if (a[6] or b[6]) and not (a[6] and b[7] or b[6] and a[7]):
                 continue
             found += 1
             print("重なり検出: %s「%s」 と %s「%s」 (交差 %.0fx%.0fpx)" % (a[0], a[1], b[0], b[1], ix, iy))
